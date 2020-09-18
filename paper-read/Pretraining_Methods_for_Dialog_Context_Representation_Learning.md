@@ -3,8 +3,8 @@
 
 # 前言
 
-> 标题：Pretraining Methods for Dialog Context Representation Learning
-> 原文链接：[Link](https://arxiv.org/pdf/1906.00414.pdf)
+> 标题：Pretraining Methods for Dialog Context Representation Learning\
+> 原文链接：[Link](https://arxiv.org/pdf/1906.00414.pdf)\
 > 转载请注明：DengBoCong
 
 # Abstract
