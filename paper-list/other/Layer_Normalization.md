@@ -1,14 +1,7 @@
-
-<font color=#999AAA >提示：阅读论文时进行相关思想、结构、优缺点，内容进行提炼和记录，论文和相关引用会标明出处。</font>
-
-@[TOC](文章目录)
-
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
-
 # 前言
 
-> 标题：Layer Normalization
-> 原文链接：[Link](https://arxiv.org/pdf/1607.06450.pdf)
+> 标题：Layer Normalization\
+> 原文链接：[Link](https://arxiv.org/pdf/1607.06450.pdf)\
 > 转载请注明：DengBoCong
 
 # Abstract
