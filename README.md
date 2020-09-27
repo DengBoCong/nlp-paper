@@ -14,7 +14,7 @@ NLP-Paper | Still work
 + [其他](#其他)
 
 # 综述
-1. [A Survey on Dialogue Systems:Recent Advances and New Frontiers](https://arxiv.org/pdf/1711.01731.pdf)：对话系统的最新研究和方向 | Chen et al,2018
+1. [A Survey on Dialogue Systems:Recent Advances and New Frontiers](https://arxiv.org/pdf/1711.01731.pdf)：对话系统的最新研究和方向 | Chen et al,2017
 
 # 预训练
 1. [Pretraining Methods for Dialog Context Representation Learning](https://arxiv.org/pdf/1906.00414.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/pretraining/Pretraining_Methods_for_Dialog_Context_Representation_Learning.md)：作者列举了四种针对对话上下文表示的预训练方法，其中两种是作者新提出的 | Shikib et al,2019
@@ -22,10 +22,12 @@ NLP-Paper | Still work
 # 模型
 1. [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/model/Attention_Is_All_You_Need.md)：Transformer的开山之作，值得精读 | Ashish et al,2017
 2. [A Neural Conversational Model](https://arxiv.org/pdf/1506.05869.pdf)：Seq2Seq结构的对话模型 | Oriol et al,2015
+3. [Context Sensitive Spoken Language Understanding Using Role Dependent LSTM Layers](https://www.merl.com/publications/docs/TR2015-134.pdf)：使用LSTM在SLU方面做的工作，通过agent和client角色划分，能够解决多轮对话中的歧义问题 | Hori et al,2015
 
 # 对话系统
 
 # 数据集
+1. [CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset](https://arxiv.org/pdf/2002.11893.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dataset/CrossWOZ.md)：第一个大规模的中文跨域任务导向对话数据集 | Qi Zhu et al,2020
 
 # 评估
 
