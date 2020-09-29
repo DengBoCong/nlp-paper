@@ -24,6 +24,7 @@ NLP-Paper | Still work
 1. [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/model/Attention_Is_All_You_Need.md)：Transformer的开山之作，值得精读 | Ashish et al,2017
 2. [A Neural Conversational Model](https://arxiv.org/pdf/1506.05869.pdf)：Seq2Seq结构的对话模型 | Oriol et al,2015
 3. [Context Sensitive Spoken Language Understanding Using Role Dependent LSTM Layers](https://www.merl.com/publications/docs/TR2015-134.pdf)：使用LSTM在SLU方面做的工作，通过agent和client角色划分，能够解决多轮对话中的歧义问题 | Hori et al,2015
+4. [An End-to-End Trainable Neural Network Model with Belief Tracking for Task-Oriented Dialog](https://arxiv.org/pdf/1708.05956.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/model/An_End-to-End_Trainable_Neural_Network_Model_with_Belief_Tracking_for_Task-Oriented_Dialog.md)：面向任务的对话系统的新型端到端可训练神经网络模型 | Liu et al,2017
 
 # Dialogue | 对话系统
 
