@@ -35,6 +35,9 @@
 
 # Corpora
 收集了具有不同域和注释粒度的大量语料库，以促进对面向任务的对话系统的研究。如下图所示：
++ informable slot 一般是由用户告知系统的，用来约束对话的一些条件，系统为了完成任务必须满足这些约束。
++ requestable slot 一般是用户向系统咨询的，可以来做选择的一些slot。
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200928210217414.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70#pic_center)
 # Challenges
 + 数据效率：资源匮乏的问题是主要的挑战之一。回顾了为缓解此问题而提出的一些最新方法。我们首先回顾一下迁移学习方法，这些方法可以从大规模数据中获取先验知识，或者从其他任务中采用经过训练的模型。然后，我们介绍了一些无监督的方法，这些方法可以通过启发式规则在资源很少的情况下直接学习而几乎没有注释。此外，我们还回顾了最近在构建数据驱动的用户模拟器方面的工作。
