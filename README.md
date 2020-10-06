@@ -28,6 +28,8 @@ NLP-Paper | Still work
 5. [A Network-based End-to-End Trainable Task-oriented Dialogue System](https://arxiv.org/pdf/1604.04562.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/model/A_Network-based_End-to-End_Trainable_Task-oriented_Dialogue_System.md)：非常值得一读的任务型对话模型架构 | Wen et al,2016
 
 # Dialogue | 对话系统
+1. [The Hidden Information State model: A practical framework for POMDP-based spoken dialogue management](https://www.sciencedirect.com/science/article/abs/pii/S0885230809000230)：关于对话状态管理的文章，可以用来补充相关背景知识 | Young et al,2010
+2. [Neural Belief Tracker: Data-Driven Dialogue State Tracking](https://arxiv.org/pdf/1606.03777.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dialogue/Neural_Belief_Tracker_Data-Driven_Dialogue_State_Tracking.md)：NBT框架，理解Belief state和tracking的好文 | Young et al,2017
 
 # Dataset | 数据集
 1. [CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset](https://arxiv.org/pdf/2002.11893.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dataset/CrossWOZ.md)：第一个大规模的中文跨域任务导向对话数据集 | Qi Zhu et al,2020
