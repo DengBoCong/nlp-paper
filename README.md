@@ -38,6 +38,6 @@ NLP-Paper | Still work
 3. [The Second Dialog State Tracking Challenge](https://www.aclweb.org/anthology/W14-4337.pdf)DSTC系列语料是专门用于对话状态跟踪的，非常经典，不过它的官网貌似无用了 |  Henderson et al,2014
 
 # Evaluate | 评估
-
+新增
 # Other | 其他
 1. [Layer Normalization](https://arxiv.org/pdf/1607.06450.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/other/Layer_Normalization.md)：层归一化方法，针对Batch Normalization的改进 | Jimmy et al,2016
