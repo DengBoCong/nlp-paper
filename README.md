@@ -31,6 +31,7 @@ NLP-Paper | Still work
 1. [The Hidden Information State model: A practical framework for POMDP-based spoken dialogue management](https://www.sciencedirect.com/science/article/abs/pii/S0885230809000230)：关于对话状态管理的文章，可以用来补充相关背景知识 | Young et al,2010
 2. [Neural Belief Tracker: Data-Driven Dialogue State Tracking](https://arxiv.org/pdf/1606.03777.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dialogue/Neural_Belief_Tracker_Data-Driven_Dialogue_State_Tracking.md)：NBT框架，理解Belief state和tracking的好文 | Young et al,2017
 3. [Latent Intention Dialogue Models](https://arxiv.org/pdf/1705.10229.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dialogue/Latent_Intention_Dialogue_Models.md)：离散潜在变量模型学习对话意图的框架 | Wen et al,2017
+4. [Global-Locally Self-Attentive Dialogue State Tracker](https://arxiv.org/pdf/1805.09655.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dialogue/Global_Locally_Self_Attentive_Dialogue_State_Tracker.md)：全局-局部自注意力状态跟踪 | Zhong et al,2018
 
 # Dataset | 数据集
 1. [CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset](https://arxiv.org/pdf/2002.11893.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dataset/CrossWOZ.md)：第一个大规模的中文跨域任务导向对话数据集 | Qi Zhu et al,2020
@@ -41,3 +42,4 @@ NLP-Paper | Still work
 新增
 # Other | 其他
 1. [Layer Normalization](https://arxiv.org/pdf/1607.06450.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/other/Layer_Normalization.md)：层归一化方法，针对Batch Normalization的改进 | Jimmy et al,2016
+2. [Scheduled Sampling for Transformers](https://arxiv.org/pdf/1906.07651.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/other/Scheduled_Sampling_for_Transformers.md)：在Transformer应用Scheduled Sampling | Mihaylova et al,2019
