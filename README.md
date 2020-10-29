@@ -26,6 +26,7 @@ NLP-Paper | Still work
 3. [Context Sensitive Spoken Language Understanding Using Role Dependent LSTM Layers](https://www.merl.com/publications/docs/TR2015-134.pdf)：使用LSTM在SLU方面做的工作，通过agent和client角色划分，能够解决多轮对话中的歧义问题 | Hori et al,2015
 4. [An End-to-End Trainable Neural Network Model with Belief Tracking for Task-Oriented Dialog](https://arxiv.org/pdf/1708.05956.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/model/An_End-to-End_Trainable_Neural_Network_Model_with_Belief_Tracking_for_Task-Oriented_Dialog.md)：面向任务的对话系统的新型端到端可训练神经网络模型 | Liu et al,2017
 5. [A Network-based End-to-End Trainable Task-oriented Dialogue System](https://arxiv.org/pdf/1604.04562.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/model/A_Network-based_End-to-End_Trainable_Task-oriented_Dialogue_System.md)：非常值得一读的任务型对话模型架构 | Wen et al,2016
+6. [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/model/BERT_Pre-training_of_Deep_Bidirectional_Transformers_for_Language_Understanding.md)：BERT的顶顶大名，使用Transformer的Encoder双向架构 | Devlin et al,2018
 
 # Dialogue | 对话系统
 1. [The Hidden Information State model: A practical framework for POMDP-based spoken dialogue management](https://www.sciencedirect.com/science/article/abs/pii/S0885230809000230)：关于对话状态管理的文章，可以用来补充相关背景知识 | Young et al,2010
