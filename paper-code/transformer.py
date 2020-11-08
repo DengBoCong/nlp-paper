@@ -1,75 +1,4 @@
 import tensorflow as tf
-import common.layers as layers
-import common.data_utils as _data
-
-def scaled_dot_product_attention(query, key, value, mask):
-    """
-    # 这里直接根据注意力的公式进行编写
-    参数：
-    query,key,value:这三个均来自输入自身
-    mask:
-    """
-    # 先将query和可以做点积
-    matmul_qk = tf.matmul(query, key, transpose_b=True)
-    deep = tf.cast(tf.shape(key)[-1], tf.float32)
-    scaled_attention_logits = matmul_qk / tf.math.sqrt(deep)
-
-    # mask的作用就是为了将输入中，很大的负数单元在softmax之后归零
-    if mask is not None:
-        scaled_attention_logits += (mask * -1e9)
-
-    # 将最后一个轴上的值进行归一化得到的就是attention score，
-    # 然后和value做点积之后，得到我们想要的加权向量
-    attention_weights = tf.nn.softmax(scaled_attention_logits, axis=-1)
-    output = tf.matmul(attention_weights, value)
-
-    return output
-
-
-class MultiHeadAttention(tf.keras.layers.Layer):
-    '''
-    # 按照过头注意力的结构进行编写
-    参数：
-        inputs: query,key,value
-    '''
-
-    def __init__(self, d_model, num_heads, name="multi_head_attention"):
-        super(MultiHeadAttention, self).__init__(name=name)
-        self.num_heads = num_heads
-        self.d_model = d_model
-
-        assert d_model % self.num_heads == 0
-        self.depth = d_model // self.num_heads
-
-        self.query_dense = tf.keras.layers.Dense(units=d_model)
-        self.key_dense = tf.keras.layers.Dense(units=d_model)
-        self.value_dense = tf.keras.layers.Dense(units=d_model)
-
-        self.dense = tf.keras.layers.Dense(d_model)
-
-    def split_heads(self, inputs, batch_size):
-        inputs = tf.reshape(inputs, (batch_size, -1, self.num_heads, self.depth))
-        return tf.transpose(inputs, perm=[0, 2, 1, 3])
-
-    def call(self, inputs):
-        query, key, value, mask = inputs['query'], inputs['key'], inputs['value'], inputs['mask']
-        batch_size = tf.shape(query)[0]
-
-        query = self.query_dense(query)
-        key = self.key_dense(key)
-        value = self.value_dense(value)
-
-        query = self.split_heads(query, batch_size)
-        key = self.split_heads(key, batch_size)
-        value = self.split_heads(value, batch_size)
-
-        scaled_attention = scaled_dot_product_attention(query, key, value, mask)
-        scaled_attention = tf.transpose(scaled_attention, perm=[0, 2, 1, 3])
-
-        concat_attention = tf.reshape(scaled_attention, (batch_size, -1, self.d_model))
-        output = self.dense(concat_attention)
-
-        return output
 
 
 class PositionalEncoding(tf.keras.layers.Layer):
@@ -83,13 +12,15 @@ class PositionalEncoding(tf.keras.layers.Layer):
         self.pos_encoding = self.positional_encoding(position, d_model)
 
     def get_angles(self, position, i, d_model):
-        angles = 1 / tf.pow(10000, (2 * (i // 2)) / tf.cast(d_model, tf.float32))
+        angles = 1 / tf.pow(10000, (2 * (i // 2)) /
+                            tf.cast(d_model, tf.float32))
         return position * angles
 
     def positional_encoding(self, position, d_model):
         angle_rads = self.get_angles(
             position=tf.range(position, dtype=tf.float32)[:, tf.newaxis],
-            i=tf.range(d_model, dtype=tf.float32)[tf.newaxis, :], d_model=d_model
+            i=tf.range(d_model, dtype=tf.float32)[
+                tf.newaxis, :], d_model=d_model
         )
 
         sines = tf.math.sin(angle_rads[:, 0::2])
@@ -100,6 +31,24 @@ class PositionalEncoding(tf.keras.layers.Layer):
 
     def call(self, inputs):
         return inputs + self.pos_encoding[:, :tf.shape(inputs)[1], :]
+
+
+def create_padding_mask(input):
+    """
+    对input中的padding单位进行mask
+    :param input:
+    :return:
+    """
+    mask = tf.cast(tf.math.equal(input, 0), tf.float32)
+    return mask[:, tf.newaxis, tf.newaxis, :]
+
+
+def create_look_ahead_mask(input):
+    seq_len = tf.shape(input)[1]
+    look_ahead_mask = 1 - \
+        tf.linalg.band_part(tf.ones((seq_len, seq_len)), -1, 0)
+    padding_mask = create_padding_mask(input)
+    return tf.maximum(look_ahead_mask, padding_mask)
 
 
 def transformer_encoder_layer(units, d_model, num_heads, dropout, name="transformer_encoder_layer"):
@@ -123,12 +72,14 @@ def transformer_encoder_layer(units, d_model, num_heads, dropout, name="transfor
     })
 
     attention = tf.keras.layers.Dropout(rate=dropout)(attention)
-    attention = tf.keras.layers.LayerNormalization(epsilon=1e-6)(inputs + attention)
+    attention = tf.keras.layers.LayerNormalization(
+        epsilon=1e-6)(inputs + attention)
 
     outputs = tf.keras.layers.Dense(units=units, activation='relu')(attention)
     outputs = tf.keras.layers.Dense(units=d_model)(outputs)
     outputs = tf.keras.layers.Dropout(rate=dropout)(outputs)
-    outputs = tf.keras.layers.LayerNormalization(epsilon=1e-6)(attention + outputs)
+    outputs = tf.keras.layers.LayerNormalization(
+        epsilon=1e-6)(attention + outputs)
 
     return tf.keras.Model(inputs=[inputs, padding_mask], outputs=outputs, name=name)
 
@@ -137,7 +88,8 @@ def transformer_encoder_layer(units, d_model, num_heads, dropout, name="transfor
 def transformer_decoder_layer(units, d_model, num_heads, dropout, name="transformer_decoder_layer"):
     inputs = tf.keras.Input(shape=(None, d_model), name="inputs")
     enc_outputs = tf.keras.Input(shape=(None, d_model), name="encoder_outputs")
-    look_ahead_mask = tf.keras.Input(shape=(1, None, None), name="look_ahead_mask")
+    look_ahead_mask = tf.keras.Input(
+        shape=(1, None, None), name="look_ahead_mask")
     padding_mask = tf.keras.Input(shape=(1, 1, None), name="padding_mask")
 
     attention1 = MultiHeadAttention(d_model, num_heads, name="attention_1")(inputs={
@@ -146,7 +98,8 @@ def transformer_decoder_layer(units, d_model, num_heads, dropout, name="transfor
         'value': inputs,
         'mask': look_ahead_mask
     })
-    attention1 = tf.keras.layers.LayerNormalization(epsilon=1e-6)(attention1 + inputs)
+    attention1 = tf.keras.layers.LayerNormalization(
+        epsilon=1e-6)(attention1 + inputs)
 
     attention2 = MultiHeadAttention(d_model, num_heads, name="attention_2")(inputs={
         'query': attention1,
@@ -155,18 +108,21 @@ def transformer_decoder_layer(units, d_model, num_heads, dropout, name="transfor
         'mask': padding_mask
     })
     attention2 = tf.keras.layers.Dropout(rate=dropout)(attention2)
-    attention2 = tf.keras.layers.LayerNormalization(epsilon=1e-6)(attention2 + attention1)
+    attention2 = tf.keras.layers.LayerNormalization(
+        epsilon=1e-6)(attention2 + attention1)
 
     outputs = tf.keras.layers.Dense(units=units, activation='relu')(attention2)
     outputs = tf.keras.layers.Dense(units=d_model)(outputs)
     outputs = tf.keras.layers.Dropout(rate=dropout)(outputs)
-    outputs = tf.keras.layers.LayerNormalization(epsilon=1e-6)(outputs + attention2)
+    outputs = tf.keras.layers.LayerNormalization(
+        epsilon=1e-6)(outputs + attention2)
 
     return tf.keras.Model(
         inputs=[inputs, enc_outputs, look_ahead_mask, padding_mask],
         outputs=outputs,
         name=name
     )
+
 
 def encoder(vocab_size, num_layers, units, d_model,
             num_heads, dropout, name="encoder"):
@@ -189,13 +145,13 @@ def encoder(vocab_size, num_layers, units, d_model,
     padding_mask = tf.keras.Input(shape=(1, 1, None), name="padding_mask")
     embeddings = tf.keras.layers.Embedding(vocab_size, d_model)(inputs)
     embeddings *= tf.math.sqrt(tf.cast(d_model, tf.float32))
-    embeddings = layers.PositionalEncoding(vocab_size, d_model)(embeddings)
+    embeddings = PositionalEncoding(vocab_size, d_model)(embeddings)
 
     outputs = tf.keras.layers.Dropout(rate=dropout)(embeddings)
 
     # 这里layer使用的name是为了调试的时候答应信息方便查看，也可以不写
     for i in range(num_layers):
-        outputs = layers.transformer_encoder_layer(
+        outputs = transformer_encoder_layer(
             units=units,
             d_model=d_model,
             num_heads=num_heads,
@@ -222,17 +178,18 @@ def decoder(vocab_size, num_layers, units, d_model, num_heads, dropout, name="de
     """
     inputs = tf.keras.Input(shape=(None,), name="inputs")
     enc_outputs = tf.keras.Input(shape=(None, d_model), name="encoder_outputs")
-    look_ahead_mask = tf.keras.Input(shape=(1, None, None), name="look_ahead_mask")
+    look_ahead_mask = tf.keras.Input(
+        shape=(1, None, None), name="look_ahead_mask")
     padding_mask = tf.keras.Input(shape=(1, 1, None), name='padding_mask')
 
     embeddings = tf.keras.layers.Embedding(vocab_size, d_model)(inputs)
     embeddings *= tf.math.sqrt(tf.cast(d_model, tf.float32))
-    embeddings = layers.PositionalEncoding(vocab_size, d_model)(embeddings)
+    embeddings = PositionalEncoding(vocab_size, d_model)(embeddings)
 
     outputs = tf.keras.layers.Dropout(rate=dropout)(embeddings)
 
     for i in range(num_layers):
-        outputs = layers.transformer_decoder_layer(
+        outputs = transformer_decoder_layer(
             units=units, d_model=d_model, num_heads=num_heads,
             dropout=dropout, name="transformer_decoder_layer_{}".format(i),
         )(inputs=[outputs, enc_outputs, look_ahead_mask, padding_mask])
@@ -262,17 +219,17 @@ def transformer(vocab_size, num_layers, units, d_model,
 
     # 使用了Lambda将方法包装成层，为的是满足函数式API的需要
     enc_padding_mask = tf.keras.layers.Lambda(
-        _data.create_padding_mask, output_shape=(1, 1, None),
+        create_padding_mask, output_shape=(1, 1, None),
         name="enc_padding_mask"
     )(inputs)
 
     look_ahead_mask = tf.keras.layers.Lambda(
-        _data.create_look_ahead_mask, output_shape=(1, None, None),
+        create_look_ahead_mask, output_shape=(1, None, None),
         name="look_ahead_mask"
     )(dec_inputs)
 
     dec_padding_mask = tf.keras.layers.Lambda(
-        _data.create_padding_mask, output_shape=(1, 1, None),
+        create_padding_mask, output_shape=(1, 1, None),
         name="dec_padding_mask"
     )(inputs)
 
@@ -286,7 +243,8 @@ def transformer(vocab_size, num_layers, units, d_model,
         d_model=d_model, num_heads=num_heads, dropout=dropout
     )(inputs=[dec_inputs, enc_outputs, look_ahead_mask, dec_padding_mask])
 
-    outputs = tf.keras.layers.Dense(units=vocab_size, name="outputs")(dec_outputs)
+    outputs = tf.keras.layers.Dense(
+        units=vocab_size, name="outputs")(dec_outputs)
     return tf.keras.Model(inputs=[inputs, dec_inputs], outputs=outputs, name=name)
 
 
@@ -311,7 +269,8 @@ def gumbel_softmax(inputs, alpha):
 
 
 def embedding_mix(gumbel_inputs, inputs):
-    probability = tf.random.uniform(shape=tf.shape(inputs), maxval=1, minval=0, dtype=tf.float32)
+    probability = tf.random.uniform(shape=tf.shape(
+        inputs), maxval=1, minval=0, dtype=tf.float32)
     return tf.where(probability < 0.3, x=gumbel_inputs, y=inputs)
 
 
@@ -334,17 +293,17 @@ def transformer_scheduled_sample(vocab_size, num_layers, units, d_model, num_hea
 
     # 使用了Lambda将方法包装成层，为的是满足函数式API的需要
     enc_padding_mask = tf.keras.layers.Lambda(
-        _data.create_padding_mask, output_shape=(1, 1, None),
+        create_padding_mask, output_shape=(1, 1, None),
         name="enc_padding_mask"
     )(inputs)
 
     look_ahead_mask = tf.keras.layers.Lambda(
-        _data.create_look_ahead_mask, output_shape=(1, None, None),
+        create_look_ahead_mask, output_shape=(1, None, None),
         name="look_ahead_mask"
     )(dec_inputs)
 
     dec_padding_mask = tf.keras.layers.Lambda(
-        _data.create_padding_mask, output_shape=(1, 1, None),
+        create_padding_mask, output_shape=(1, 1, None),
         name="dec_padding_mask"
     )(inputs)
 
@@ -358,7 +317,8 @@ def transformer_scheduled_sample(vocab_size, num_layers, units, d_model, num_hea
         d_model=d_model, num_heads=num_heads, dropout=dropout
     )
 
-    dec_first_outputs = transformer_decoder(inputs=[dec_inputs, enc_outputs, look_ahead_mask, dec_padding_mask])
+    dec_first_outputs = transformer_decoder(
+        inputs=[dec_inputs, enc_outputs, look_ahead_mask, dec_padding_mask])
 
     # dec_outputs的几种方式
     # 1. dec_outputs = tf.argmax(dec_outputs, axis=-1)  # 使用这个方式的话，就是直接返回最大的概率用来作为decoder的inputs
@@ -369,27 +329,11 @@ def transformer_scheduled_sample(vocab_size, num_layers, units, d_model, num_hea
     gumbel_outputs = gumbel_softmax(dec_first_outputs, alpha=alpha)
     dec_first_outputs = embedding_mix(gumbel_outputs, dec_inputs)
 
-    dec_second_outputs = transformer_decoder(inputs=[dec_first_outputs, enc_outputs, look_ahead_mask, dec_padding_mask])
-    outputs = tf.keras.layers.Dense(units=vocab_size, name="outputs")(dec_second_outputs)
+    dec_second_outputs = transformer_decoder(
+        inputs=[dec_first_outputs, enc_outputs, look_ahead_mask, dec_padding_mask])
+    outputs = tf.keras.layers.Dense(
+        units=vocab_size, name="outputs")(dec_second_outputs)
     return tf.keras.Model(inputs=[inputs, dec_inputs], outputs=outputs, name=name)
-
-
-class CustomSchedule(tf.keras.optimizers.schedules.LearningRateSchedule):
-    """
-    优化器将 Adam 优化器与自定义的学习速率调度程序配合使用，这里直接参考了官网的实现
-    因为是公式的原因，其实大同小异
-    """
-
-    def __init__(self, d_model, warmup_steps=4000):
-        super(CustomSchedule, self).__init__()
-        self.d_model = d_model
-        self.d_model = tf.cast(self.d_model, tf.float32)
-        self.warmup_steps = warmup_steps
-
-    def __call__(self, step):
-        arg1 = tf.math.rsqrt(step)
-        arg2 = step * (self.warmup_steps ** -1.5)
-        return tf.math.rsqrt(self.d_model) * tf.math.minimum(arg1, arg2)
 
 
 def accuracy(real, pred):
