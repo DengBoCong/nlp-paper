@@ -9,10 +9,14 @@ Paper-Recurrence | Still work
 目前我的想法是直接复现论文时，只上传模型结构的代码，这样有利于缩小项目体积（本项目毕竟不是代码项目）。当然，如果有对部分复现代码感兴趣的伙伴，想要提出交流或者想要我实现完整过程等，欢迎提Issue。
 
 # Coder | 模型代码
-1. [Transformer](https://github.com/DengBoCong/paper/blob/master/paper-code/transformer.py)
-2. [Scheduled Sampling for Transformer](https://github.com/DengBoCong/paper/blob/master/paper-code/transformer.py)
-3. [GPT2](https://github.com/DengBoCong/paper/blob/master/paper-code/gpt2.py)
+### Tensorflow2.3
+1. [Transformer](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/transformer.py)
+2. [Scheduled Sampling for Transformer](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/transformer.py)
+3. [GPT2](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/gpt2.py)
 4. [GPT2-TF2.3完整仓库](https://github.com/DengBoCong/GPT2-TF2.3)：使用GPT2以及TensorFlow2.3实现闲聊，后续更新PyTorch。
-5. [Sequential Matching Network](https://github.com/DengBoCong/paper/blob/master/paper-code/smn.py)
-6. [Seq-to-Seq base](https://github.com/DengBoCong/paper/blob/master/paper-code/seq2seq.py)
-7. [Neural Belief Tracker](https://github.com/DengBoCong/paper/blob/master/paper-code/nbt.py)
+5. [Sequential Matching Network](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/smn.py)
+6. [Seq-to-Seq base](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/seq2seq.py)
+7. [Neural Belief Tracker](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/nbt.py)
+
+### Pytorch1.7.0
+[Seq-to-Seq base](https://github.com/DengBoCong/paper/blob/master/paper-code/pytorch_src/seq2seq)：包含完整数据处理、训练、对话、模型保存恢复等代码
