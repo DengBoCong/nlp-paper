@@ -9,6 +9,7 @@ NLP-Paper | Still work
 + [预训练](#预训练)
 + [模型](#模型)
 + [对话系统](#对话系统)
++ [语音系统](#语音系统)
 + [数据集](#数据集)
 + [评估](#评估)
 + [其他](#其他)
@@ -36,6 +37,9 @@ NLP-Paper | Still work
 4. [Global-Locally Self-Attentive Dialogue State Tracker](https://arxiv.org/pdf/1805.09655.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dialogue/Global_Locally_Self_Attentive_Dialogue_State_Tracker.md)：全局-局部自注意力状态跟踪 | Zhong et al,2018
 5. [Sequential Matching Network: A New Architecture for Multi-turn Response Selection in Retrieval-Based Chatbots](https://arxiv.org/pdf/1612.01627v2.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dialogue/Sequential_Matching_Network_A_New_Architecture_for_Multi_turn_Response_Selection_in_Retrieva.md)：SMN检索式对话模型，多层多粒度提取信息 | Devlin et al,2018
 6. [Multi-Turn Response Selection for Chatbots with Deep Attention Matching Network](https://www.aclweb.org/anthology/P18-1103.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dialogue/Multi_Turn_Response_Selection_for_Chatbots_with_Deep_Attention_Matching_Network.md)：DAM检索式对话模型，完全基于注意力机制的多层多粒度提取信息 | Xiangyang et al,2018
+
+# Speech | 语音系统
+1. [A Comparative Study on Transformer vs RNN in Speech Applications](https://arxiv.org/pdf/1909.06317.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/speech/A_Comparative_Study_on_Transformer_vs_RNN_in_Speech_Applications.md)：Transformer应用在语音领域上与RNN对比的论文，并在ESPnet上面开源了模型代码 | Nanxin et al,2019
 
 # Dataset | 数据集
 1. [CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset](https://arxiv.org/pdf/2002.11893.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dataset/CrossWOZ.md)：第一个大规模的中文跨域任务导向对话数据集 | Qi Zhu et al,2020
