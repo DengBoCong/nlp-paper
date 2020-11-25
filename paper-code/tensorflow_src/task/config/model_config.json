@@ -1,0 +1,20 @@
+{
+  "train_data": "checkpoint",
+  "units": 150,
+  "vocab_size": 20000,
+  "embedding_dim": 256,
+  "use_pretrained_embedding": true,
+  "kb": "data/kb.json",
+  "sent_groups": "data/groups.json",
+  "database": "data/database.json",
+  "ontology": "data/ontology.json",
+  "semi_dict": "data/semi_dict.json",
+  "dialogues_train": "data/woz_train_en.json",
+  "tokenized_data": "data/dialogues_tokenized.txt",
+  "dict_fn": "data/task_dict.json",
+  "kb_indicator_len": 3,
+  "beam_size": 3,
+  "max_length": 300,
+  "max_train_data_size": 30,
+  "epochs": 2
+}
