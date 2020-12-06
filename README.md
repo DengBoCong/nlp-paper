@@ -50,6 +50,7 @@ NLP-Paper | Still work
 
 # Speech | 语音系统
 1. [A Comparative Study on Transformer vs RNN in Speech Applications](https://arxiv.org/pdf/1909.06317.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/speech/A_Comparative_Study_on_Transformer_vs_RNN_in_Speech_Applications.md)：Transformer应用在语音领域上与RNN对比的论文，并在ESPnet上面开源了模型代码 | Nanxin et al,2019
+2. [Neural Speech Synthesis with Transformer Network](https://arxiv.org/pdf/1809.08895.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/speech/Neural_Speech_Synthesis_with_Transformer_Network.md)：本文受Transformer启发，使用多头自注意力机制取代Tacotron2中的RNN结构和原始注意力机制。 | Naihan et al,2018
 
 # Dataset | 数据集
 1. [CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset](https://arxiv.org/pdf/2002.11893.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/dataset/CrossWOZ.md)：第一个大规模的中文跨域任务导向对话数据集 | Qi Zhu et al,2020
