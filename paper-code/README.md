@@ -8,15 +8,27 @@ Paper-Recurrence | Still work
 
 目前我的想法是直接复现论文时，只上传模型结构的代码，这样有利于缩小项目体积（本项目毕竟不是代码项目）。当然，如果有对部分复现代码感兴趣的伙伴，想要提出交流或者想要我实现完整过程等，欢迎提Issue。
 
-# Coder | 模型代码
-### Tensorflow2.3
-1. [Transformer](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/transformer.py)
-2. [Scheduled Sampling for Transformer](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/transformer.py)
-3. [GPT2](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/gpt2.py)
-4. [GPT2-TF2.3完整仓库](https://github.com/DengBoCong/GPT2-TF2.3)：使用GPT2以及TensorFlow2.3实现闲聊，后续更新PyTorch。
-5. [Sequential Matching Network](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/smn.py)
-6. [Seq-to-Seq base](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/seq2seq.py)
-7. [Neural Belief Tracker](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/nbt.py)
+# Data | 数据
+1. [smudict](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/data/cmudict-0.7b)
+2. [thchs30](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/data/lexicon.txt)
 
-### Pytorch1.7.0
-[Seq-to-Seq base](https://github.com/DengBoCong/paper/blob/master/paper-code/pytorch_src/seq2seq)：包含完整数据处理、训练、对话、模型保存恢复等代码
+# Code | 模型代码
+
+1. [Byte Pair Encoding（BPE）](https://github.com/DengBoCong/paper/blob/master/paper-code/bpe.py)：论文代码
+
+## Tensorflow2.3
+### Tools
+1. [en_text_to_phoneme](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/tools/en_text_to_phoneme.py)
+### Models
+1. [Transformer](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/transformer.py)
+2. [Scheduled Sampling for Transformer](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/transformer.py)
+3. [GPT2](https://github.com/DengBoCong/paper/blob/master/paper-code/tensorflow_src/models/gpt2.py)
+4. [GPT2-TF2.3完整仓库](https://github.com/DengBoCong/GPT2-TF2.3)：使用GPT2以及TensorFlow2.3实现闲聊，后续更新PyTorch。
+5. [Sequential Matching Network](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/smn.py)
+6. [Seq-to-Seq base](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/seq2seq.py)
+7. [Neural Belief Tracker](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/nbt.py)
+8. [An End-to-End Trainable Neural Network Model with
+Belief Tracking for Task-Oriented Dialog](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/task)
+
+## Pytorch1.7.0
+[Seq-to-Seq base](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/pytorch_src/seq2seq)：包含完整数据处理、训练、对话、模型保存恢复等代码

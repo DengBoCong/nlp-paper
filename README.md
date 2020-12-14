@@ -2,7 +2,7 @@ NLP-Paper | Still work
 ========================
 本人在学习的过程中觉得值得阅读的论文就更新上来，对于自己精读的论文，会写一些阅读笔记上传，有兴趣的也可以一同更新完善。(内容同步更新到[CSDN](https://dengbocong.blog.csdn.net/)、[知乎](https://www.zhihu.com/people/dengbocong))
 
-**注：对部分复现论文代码放在这 ☞ [paper-code](https://github.com/DengBoCong/paper/tree/master/paper-code)**
+**注：对部分复现论文代码以及NLP其他工具代码放在这 ☞ [paper-code](https://github.com/DengBoCong/paper/tree/master/paper-code)**
 
 # Contents | 内容
 + [综述](#综述)
