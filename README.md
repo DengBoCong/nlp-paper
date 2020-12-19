@@ -53,6 +53,7 @@ NLP-Paper | Still work
 2. [Neural Speech Synthesis with Transformer Network](https://arxiv.org/pdf/1809.08895.pdf) | [阅读笔记](https://github.com/DengBoCong/nlp-paper/blob/master/paper-list/speech/Neural_Speech_Synthesis_with_Transformer_Network.md)：本文受Transformer启发，使用多头自注意力机制取代Tacotron2中的RNN结构和原始注意力机制。 | Naihan et al,2018
 3. [Tacotron: A Fully End-To-End Text-To-Speech Synthesis Model](http://bengio.abracadoudou.com/cv/publications/pdf/wang_2017_arxiv.pdf) | [阅读笔记](https://github.com/DengBoCong/nlp-paper/blob/master/paper-list/speech/tacotron_tacotron2.md)：Tacotron，端到端的语音合成系统 | Yuxuan et al,2017
 4. [Natural TTS Synthesis By Conditioning Wavenet On Mel Spectrogram Predictions](https://arxiv.org/pdf/1712.05884.pdf) | [阅读笔记](https://github.com/DengBoCong/nlp-paper/blob/master/paper-list/speech/tacotron_tacotron2.md)：Tacotron2，相较于Tacotron有着更好的性能，使用WaveNet作为Vocoder | Jonathan et al,2017
+5. [Attention-Based Models for Speech Recognition](https://proceedings.neurips.cc/paper/2015/file/1068c6e4c8051cfd4e9ea8072e3189e2-Paper.pdf)：Tacotron2使用的Location Sensitive Attention  |  Chorowski et al,2015
 
 # Dataset | 数据集
 1. [CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset](https://arxiv.org/pdf/2002.11893.pdf) | [阅读笔记](https://github.com/DengBoCong/nlp-paper/blob/master/paper-list/dataset/CrossWOZ.md)：第一个大规模的中文跨域任务导向对话数据集 | Qi Zhu et al,2020
@@ -70,3 +71,7 @@ NLP-Paper | Still work
 4. [ProjectionNet: Learning Efficient On-Device Deep Networks Using Neural Projections](https://arxiv.org/pdf/1708.00630.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/other/ProjectionNet_Learning_Efficient_On_Device_Deep_Networks_Using_Neural_Projections.md)：一种叫ProjectionNet的联合框架，可以为不同机器学习模型架构训练轻量的设备端模型。 | Google et al,2017
 
 5. [Massive Exploration of Neural Machine Translation Architectures](https://arxiv.org/pdf/1703.03906.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/other/Massive_Exploration_of_Neural_Machine_Translation_Architectures.md)：展示了以NMT架构超参数为例的首次大规模分析，实验为构建和扩展NMT体系结构带来了新颖的见解和实用建议。 | Denny et al,2017
+
+6. [NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE](https://arxiv.org/pdf/1409.0473.pdf)：Bahdanau Attention的原文 | Bahdanau et al,2014
+
+7. [Effective Approaches to Attention-based Neural Machine Translation](https://arxiv.org/pdf/1508.04025.pdf)：Luong Attention的原文 | Luong et al,2015
