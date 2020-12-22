@@ -54,6 +54,7 @@ NLP-Paper | Still work
 3. [Tacotron: A Fully End-To-End Text-To-Speech Synthesis Model](http://bengio.abracadoudou.com/cv/publications/pdf/wang_2017_arxiv.pdf) | [阅读笔记](https://github.com/DengBoCong/nlp-paper/blob/master/paper-list/speech/tacotron_tacotron2.md)：Tacotron，端到端的语音合成系统 | Yuxuan et al,2017
 4. [Natural TTS Synthesis By Conditioning Wavenet On Mel Spectrogram Predictions](https://arxiv.org/pdf/1712.05884.pdf) | [阅读笔记](https://github.com/DengBoCong/nlp-paper/blob/master/paper-list/speech/tacotron_tacotron2.md)：Tacotron2，相较于Tacotron有着更好的性能，使用WaveNet作为Vocoder | Jonathan et al,2017
 5. [Attention-Based Models for Speech Recognition](https://proceedings.neurips.cc/paper/2015/file/1068c6e4c8051cfd4e9ea8072e3189e2-Paper.pdf)：Tacotron2使用的Location Sensitive Attention  |  Chorowski et al,2015
+6. [Syllable-Based Sequence-to-Sequence Speech Recognition with the Transformer in Mandarin Chinese](https://arxiv.org/pdf/1804.10752.pdf)：使用Transformer应用在普通话语音识别，数据集是HKUST datasets  |  Shiyu et al,2018
 
 # Dataset | 数据集
 1. [CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset](https://arxiv.org/pdf/2002.11893.pdf) | [阅读笔记](https://github.com/DengBoCong/nlp-paper/blob/master/paper-list/dataset/CrossWOZ.md)：第一个大规模的中文跨域任务导向对话数据集 | Qi Zhu et al,2020
