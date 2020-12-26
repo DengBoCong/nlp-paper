@@ -76,3 +76,5 @@ NLP-Paper | Still work
 6. [NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE](https://arxiv.org/pdf/1409.0473.pdf)：Bahdanau Attention的原文 | Bahdanau et al,2014
 
 7. [Effective Approaches to Attention-based Neural Machine Translation](https://arxiv.org/pdf/1508.04025.pdf)：Luong Attention的原文 | Luong et al,2015
+
+8. [Covariate Shift: A Review and Analysis on Classifiers](https://ieeexplore.ieee.org/abstract/document/8978471) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/other/Covariate_Shift_A_Review_and_Analysis_on_Classifiers.md)：通过几种分类算法，在四种不同的数据集下验证几种方法处理Covariate Shift问题后的性能分析 | Geeta et al,2019
