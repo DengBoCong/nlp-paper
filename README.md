@@ -84,3 +84,7 @@ NLP-Paper | Still work
 10. [How Does Batch Normalization Help Optimization?](https://arxiv.org/pdf/1805.11604.pdf)：讨论Batch Normalization是如何帮助优化器工作的，主要结论是BN层能够让损失函数更加平滑 | Shibani et al,2018
 
 11. [An empirical analysis of the optimization of deep network loss surfaces](https://arxiv.org/pdf/1612.04010.pdf)：论文中得出一个结论，即Batch Normalization更有利于梯度下降 | Shibani et al,2018
+
+12. [Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks](https://arxiv.org/pdf/1602.07868.pdf)：Weight Normalization是一种在权值维度上进行归一化的方法 | Tim Salimans et al,2016
+
+13. [Cosine Normalization: Using Cosine Similarity Instead of Dot Product in Neural Networks](https://arxiv.org/pdf/1702.05870v5.pdf)：Cosine Normalization是一种将unbounded的向量点积换成夹角余弦操作，从而进行归一化的方法 | Luo Chunjie et al,2017
