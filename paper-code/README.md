@@ -6,7 +6,7 @@ Paper-Recurrence | Still work
 # Notice | 特别说明
 **特别说明**：此处模型代码为纯模型结构的代码，且都经过本人训练、测试、评价使用无误的代码，在代码关键处我添加了必要的注释，可以放心使用。
 
-目前我的想法是直接复现论文时，只上传模型结构的代码，这样有利于缩小项目体积（本项目毕竟不是代码项目）。当然，如果有对部分复现代码感兴趣的伙伴，想要提出交流或者想要我实现完整过程等，欢迎提Issue。
+目前我的想法是直接复现论文时，只上传模型结构的代码，这样有利于缩小项目体积（后续逐步构建完善）。当然，如果有对部分复现代码感兴趣的伙伴，想要提出交流或者想要我实现完整过程等，欢迎提Issue。
 
 # Data | 数据
 1. [smudict](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/data/cmudict-0.7b)
@@ -17,6 +17,7 @@ Paper-Recurrence | Still work
 1. [Byte Pair Encoding（BPE）](https://github.com/DengBoCong/paper/blob/master/paper-code/bpe.py)：论文代码
 2. [Batch Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/batch_normalization.py)
 3. [Cosine Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/conv2d_cosnorm.py)
+4. [Group Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/group_normalization.py)
 
 ## Tensorflow2.3
 ### Tools
