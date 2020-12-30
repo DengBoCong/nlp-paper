@@ -17,7 +17,7 @@ Paper-Recurrence | Still work
 1. [Byte Pair Encoding（BPE）](https://github.com/DengBoCong/paper/blob/master/paper-code/bpe.py)：论文代码
 2. [Batch Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/batch_normalization.py)
 3. [Cosine Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/conv2d_cosnorm.py)
-4. [Group Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/group_normalization.py)
+4. [Group Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/group_normalization.py)：论文代码
 
 ## Tensorflow2.3
 ### Tools
