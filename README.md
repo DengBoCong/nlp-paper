@@ -12,7 +12,7 @@ NLP-Paper | Still work
 + [语音系统](#语音系统)
 + [数据集](#数据集)
 + [评估](#评估)
-+ [其他](#其他)
++ [深度学习](#深度学习)
 
 # Summarize | 综述
 1. [A Survey on Dialogue Systems:Recent Advances and New Frontiers](https://arxiv.org/pdf/1711.01731.pdf)：对话系统的最新研究和方向 | Chen et al,2017
@@ -65,7 +65,7 @@ NLP-Paper | Still work
 
 # Evaluate | 评估
 新增
-# Other | 其他
+# Other | 深度学习
 1. [Layer Normalization](https://arxiv.org/pdf/1607.06450.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/other/Layer_Normalization.md)：层归一化方法，针对Batch Normalization的改进 | Jimmy et al,2016
 2. [Scheduled Sampling for Transformers](https://arxiv.org/pdf/1906.07651.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/other/Scheduled_Sampling_for_Transformers.md)：在Transformer应用Scheduled Sampling | Mihaylova et al,2019
 3. [Self-Attention with Relative Position Representations](https://arxiv.org/pdf/1803.02155.pdf) | [阅读笔记](https://github.com/DengBoCong/paper/blob/master/paper-list/other/Self_Attention_with_Relative_Position_Representations.md)：对Transformer里面用到的位置编码进行讨论，对自注意力进行改造，从而使用相对位置编码代替硬位置编码 | Mihaylova et al,2019
@@ -92,3 +92,7 @@ NLP-Paper | Still work
 14. [Group Normalization](https://arxiv.org/pdf/1803.08494.pdf)：Group Normalization是将输入的通道分成较小的子组，并根据其均值和方差归一化这些值 | Yuxin Wu et al,2018
 
 15. [Instance Normalization:The Missing Ingredient for Fast Stylization](https://arxiv.org/pdf/1607.08022.pdf)Instance Normalization是一种不受限于批量大小的算法专门用于Texture Network中的生成器网络 | Dmitry Ulyanov et al,2016
+
+16. [Convolutional Neural Networks at Constrained Time Cost](https://arxiv.org/pdf/1412.1710.pdf) 针对卷积网络很好地概述了计算成本以及深度，过滤器尺寸之间的权衡 | Kaiming He et al,2014
+
+17. [Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/pdf/1506.02626.pdf) 有一张表格，其中列出了计算与内存访问的相对成本，除此之外还讨论了怎么精简神经网络 | Song Han et al,2015
