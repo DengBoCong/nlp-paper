@@ -11,6 +11,7 @@ Paper-Recurrence | Still work
 # Data | 数据
 1. [smudict](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/data/cmudict-0.7b)
 2. [thchs30](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/data/lexicon.txt)
+3. [ubuntu corpus](http://dataset.cs.mcgill.ca/ubuntu-corpus-1.0/)
 
 # Code | 模型代码
 
