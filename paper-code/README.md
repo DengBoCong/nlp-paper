@@ -12,6 +12,9 @@ Paper-Recurrence | Still work
 1. [smudict](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/data/cmudict-0.7b)
 2. [thchs30](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/data/lexicon.txt)
 3. [ubuntu corpus](http://dataset.cs.mcgill.ca/ubuntu-corpus-1.0/)
+4. TrecQA：TrecQA是QA最广泛评估和长期作为标准的数据集之一，用于回答基于事实的问题的任务
+5. QatarLiving：答案通常是主观的而不是事实的，在这个数据集中，每个问题有十个答案，标记为“正向”和“负向”
+6. Tweet Reply Prediction：数据集中包含对知名品牌的Tweet-Response对
 
 # Code | 模型代码
 
