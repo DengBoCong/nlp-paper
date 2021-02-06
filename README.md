@@ -131,6 +131,10 @@ NLP-Paper | Still work
 
 16. [Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/pdf/1506.02626.pdf)：有一张表格，其中列出了计算与内存访问的相对成本，除此之外还讨论了怎么精简神经网络 | Song Han et al,2015
 
+17. [Consistency of a Recurrent Language Model With Respect to Incomplete Decoding](https://arxiv.org/pdf/2002.02492.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/349675973)：讨论Seq2Seq模型解码停不下来的原因 | Sean Welleck et al,2020
+
+18. [A Theoretical Analysis of the Repetition Problem in Text Generation](https://arxiv.org/pdf/2012.14660.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/349675973)：讨论Seq2Seq模型解码重复生成的原因 | Zihao Fu et al,2020
+
 # Machine Learning | 机器学习
 
 1. [Optimal Whitening and Decorrelation](https://arxiv.org/pdf/1512.00809.pdf)：提供五种白化方法的数学证明 | Agnan Kessy et al,2015
