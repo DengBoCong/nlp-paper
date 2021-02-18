@@ -16,6 +16,10 @@ Paper-Recurrence | Still work
 5. QatarLiving：答案通常是主观的而不是事实的，在这个数据集中，每个问题有十个答案，标记为“正向”和“负向”
 6. Tweet Reply Prediction：数据集中包含对知名品牌的Tweet-Response对
 
+7. [ETT(变电站温度数据)](https://github.com/zhouhaoyi/ETDataset)
+8. [ECL(耗电量数据)](https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014)
+9. [天气数据](https://www.ncdc.noaa.gov/orders/qclcd/)
+
 # Code | 模型代码
 
 1. [Byte Pair Encoding（BPE）](https://github.com/DengBoCong/paper/blob/master/paper-code/bpe.py)：论文代码
