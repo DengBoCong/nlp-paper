@@ -45,6 +45,8 @@ NLP-Paper | Still work
 
 11. [Pre-trained Models for Natural Language Processing: A Survey](https://arxiv.org/pdf/2003.08271.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/352152573)：超详细的NLP预训练语言模型总结清单 | Xipeng Qiu et al,2020
 
+12. [How to Fine-Tune BERT for Text Classification?](https://arxiv.org/pdf/1905.05583.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/358516009)：BERT在Text Classification上的一些微调实验 | Xipeng Qiu et al,2019
+
 # Model | 模型
 1. [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/250946855)：Transformer的开山之作，值得精读 | Ashish et al,2017
 
