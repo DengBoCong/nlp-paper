@@ -1,3 +1,31 @@
+import os
+import jieba
+import multiprocessing as mt
+import tensorflow as tf
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.text import tokenizer_from_json
+from typing import Any
+from typing import AnyStr
+from typing import NoReturn
+from typing import List
+
+MAX_SENTENCE_LEN = 20  # 最大句子长度
+
+def load_tokenizer(dict_path: AnyStr) -> Tokenizer:
+    """ 加载分词器工具
+
+    :param dict_path: 字典路径
+    :return: 分词器
+    """
+    if not os.path.exists(dict_path):
+        raise FileNotFoundError("字典不存在，请检查后重试！")
+
+    with open(dict_path, "r", encoding="utf-8") as dict_file:
+        json_string = dict_file.read().strip().strip("\n")
+        tokenizer = tokenizer_from_json(json_string=json_string)
+
+    return tokenizer
+
 def preprocess_raw_data(data_path: AnyStr, record_data_path: AnyStr, dict_path: AnyStr,
                         max_len: Any, max_data_size: Any = 0, pair_size: Any = 3) -> NoReturn:
     """ 处理原始数据，并将处理后的数据保存为TFRecord格式

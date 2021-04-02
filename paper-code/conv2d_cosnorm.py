@@ -1,3 +1,5 @@
+import tensorflow as tf
+
 def conv2d_cosnorm(x, w, strides, padding, bias=0.0001):
     """
     conv2d_cosnorm

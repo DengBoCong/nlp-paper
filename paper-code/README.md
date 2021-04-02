@@ -26,10 +26,16 @@ Paper-Recurrence | Still work
 2. [Batch Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/batch_normalization.py)
 3. [Cosine Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/conv2d_cosnorm.py)
 4. [Group Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/group_normalization.py)：论文代码
+5. [data_enhancement](https://github.com/DengBoCong/paper/blob/master/paper-code/data_enhancement.py)：文本匹配中句子对数据增强
 
 ## Tensorflow2.3
 ### Tools
-1. [en_text_to_phoneme](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/tools/en_text_to_phoneme.py)
+1. [en_text_to_phoneme](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/tools/en_text_to_phoneme.py)：文本转音素的切分方式
+2. [preprocess_tfrecord](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/tools/preprocess_tfrecord.py)：TFRecord格式保存以及Dataset加载
+3. [attention](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/tools/attention.py)：加法、点乘、自注意力等各类Attention实现
+4. [logME](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/tools/logME.py)：预训练模型评估方法
+
+
 ### Models
 1. [Transformer](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/transformer.py)
 2. [Scheduled Sampling for Transformer](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/transformer.py)
@@ -38,8 +44,13 @@ Paper-Recurrence | Still work
 5. [Sequential Matching Network](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/smn.py)
 6. [Seq-to-Seq base](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/seq2seq.py)
 7. [Neural Belief Tracker](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/nbt.py)
-8. [An End-to-End Trainable Neural Network Model with
-Belief Tracking for Task-Oriented Dialog](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/task)
+8. [An End-to-End Trainable Neural Network Model with Belief Tracking for Task-Oriented Dialog](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/task)
+9. [SMN](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/smn.py)
+10. [DAM](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/DAM.py)
+11. [Informer](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/informer.py)
 
 ## Pytorch1.7.0
 [Seq-to-Seq base](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/pytorch_src/seq2seq)：包含完整数据处理、训练、对话、模型保存恢复等代码
+
+### Tools
+[logME](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/pytorch_src/logME.py)：预训练模型评估方法
