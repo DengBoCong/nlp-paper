@@ -48,6 +48,7 @@ Paper-Recurrence | Still work
 9. [SMN](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/smn.py)
 10. [DAM](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/DAM.py)
 11. [Informer](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/informer.py)
+12. [InferSent](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/models/InferSent.py)：七种方式中，选用BiLSTM+Max Pooling+BERT Base融合
 
 ## Pytorch1.7.0
 [Seq-to-Seq base](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/pytorch_src/seq2seq)：包含完整数据处理、训练、对话、模型保存恢复等代码
