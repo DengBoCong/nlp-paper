@@ -28,6 +28,8 @@ Paper-Recurrence | Still work
 4. [Group Normalization](https://github.com/DengBoCong/paper/blob/master/paper-code/group_normalization.py)：论文代码
 5. [data_enhancement](https://github.com/DengBoCong/paper/blob/master/paper-code/data_enhancement.py)：文本匹配中句子对数据增强
 
+6. [SIF和USIF](https://github.com/DengBoCong/sentence2vec/blob/main/sentence2vec/transform.py)：SIF和uSIF的Sentence Embedding实现
+
 ## Tensorflow2.3
 ### Tools
 1. [en_text_to_phoneme](https://github.com/DengBoCong/nlp-paper/blob/master/paper-code/tensorflow_src/tools/en_text_to_phoneme.py)：文本转音素的切分方式
