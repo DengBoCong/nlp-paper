@@ -12,6 +12,7 @@ NLP-Paper | Still work
 + [语音系统](#语音系统)
 + [数据集](#数据集)
 + [评估](#评估)
++ [文本相似度(匹配)](文本相似度(匹配))
 + [深度学习](#深度学习)
 + [机器学习](#机器学习)
 
@@ -123,6 +124,9 @@ NLP-Paper | Still work
 
 # Evaluate | 评估
 1. [LogME: Practical Assessment of Pre-trained Models for Transfer Learning](https://arxiv.org/pdf/2102.11005.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/358844524)：一种通用且快速的评估选择适合下游任务的预训练模型的打分方法，logME | Kaichao You et al,2021
+
+# Text Similarity | 文本相似度(匹配)
+1. [Siamese Recurrent Architectures for Learning Sentence Similarity](https://scholar.google.com/scholar_url?url=https://ojs.aaai.org/index.php/AAAI/article/view/10350/10209&hl=zh-CN&sa=T&oi=gsb-gga&ct=res&cd=0&d=7393466935379636447&ei=KQWzYNL5OYz4yATXqJ6YCg&scisig=AAGBfm0zNEZZez8zh5ZB_iG7UTrwXmhJWg)：Siamese LSTM，一个用来计算句对相似度的模型 | Jonas Mueller et al,2016
 
 # Deep Learning | 深度学习
 1. [Layer Normalization](https://arxiv.org/pdf/1607.06450.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/258977332)：层归一化方法，针对Batch Normalization的改进 | Jimmy et al,2016
