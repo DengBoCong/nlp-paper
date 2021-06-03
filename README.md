@@ -97,6 +97,8 @@ NLP-Paper | Still work
 
 9. [Dense Passage Retrieval for Open-Domain Question Answering](https://arxiv.org/pdf/2004.04906.pdf)：一种UnSupervised的检索式模型，应用了BERT进行编码 | Karpukhin et al,2020
 
+10. [TOD-BERT: Pre-trained Natural Language Understanding for Task-Oriented Dialogue](https://arxiv.org/pdf/2004.06871.pdf)：任务导向型对话的预训练自然语言理解模型 | Chien-Sheng Wu et al,2020
+
 # Speech | 语音系统
 1. [A Comparative Study on Transformer vs RNN in Speech Applications](https://arxiv.org/pdf/1909.06317.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/309390439)：Transformer应用在语音领域上与RNN对比的论文，并在ESPnet上面开源了模型代码 | Nanxin et al,2019
 
