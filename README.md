@@ -23,6 +23,8 @@ NLP-Paper | Still work
 
 3. [Pre-trained Models for Natural Language Processing: A Survey](https://arxiv.org/pdf/2003.08271.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/352152573)：超详细的NLP预训练语言模型总结清单 | Xipeng Qiu et al,2020
 
+4. [Recent Advances in Deep Learning Based Dialogue Systems: A Systematic Survey](https://arxiv.org/pdf/2105.04387.pdf): 对话系统综述：新进展新前沿 | JinJie Ni et al,2021
+
 # Pretraining | 预训练
 1. [Pretraining Methods for Dialog Context Representation Learning](https://arxiv.org/pdf/1906.00414.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/240742891)：作者列举了四种针对对话上下文表示的预训练方法，其中两种是作者新提出的 | Shikib et al,2019
 
