@@ -138,6 +138,8 @@ NLP-Paper | Still work
 # Evaluate | 评估
 + [LogME: Practical Assessment of Pre-trained Models for Transfer Learning](https://arxiv.org/pdf/2102.11005.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/358844524)：一种通用且快速的评估选择适合下游任务的预训练模型的打分方法，logME | Kaichao You et al,2021
 
++ [Towards Quantifiable Dialogue Coherence Evaluation](https://arxiv.org/pdf/2106.00507.pdf)：QuantiDCE，一种实现可量化的对话连贯性评估指标模型 | Zheng Ye et al,2021
+
 # Text Similarity | 文本相似度(匹配)
 + [Siamese Recurrent Architectures for Learning Sentence Similarity](https://scholar.google.com/scholar_url?url=https://ojs.aaai.org/index.php/AAAI/article/view/10350/10209&hl=zh-CN&sa=T&oi=gsb-gga&ct=res&cd=0&d=7393466935379636447&ei=KQWzYNL5OYz4yATXqJ6YCg&scisig=AAGBfm0zNEZZez8zh5ZB_iG7UTrwXmhJWg)：Siamese LSTM，一个用来计算句对相似度的模型 | Jonas Mueller et al,2016
 
