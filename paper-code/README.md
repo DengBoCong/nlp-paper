@@ -19,6 +19,8 @@ Paper-Recurrence | Still work
 7. [ETT(变电站温度数据)](https://github.com/zhouhaoyi/ETDataset)
 8. [ECL(耗电量数据)](https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014)
 9. [天气数据](https://www.ncdc.noaa.gov/orders/qclcd/)
+10. [DailyDialog++](https://github.com/iitmnlp/Dialogue-Evaluation-with-BERT)：DailyDialog数据集的升级版，11K的多轮对话上下文，每个上下文包括五个标准的参考回复、五个不相关的回复、五个随机挑选的回复
+11. [DailyDialog: A Manually Labelled Multi-turn Dialogue Dataset](https://drive.google.com/file/d/1sj3Z_GZfYzrhmleWazA-QawhUEhlNmJd/view?usp=sharing)：包含对话意图和情感信息的多轮对话数据集
 
 # Code | 模型代码
 

@@ -129,7 +129,11 @@ NLP-Paper | Still work
 
 + [The Ubuntu Dialogue Corpus: A Large Dataset for Research in Unstructured Multi-Turn Dialogue Systems](https://arxiv.org/pdf/1506.08909.pdf)：Ubuntu 非结构化多轮对话数据集 |  Ryan Lowe et al,2015
 
++ [DailyDialog: A Manually Labelled Multi-turn Dialogue Dataset](https://arxiv.org/pdf/1710.03957.pdf) | [数据集地址](https://drive.google.com/file/d/1sj3Z_GZfYzrhmleWazA-QawhUEhlNmJd/view?usp=sharing)：包含对话意图和情感信息的多轮对话数据集 | Yanran Li et al, 2017
+
 + [CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset](https://arxiv.org/pdf/2002.11893.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/259861746)：第一个大规模的中文跨域任务导向对话数据集 | Qi Zhu et al,2020
+
++ [Improving Dialog Evaluation with a Multi-reference Adversarial Dataset and Large Scale Pretraining](https://scholar.google.com/scholar_url?url=https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00347/1923874/tacl_a_00347.pdf&hl=zh-CN&sa=T&oi=gsb-gga&ct=res&cd=0&d=13355199831609160829&ei=hXzkYNupCsyO6rQPkrG1wAo&scisig=AAGBfm39FeIrjR-BGf074wiUqDueImjYeA) | [数据集地址](https://github.com/iitmnlp/Dialogue-Evaluation-with-BERT)：DailyDialog数据集的升级版，11K的多轮对话上下文，每个上下文包括五个标准的参考回复、五个不相关的回复、五个随机挑选的回复 | Ananya B. Sai et al, 2020
 
 + [MuTual: A Dataset for Multi-Turn Dialogue Reasoning](https://arxiv.org/pdf/2004.04494.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/282843192)：MuTual 数据集，用于针对性地评测模型在多轮对话中的推理能力 |  L Cui et al,2020
 
