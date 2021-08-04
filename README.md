@@ -78,6 +78,8 @@ NLP-Paper | Still work
 
 + [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/269997771)：BERT的顶顶大名，使用Transformer的Encoder双向架构 | Devlin et al,2018
 
++ [Pay Less Attention With Lightweight And Dynamic Convolutions](https://arxiv.org/pdf/1901.10430.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/396143249)：论文研究Lightweight、Dynamic Convolutions，卷积结构同样能够达到和Self-Attention媲美的效果 | Felix Wu et al,2019
+
 + [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/pdf/1906.08237.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/361737484)：XLNet--自回归语言模型的复兴，30多项任务超越BERT | Zhilin Yang et al,2019
 
 + [Synthesizer: Rethinking Self-Attention for Transformer Models](https://arxiv.org/pdf/2005.00743.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/380602965)：在Transformer架构下，对Self-Attention计算的探索研究，看完会对Self-Attention有个新认识 | Yi Tay et al,2020
