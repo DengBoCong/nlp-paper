@@ -180,6 +180,8 @@ NLP-Paper | Still work
 
 + [ProjectionNet: Learning Efficient On-Device Deep Networks Using Neural Projections](https://arxiv.org/pdf/1708.00630.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/295636122)：一种叫ProjectionNet的联合框架，可以为不同机器学习模型架构训练轻量的设备端模型。 | Google et al,2017
 
++ [Additive Margin Softmax for Face Verification](https://arxiv.org/pdf/1801.05599.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/397084135)：AM-Softmax在A-Softmax的最大区别是AM是角度距离，A是余弦距离
+
 + [Self-Attention with Relative Position Representations](https://arxiv.org/pdf/1803.02155.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/268649069)：对Transformer里面用到的位置编码进行讨论，对自注意力进行改造，从而使用相对位置编码代替硬位置编码 | Mihaylova et al,2018
 
 + [Group Normalization](https://arxiv.org/pdf/1803.08494.pdf)：Group Normalization是将输入的通道分成较小的子组，并根据其均值和方差归一化这些值 | Yuxin Wu et al,2018
