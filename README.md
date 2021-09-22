@@ -1,9 +1,12 @@
-NLP-Paper | Still work
+<h1 align="center">NLP-Paper</h1>
+<div align="center">
 
 [![Blog](https://img.shields.io/badge/blog-@DengBoCong-blue.svg?style=social)](https://www.zhihu.com/people/dengbocong)
 [![Paper Support](https://img.shields.io/badge/paper-repo-blue.svg?style=social)](https://github.com/DengBoCong/nlp-paper)
 ![Stars Thanks](https://img.shields.io/badge/Stars-thanks-brightgreen.svg?style=social&logo=trustpilot)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=social&logo=appveyor)
+
+</div>
 
 本人在学习的过程中阅读过的论文就更新上来，对于自己精读的论文，会写一些阅读笔记上传，有兴趣的也可以一同分享完善。(内容同步更新到[知乎](https://www.zhihu.com/people/dengbocong)、[CSDN](https://dengbocong.blog.csdn.net/))，**论文按照时间顺序排放**。
 
@@ -113,6 +116,8 @@ NLP-Paper | Still work
 + [Multi-Turn Response Selection for Chatbots with Deep Attention Matching Network](https://www.aclweb.org/anthology/P18-1103.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/306846122)：DAM检索式对话模型，完全基于注意力机制的多层多粒度提取信息 | Xiangyang et al,2018
 
 + [Global-Locally Self-Attentive Dialogue State Tracker](https://arxiv.org/pdf/1805.09655.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/266982344)：全局-局部自注意力状态跟踪 | Zhong et al,2018
+
++ [A Closer Look At Feature Space Data Augmentation For Few-Shot Intent Classification](https://arxiv.org/pdf/1910.04176.pdf)：针对SLU的Intent分类任务，对其文本数据进行数据增强并比较效果，其中Linear+Transfer learning效果最佳 | Varun Kumar et al,2019
 
 + [Dense Passage Retrieval for Open-Domain Question Answering](https://arxiv.org/pdf/2004.04906.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/403589222)：DPR一种高效的开放域问答检索技术，应用了BERT进行编码 | Karpukhin et al,2020
 
