@@ -117,6 +117,10 @@
 
 + [Global-Locally Self-Attentive Dialogue State Tracker](https://arxiv.org/pdf/1805.09655.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/266982344)：全局-局部自注意力状态跟踪 | Zhong et al,2018
 
++ [Sequence-to-Sequence Data Augmentation for Dialogue Language Understanding](https://arxiv.org/pdf/1807.01554.pdf)：使用seq2seq生成模型对语义文本进行数据增强，核心步骤为Delexicalisation->Diversity rank->generation->surface realisation | Yutai Hou et al,2018
+
++ [Data Augmentation with Atomic Templates for Spoken Language Understanding](https://arxiv.org/pdf/1908.10770.pdf)：使用Atomic Templates（act-slot-value）进行对话数据增强，使用seq2seq生成模型进行语句生成 | Zijian Zhao et al,2019
+
 + [A Closer Look At Feature Space Data Augmentation For Few-Shot Intent Classification](https://arxiv.org/pdf/1910.04176.pdf)：针对SLU的Intent分类任务，对其文本数据进行数据增强并比较效果，其中Linear+Transfer learning效果最佳 | Varun Kumar et al,2019
 
 + [Dense Passage Retrieval for Open-Domain Question Answering](https://arxiv.org/pdf/2004.04906.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/403589222)：DPR一种高效的开放域问答检索技术，应用了BERT进行编码 | Karpukhin et al,2020
