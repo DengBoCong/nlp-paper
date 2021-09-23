@@ -115,6 +115,8 @@
 
 + [Multi-Turn Response Selection for Chatbots with Deep Attention Matching Network](https://www.aclweb.org/anthology/P18-1103.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/306846122)：DAM检索式对话模型，完全基于注意力机制的多层多粒度提取信息 | Xiangyang et al,2018
 
++ [Slot-Gated Modeling for Joint Slot Filling and Intent Prediction](https://aclanthology.org/N18-2118.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/413261222)：提出了Slot-Gated机制，联合意图识别和槽位填充效果提升 | Chih-Wen Goo et al,2018
+
 + [Global-Locally Self-Attentive Dialogue State Tracker](https://arxiv.org/pdf/1805.09655.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/266982344)：全局-局部自注意力状态跟踪 | Zhong et al,2018
 
 + [Sequence-to-Sequence Data Augmentation for Dialogue Language Understanding](https://arxiv.org/pdf/1807.01554.pdf)：使用seq2seq生成模型对语义文本进行数据增强，核心步骤为Delexicalisation->Diversity rank->generation->surface realisation | Yutai Hou et al,2018
