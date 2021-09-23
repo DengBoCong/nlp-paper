@@ -107,6 +107,8 @@
 
 + [Neural Belief Tracker: Data-Driven Dialogue State Tracking](https://arxiv.org/pdf/1606.03777.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/262289823)：NBT框架，理解Belief state和tracking的好文 | Young et al,2016
 
++ [Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling](https://arxiv.org/pdf/1609.01454.pdf)：使用Attention-Based的RNN模型进行联合意图识别和槽位填充，达到不错的效果 | Bing Liu et al,2016
+
 + [Sequential Matching Network: A New Architecture for Multi-turn Response Selection in Retrieval-Based Chatbots](https://arxiv.org/pdf/1612.01627v2.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/270554147)：SMN检索式对话模型，多层多粒度提取信息 | Devlin et al,2016
 
 + [Latent Intention Dialogue Models](https://arxiv.org/pdf/1705.10229.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/263034049)：离散潜在变量模型学习对话意图的框架 | Wen et al,2017
