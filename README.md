@@ -135,6 +135,8 @@
 
 + [DISTILLING KNOWLEDGE FROM READER TO RETRIEVER FOR QUESTION ANSWERING](https://openreview.net/pdf?id=NTEz-6wysdb) | [阅读笔记](https://zhuanlan.zhihu.com/p/372694270)：一种模型训练模型的开放域问答方法 | Izacard et al,2021
 
++ [Retrieve & Memorize: Dialog Policy Learning with Multi-Action Memory](https://arxiv.org/pdf/2106.02317.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/415170940)：联合检索和记忆块的多action的Dialog Policy Learning模型，在action生成和response生成上效果SOTA | Yunhao Li et al,2021
+
 + [Increasing Faithfulness in Knowledge-Grounded Dialogue with Controllable Features](https://arxiv.org/pdf/2107.06963.pdf)：通过可控特征来增加知识对话系统的学习 | Rashkin et al,2021
 
 # Speech | 语音系统
