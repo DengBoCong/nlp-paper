@@ -8,7 +8,7 @@
 
 </div>
 
-本人在学习的过程中阅读过的论文就更新上来，对于自己精读的论文，会写一些阅读笔记上传，有兴趣的也可以一同分享完善。(内容同步更新到[知乎](https://www.zhihu.com/people/dengbocong)、[CSDN](https://dengbocong.blog.csdn.net/))，**论文按照时间顺序排放**。
+更新一些在我学习过程中阅读过的且感觉不错的论文，对于一些经典或思路很新奇的论文，会进行精读，并写一些阅读笔记同步上传更新。(内容同步更新到[知乎](https://www.zhihu.com/people/dengbocong)、[CSDN](https://dengbocong.blog.csdn.net/))，**论文按照时间顺序排放**。
 
 **注：对部分复现论文代码以及NLP其他工具代码放在这 ☞ [paper-code](https://github.com/DengBoCong/paper/tree/master/paper-code)**
 
@@ -23,6 +23,7 @@
 + [文本相似度(匹配)](文本相似度(匹配))
 + [深度学习](#深度学习)
 + [机器学习](#机器学习)
++ [向量检索](#向量检索)
 
 # Summarize | 综述
 + [A Survey on Dialogue Systems:Recent Advances and New Frontiers](https://arxiv.org/pdf/1711.01731.pdf)：对话系统的最新研究和方向 | Chen et al,2017
@@ -239,3 +240,5 @@
 + [An overview of gradient descent optimization algorithms](https://arxiv.org/pdf/1609.04747.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/343564175)：对当前主流的梯度下降算法进行概述 | Sebastian Ruder et al,2016
 
 + [Covariate Shift: A Review and Analysis on Classifiers](https://ieeexplore.ieee.org/abstract/document/8978471) | [阅读笔记](https://zhuanlan.zhihu.com/p/339719861)：通过几种分类算法，在四种不同的数据集下验证几种方法处理Covariate Shift问题后的性能分析 | Geeta et al,2019
+
+# Nearest Neighbor | 向量检索
