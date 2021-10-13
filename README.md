@@ -237,6 +237,8 @@
 
 + [Shortcut Learning in Deep Neural Networks](https://arxiv.org/pdf/2004.07780.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/421175552)：对Shortcut Learning问题进行比较详细的解释和剖析，虽然最后没有给出实际的解决方案（Shortcut Learning问题本身就没有一个体系化的策略，需要根据实际任务而定），不过提供了几种解决的视角 | Robert Geirhos et al,2020
 
++ [Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://arxiv.org/pdf/2005.04118.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/421175552)：ACL2020的Best Paper，基于NLP领域提出了测试体系来指导我们了解 NLP 模型的能力，也能够指导我们去理解问题、解决问题。不同于现代 NLP 模型常常仅关注特定的任务，CheckList 希望去评估一个模型的多方面能力，这些能力有的是模型通用的，有的则是面向特定的任务或领域 | Marco Tulio Ribeiro et al,2020
+
 + [A Theoretical Analysis of the Repetition Problem in Text Generation](https://arxiv.org/pdf/2012.14660.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/349675973)：讨论Seq2Seq模型解码重复生成的原因 | Zihao Fu et al,2020
 
 # Machine Learning | 机器学习
