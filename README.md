@@ -74,6 +74,8 @@
 
 + [Training Very Deep Networks](https://arxiv.org/pdf/1507.06228.pdf) | [阅读笔记](https://cloud.tencent.com/developer/article/1148375)：经典的Highway networks，基于深层的CNN堆叠网络，使用transform gate和carry gate（其实后来被统一称为Shortcut），将浅层特征信息带到深层中，以此来解决深度网络中梯度发散，难以训练的问题 | Rupesh Kumar Srivastava et al,2015
 
++ [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf) [阅读笔记](https://cloud.tencent.com/developer/article/1148375)：经典的ResNet，基于深层的CNN堆叠网络，利用了残差连接（ResNet中是跨越了2层或3层），解决深度模型中的退化问题，最优的残差结构是把BN和ReLU都提前，成为pre-activation | Kaiming He et al,2016
+
 + [Incorporating Copying Mechanism in Sequence-to-Sequence Learning](https://arxiv.org/pdf/1603.06393.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/415502906)：CopyNet模型，使用Copying Mechanism来缓解未登录词问题的模型，在文本摘要等生成词多含输入词的任务中，效果不错 | Jiatao Gu et al,2016
 
 + [Language Modeling with Gated Convolutional Networks](https://arxiv.org/pdf/1612.08083.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/395977833)：受LSTM门控机制的启发，将线性门控机制应用于卷积结构，文中对比GLU、GTU等结构性能 | Yann N. Dauphin et al,2016
