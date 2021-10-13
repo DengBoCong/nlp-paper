@@ -80,6 +80,8 @@
 
 + [Language Modeling with Gated Convolutional Networks](https://arxiv.org/pdf/1612.08083.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/395977833)：受LSTM门控机制的启发，将线性门控机制应用于卷积结构，文中对比GLU、GTU等结构性能 | Yann N. Dauphin et al,2016
 
++ [Densely Connected Convolutional Networks](https://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.pdf) | [阅读笔记](https://cloud.tencent.com/developer/article/1148375)：CVPR 2017的Best Paper，提出了DenseNet，借鉴highway networks和ResNet的思路，DenseNet将shortcut用到了“极致”——每两层之间都添加shortcut，当然具体实现中使用了一些tricks防止模型过大的问题 | Gao Huang et al,2017
+
 + [A SIMPLE BUT TOUGH-TO-BEAT BASELINE FOR SENTENCE EMBEDDINGS](https://openreview.net/pdf?id=SyK00v5xx)：Smooth Inverse Frequency，一种简单但是效果好的Sentence Embedding方法 | Sanjeev Arora et al,2017
 
 + [Get To The Point: Summarization with Pointer-Generator Networks](https://arxiv.org/pdf/1704.04368.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/419659043)：结合Copying Mechanism和Coverage mechanism两种技巧的LSTM-Base模型，一定程度上解决OOV和重复词问题，经典值得一读 | Abigail See et al,2017
