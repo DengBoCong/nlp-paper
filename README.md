@@ -258,10 +258,12 @@
 # Nearest Neighbor | 向量检索
 + [similarity estimation techniques from rounding algorithms](https://www.cs.princeton.edu/courses/archive/spring04/cos598B/bib/CharikarEstim.pdf) | [阅读笔记](http://tangxman.github.io/2015/12/01/simhash/)：论文提出的SimHash是当年Google用来文本去重的算法。主要做法是将文档提取出一定数量的关键词，然后转换成哈希码并按列相加，1+weight，0-weight，得到的结果按照整数为1，负数为0得到最终的哈希码，然后将哈希码分为m个table，并分别记性计算检索 | Moses S. Charikar et al,2002
 
++ [Product quantization for nearest neighbor search](https://lear.inrialpes.fr/pubs/2011/JDS11/jegou_searching_with_quantization.pdf) | [阅读笔记](http://vividfree.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/2017/08/05/understanding-product-quantization)：这篇PaperPQ算法的成功开始，PQ是一种量化方法，本质上是数据的一种压缩表达方式（本篇论文使用了KMeans算法，得到质心的codebook），先将向量分成m段，每段分别根据codebook转换成压缩向量，然后使用SDC或ADC算法进行相似搜索。不过论文中进一步进行了改进，提出了IVFADC算法，一种基于倒排索引的ADC算法，分两步，第一步是PQ一遍（成为coarse quantizer），然后用向量减去量化后的向量得到残差，第二步就是在所有得到的残差集合上在进行一次PQ，最后用得到的向量建立倒排索引 | Herve Jegou et al,2011
+
 + [Fast Search in Hamming Space with Multi-Index Hashing](https://www.cs.toronto.edu/~norouzi/research/papers/multi_index_hashing.pdf) | [阅读笔记](https://tangxman.github.io/2015/12/03/mih/)：主要是解决在汉明空间上的R-Neighbors of query和KNN query，论文提出了一种多分段索引的哈希方法，查询效率达到了次线性，做法是r为查询的汉明距离，将汉明码切分成m段，快速找出每段中汉明距离小于r/m的结果，合并所有结果即为候选集 | Mohammad Norouzi et al,2012
+
++ [Learning Deep Structured Semantic Models for Web Search using Clickthrough Data](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/cikm2013_DSSM_fullversion.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/421944601)：经典的DSSM语义相似度匹配模型，就是通常我们所说的双塔模型。使用Word Hashing的n-gram，在那个时候还是很独到的，其核心思想是将query和doc映射到到共同维度的语义空间中，通过最大化query和doc语义向量之间的余弦相似度，从而训练得到隐含语义模型，达到检索的目的。负采样1:4 | Po-Sen Huang et al,2013
 
 + [Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS)](https://arxiv.org/pdf/1405.5869.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/111502331)：传统的MIPS问题找不到LSH函数，为此论文提出了一种“非对称LSH”的算法，其核心技巧就是通过“非对称变换”构造向量从而消除待查集合X的向量模长对MIPS结果的影响。巧妙的将问题转换为欧氏距离下，通过LSH函数求出NN的近似解的问题 | Anshumali Shrivastava et al,2014
 
 + [Speeding Up the Xbox Recommender System Using a Euclidean Transformation for Inner-Product Spaces](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/XboxInnerProduct.pdf)：微软的Inner Product快速计算的方法，主要解决的是Inner Product Top-K Search的问题。通过各种公式证明，将问题简化到一个欧氏距离搜索问题后，使用一个PCA-Tree来求解 | Yoram Bachrach et al,2014
-
-+ [Learning Deep Structured Semantic Models for Web Search using Clickthrough Data](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/cikm2013_DSSM_fullversion.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/421944601)：经典的DSSM语义相似度匹配模型，就是通常我们所说的双塔模型。使用Word Hashing的n-gram，在那个时候还是很独到的，其核心思想是将query和doc映射到到共同维度的语义空间中，通过最大化query和doc语义向量之间的余弦相似度，从而训练得到隐含语义模型，达到检索的目的。负采样1:4 | Po-Sen Huang et al,2013
