@@ -264,6 +264,14 @@
 
 + [Learning Deep Structured Semantic Models for Web Search using Clickthrough Data](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/cikm2013_DSSM_fullversion.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/421944601)：经典的DSSM语义相似度匹配模型，就是通常我们所说的双塔模型。使用Word Hashing的n-gram，在那个时候还是很独到的，其核心思想是将query和doc映射到到共同维度的语义空间中，通过最大化query和doc语义向量之间的余弦相似度，从而训练得到隐含语义模型，达到检索的目的。负采样1:4 | Po-Sen Huang et al,2013
 
++ [Optimized Product Quantization](https://www.microsoft.com/en-us/research/wp-content/uploads/2013/11/pami13opq.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/213395313)：PQ的做法是直接简单粗暴的分割原始特征向量，并没有去除相关性，而如果去除相关性之后再进行PQ可以使得检索效果更好，OPQ就提供了是的每个子空间信息均衡的方法，即使用一个正交矩阵来对聚类中心进行旋转，并提供了Non-Parametric和Parametric的两种算法思路 | Tiezheng Ge et al,2013
+
++ [Locally Optimized Product Quantization for Approximate Nearest Neighbor Search](https://openaccess.thecvf.com/content_cvpr_2014/papers/Kalantidis_Locally_Optimized_Product_2014_CVPR_paper.pdf)：LOPQ实在OPQ的基础上进一步优化，OPQ仅考虑了CodeBook的旋转问题，LOPQ考虑的是每个子空间进行不同的旋转 | Yannis Kalantidis et al,2014
+
 + [Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS)](https://arxiv.org/pdf/1405.5869.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/111502331)：传统的MIPS问题找不到LSH函数，为此论文提出了一种“非对称LSH”的算法，其核心技巧就是通过“非对称变换”构造向量从而消除待查集合X的向量模长对MIPS结果的影响。巧妙的将问题转换为欧氏距离下，通过LSH函数求出NN的近似解的问题 | Anshumali Shrivastava et al,2014
 
 + [Speeding Up the Xbox Recommender System Using a Euclidean Transformation for Inner-Product Spaces](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/XboxInnerProduct.pdf)：微软的Inner Product快速计算的方法，主要解决的是Inner Product Top-K Search的问题。通过各种公式证明，将问题简化到一个欧氏距离搜索问题后，使用一个PCA-Tree来求解 | Yoram Bachrach et al,2014
+
++ [Deep Compression: Ccompressing Deep Neural Networks With Pruning, Trained Quantization And Huffman Coding](https://arxiv.org/pdf/1510.00149.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/21574328)：ICLR的best paper，主要内容是关于深度学习网络参数的压缩。分为三步，Network pruning，即先训练一个网络，然后把一些权重很小的连接进行剪枝（通过阈值来决定），然后retrain网络。第二步，量化权重；第三步则是使用Huffman coding进行无损编码 | Song Han et al,2015
+
+
