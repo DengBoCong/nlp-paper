@@ -272,6 +272,8 @@
 
 + [Speeding Up the Xbox Recommender System Using a Euclidean Transformation for Inner-Product Spaces](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/XboxInnerProduct.pdf)：微软的Inner Product快速计算的方法，主要解决的是Inner Product Top-K Search的问题。通过各种公式证明，将问题简化到一个欧氏距离搜索问题后，使用一个PCA-Tree来求解 | Yoram Bachrach et al,2014
 
++ [Approximate nearest neighbor algorithm based on navigable small world graphs](sciencedirect.com/science/article/abs/pii/S0306437913001300) | [阅读笔记](https://blog.csdn.net/u011233351/article/details/85116719)：经典的NSW算法，在构建近似DG图的基础上，加入Expressway mechanism。构建时，在朴素插入选近邻连接的思路上，使用废弃列表和动态列表提速 Yury Malkov et al,2014
+
 + [Deep Compression: Ccompressing Deep Neural Networks With Pruning, Trained Quantization And Huffman Coding](https://arxiv.org/pdf/1510.00149.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/21574328)：ICLR的best paper，主要内容是关于深度学习网络参数的压缩。分为三步，Network pruning，即先训练一个网络，然后把一些权重很小的连接进行剪枝（通过阈值来决定），然后retrain网络。第二步，量化权重；第三步则是使用Huffman coding进行无损编码 | Song Han et al,2015
 
-[Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs](https://arxiv.org/pdf/1603.09320.pdf) | [阅读笔记](https://blog.csdn.net/u011233351/article/details/85116719)：经典的NSW算法，在构建近似DG图的基础上，加入Expressway mechanism。构建时，在朴素插入选近邻连接的思路上，使用废弃列表和动态列表提速 | Yu. A. Malkov et al,2016
++ [Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs](https://arxiv.org/pdf/1603.09320.pdf) | [阅读笔记](https://blog.csdn.net/u011233351/article/details/85116719)：HNSW算法，在NSW的基础上，引入层次结构实现Expressway mechanism，达到顶层粗查，底层细查的思路 | Yu. A. Malkov et al,2016
