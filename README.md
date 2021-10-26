@@ -72,6 +72,10 @@
 + [Are Pre-trained Convolutions Better than Pre-trained Transformers?](https://arxiv.org/pdf/2105.03322.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/380195756)：将Transformer的Attention换成了卷积，尝试预训练模型新方式 | Yi Tay et al,2021
 
 # Model | 模型
++ [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/26306795)：Word2vec开山之作之一，专门讲训练中的两个trick：hierarchical softmax 和 negative sampling | Tomas Mikolov et al,2013
+
++ [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/pdf/1310.4546.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/26306795)：Word2vec开山之作之一，在前人基础上提出更精简的语言模型框架并用于生成词向量，这个框架就是 Word2vec | Tomas Mikolov et al,2013
+
 + [Convolutional Neural Networks for Sentence Classification](https://arxiv.org/pdf/1408.5882.pdf)：经典的TextCNN，static/non-static几种特征向量学习方式 | Yoon Kim et al,2014
 
 + [Pointer Networks](https://arxiv.org/pdf/1506.03134.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/48959800)：原文是围绕解决凸包而设计的的网络结构，直接使用Attention的权重用于预测，能够适应输入的规模，后面许多网络结构应用发展成了Copying Mechanism来解决OOV问题 | Oriol Vinyals et al,2015
