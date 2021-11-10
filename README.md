@@ -196,6 +196,8 @@
 
 + [Fast and Provably Good Seedings for k-Means](https://proceedings.neurips.cc/paper/2016/file/d67d8ab4f4c10bf22aa353e27879133c-Paper.pdf) | [阅读笔记](https://www.zhihu.com/question/494753171/answer/2204649294)：AFK-MC2基于K-MC2改进，由于K-MC2的proposal distribution是常函数，不够鲁棒，因此AFK-MC2将与距离有关的分布作为一个term加入原始的分布中，优化proposal distribution | Olivier Bachem et al,2016
 
++ [Robust and Rapid Clustering of KPIs for Large-Scale Anomaly Detection](https://netman.aiops.org/~peidan/ANM2018/8.DependencyDiscovery/LectureCoverage/2018IWQOS_ROCKA.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/50698719)：关于快速时序聚类的文章，提出ROCKA系统架构，包括了数据预处理、基线提取、相似性度量、基于密度的聚类算法。ROCKA算法仅仅是使用了派发策略，单是并未在有效的利用过程中的计算结果，导致在派发过程中复杂度较高 | Zhihan Li et al,2018
+
 # Text Similarity | 文本相似度(匹配)
 + [Siamese Recurrent Architectures for Learning Sentence Similarity](https://scholar.google.com/scholar_url?url=https://ojs.aaai.org/index.php/AAAI/article/view/10350/10209&hl=zh-CN&sa=T&oi=gsb-gga&ct=res&cd=0&d=7393466935379636447&ei=KQWzYNL5OYz4yATXqJ6YCg&scisig=AAGBfm0zNEZZez8zh5ZB_iG7UTrwXmhJWg)：Siamese LSTM，一个用来计算句对相似度的模型 | Jonas Mueller et al,2016
 
