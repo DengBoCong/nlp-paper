@@ -201,6 +201,8 @@
 # Text Similarity | 文本相似度(匹配)
 + [Siamese Recurrent Architectures for Learning Sentence Similarity](https://scholar.google.com/scholar_url?url=https://ojs.aaai.org/index.php/AAAI/article/view/10350/10209&hl=zh-CN&sa=T&oi=gsb-gga&ct=res&cd=0&d=7393466935379636447&ei=KQWzYNL5OYz4yATXqJ6YCg&scisig=AAGBfm0zNEZZez8zh5ZB_iG7UTrwXmhJWg)：Siamese LSTM，一个用来计算句对相似度的模型 | Jonas Mueller et al,2016
 
++ [Learning Text Similarity with Siamese Recurrent Networks](https://aclanthology.org/W16-1617.pdf)：网络包含4层BiLSTM（64-d hidden），最后一层的BiLSTM的hidden state和cell state进行concat，然后在timestep维度进行average处理，并接一个Dense层（激活函数为tanh），得到的两个Embedding Space进行Cosine sim计算，得到的相似度分数E用于损失函数计算，损失函数使用对比损失函数，计算方法为，损失函数正例：1/4(1-E)^2，负例：E^2(如果E<m)，否则0 | Paul Neculoiu et al,2016
+
 # Nearest Neighbor | 向量检索
 + [similarity estimation techniques from rounding algorithms](https://www.cs.princeton.edu/courses/archive/spring04/cos598B/bib/CharikarEstim.pdf) | [阅读笔记](http://tangxman.github.io/2015/12/01/simhash/)：论文提出的SimHash是当年Google用来文本去重的算法。主要做法是将文档提取出一定数量的关键词，然后转换成哈希码并按列相加，1+weight，0-weight，得到的结果按照整数为1，负数为0得到最终的哈希码，然后将哈希码分为m个table，并分别记性计算检索 | Moses S. Charikar et al,2002
 
