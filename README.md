@@ -251,6 +251,8 @@
 
 + [Efficient softmax approximation for GPUs](https://arxiv.org/pdf/1609.04309.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/397084135)：Adaptive Softmax，针对GPU的矩阵计算，实现了多倍与普通Softmax计算效率的提升，值得一看 | Edouard Grave et al,2016
 
++ [Categorical Reparameterization With Gumbel-Softmax](https://arxiv.org/pdf/1611.01144.pdf) | [阅读笔记](https://www.zhihu.com/question/422373907/answer/2260975090)：Gumbel Max由来已久，而这篇文章就是基于Gumbel Max，首次提出并应用Gumbel Softmax的。目标就是使用梯度估计的方法，来解决Categorical Distribution中，使用类似argmax操作导致网络不可微的问题。文章主要探讨了部分隐变量是离散型变量的变分推断问题，比如基于VAE的半监督学习 | Eric Jang et al,2016
+
 + [Large-Margin Softmax Loss for Convolutional Neural Networks](https://arxiv.org/pdf/1612.02295.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/397084135)：L-Softmax在原Softmax的基础上增加了控制系数m，使得类内距离尽可能小，类间距离尽可能大 | Weiyang Liu et al,2016
 
 + [An empirical analysis of the optimization of deep network loss surfaces](https://arxiv.org/pdf/1612.04010.pdf)：论文中得出一个结论，即Batch Normalization更有利于梯度下降 | Shibani et al,2016
@@ -270,6 +272,8 @@
 + [Group Normalization](https://arxiv.org/pdf/1803.08494.pdf)：Group Normalization是将输入的通道分成较小的子组，并根据其均值和方差归一化这些值 | Yuxin Wu et al,2018
 
 + [How Does Batch Normalization Help Optimization?](https://arxiv.org/pdf/1805.11604.pdf)：讨论Batch Normalization是如何帮助优化器工作的，主要结论是BN层能够让损失函数更加平滑 | Shibani et al,2018
+
++ [RelGAN: Relational Generative Adversarial Networks For Text Generation](https://openreview.net/pdf?id=rJedV3R5tm) | [阅读笔记](https://zhuanlan.zhihu.com/p/87605995)：提出了新型的生成器和判别器结构，使得直接用Gumbel Softmax训练出的文本GAN大幅度超过了以往的各种文本GAN模型。主要由三个模块组成，分别是：在生成器上，利用relational memory，使得具有更强表达能力和在长文本上更好的模型能力；在离散数据上，训练GAN利用Gumbel-Softmax Relaxation模型，使得模型简化，替代强化学习启发式算法；在判别器上利用多层词向量表示，使得生成器往更具多样性方面更新 Weili Nie et al,2019
 
 + [Scheduled Sampling for Transformers](https://arxiv.org/pdf/1906.07651.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/267146739)：在Transformer应用Scheduled Sampling | Mihaylova et al,2019
 
