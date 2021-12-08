@@ -295,6 +295,8 @@
 
 + [Covariate Shift: A Review and Analysis on Classifiers](https://ieeexplore.ieee.org/abstract/document/8978471) | [阅读笔记](https://zhuanlan.zhihu.com/p/339719861)：通过几种分类算法，在四种不同的数据集下验证几种方法处理Covariate Shift问题后的性能分析 | Geeta et al,2019
 
++ [Monte Carlo Gradient Estimation in Machine Learning](https://arxiv.org/pdf/1906.10652.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/110588068)：本文是一篇关于Monte Carlo gradient estimation的survey，本文主要总结的内容是：随机梯度估计方法的相关背景知识，包括蒙特卡洛采样和随机优化；几种经典应用，包括变分推断、强化学习中的Policy gradient、敏感性分析、实验设计；两类经典的梯度估计算法 | Shakir Mohamed et al,2019
+
 # Dataset | 数据集
 + [The Second Dialog State Tracking Challenge](https://www.aclweb.org/anthology/W14-4337.pdf)：DSTC系列语料是专门用于对话状态跟踪的，非常经典，不过它的官网貌似无用了 |  Henderson et al,2014
 
