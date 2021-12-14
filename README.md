@@ -295,6 +295,10 @@
 
 + [An overview of gradient descent optimization algorithms](https://arxiv.org/pdf/1609.04747.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/343564175)：对当前主流的梯度下降算法进行概述 | Sebastian Ruder et al,2016
 
++ [Sigmoid-Weighted Linear Units for Neural Network Function Approximation in Reinforcement Learning](https://arxiv.org/pdf/1702.03118.pdf)：提出SILU激活函数，其实从某种角度讲就是GELU激活的一种近似，x*sigmoid(x) | Stefan Elfwing et al,2017
+
++ [SWISH: A SELF-GATED ACTIVATION FUNCTION](https://arxiv.org/pdf/1710.05941v1.pdf)：提出的Swish激活函数，通SILU激活函数一样，没啥差别，x*sigmoid(x) | Prajit Ramachandran et al,2017
+
 + [Covariate Shift: A Review and Analysis on Classifiers](https://ieeexplore.ieee.org/abstract/document/8978471) | [阅读笔记](https://zhuanlan.zhihu.com/p/339719861)：通过几种分类算法，在四种不同的数据集下验证几种方法处理Covariate Shift问题后的性能分析 | Geeta et al,2019
 
 + [Monte Carlo Gradient Estimation in Machine Learning](https://arxiv.org/pdf/1906.10652.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/110588068)：本文是一篇关于Monte Carlo gradient estimation的survey，本文主要总结的内容是：随机梯度估计方法的相关背景知识，包括蒙特卡洛采样和随机优化；几种经典应用，包括变分推断、强化学习中的Policy gradient、敏感性分析、实验设计；两类经典的梯度估计算法 | Shakir Mohamed et al,2019
