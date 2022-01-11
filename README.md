@@ -279,6 +279,8 @@
 
 + [Consistency of a Recurrent Language Model With Respect to Incomplete Decoding](https://arxiv.org/pdf/2002.02492.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/349675973)：讨论Seq2Seq模型解码停不下来的原因 | Sean Welleck et al,2020
 
++ [GLU Variants Improve Transformer](https://arxiv.org/pdf/2002.05202.pdf)：本文借助门控线性单元(Gated Linear Unit,GLU)对模型的FeedForward层进行了修改，同时在训练的时候去掉了Dropout，并增加了解码器输出端的Embedding（这些改动增加了模型参数，但效果更佳）。文中主要对比了Bilinear、relu、gelu、swish激活函数下，使用GLU的效果，其中gelu和swish表现最佳。总得来说，实验证明了GLU的有效性，可以应用在模型里试试 | Noam Shazeer et al,2020
+
 + [PowerNorm: Rethinking Batch Normalization in Transformers](https://arxiv.org/pdf/2003.07845.pdf)：对于Transformer中BN表现不好的原因做了一定的empirical和theoretical的分析 | Sheng Shen et al,2020
 
 + [Shortcut Learning in Deep Neural Networks](https://arxiv.org/pdf/2004.07780.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/421175552)：对Shortcut Learning问题进行比较详细的解释和剖析，虽然最后没有给出实际的解决方案（Shortcut Learning问题本身就没有一个体系化的策略，需要根据实际任务而定），不过提供了几种解决的视角 | Robert Geirhos et al,2020
