@@ -245,6 +245,8 @@
 
 + [Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks](https://arxiv.org/pdf/1602.07868.pdf)：Weight Normalization是一种在权值维度上进行归一化的方法 | Tim Salimans et al,2016
 
++ [Training Deep Nets with Sublinear Memory Cost](https://arxiv.org/pdf/1604.06174.pdf) | [keras_recompute](https://github.com/bojone/keras_recompute)：这篇论文整体上讲了一个以时间换空间的省显存的trick，即gradient checkpointing，通过丢弃低运算成本操作的结果，也就是把中间结果feature map 一个都不保留，全部干掉，反向传播时重新计算出来（当然，论文折中是每隔 sqrt(n)保留一个feature map）。能够把内存降低 sqrt(n) 分之一，超越大多数节省内存的奇淫巧技，具体实现可参考tf.recompute_grad，或者的一个开源实现 | Tianqi Chen et al,2016
+
 + [Layer Normalization](https://arxiv.org/pdf/1607.06450.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/258977332)：层归一化方法，针对Batch Normalization的改进 | Jimmy et al,2016
 
 + [Instance Normalization:The Missing Ingredient for Fast Stylization](https://arxiv.org/pdf/1607.08022.pdf)：Instance Normalization是一种不受限于批量大小的算法专门用于Texture Network中的生成器网络 | Dmitry Ulyanov et al,2016
