@@ -293,6 +293,10 @@
 
 # Machine Learning | 机器学习
 
++ [Parameter Server for Distributed Machine Learning](http://www.cs.cmu.edu/~feixia/files/ps.pdf) | [阅读笔记](https://www.zybuluo.com/Dounm/note/517675)：论文里说本篇所介绍的Parameter Server属于第三代PS，提供了更加通用的设计，架构上包括一个Server Group和若干个Worker Group，提供了如下几个特点：Efficient Communication、Elastic Scalability、Fault Tolerance and Durability、Ease of Use | Mu Li et al,2013
+
++ [Scaling Distributed Machine Learning with the Parameter Server](https://www.cs.cmu.edu/~muli/file/parameter_server_osdi14.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/21569493)：在PS中，每个 server 实际上都只负责分到的部分参数（servers共同维持一个全局的共享参数），而每个 work 也只分到部分数据和处理任务。较它之前一篇PS进行了更加细节的描述，并对一些细节进行了扩展，两篇结合起来看受益颇多 | Mu Li et al,2014
+
 + [Optimal Whitening and Decorrelation](https://arxiv.org/pdf/1512.00809.pdf)：提供五种白化方法的数学证明 | Agnan Kessy et al,2015
 
 + [Gaussian Error Linear Units (GELUS)](https://arxiv.org/pdf/1606.08415.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/349492378)：GELU的目标就是希望在激活（拥有非线性拟合的能力）中加入正则化的思想。ReLU会确定性的将输入乘上一个0或者1，Dropout则是随机乘上0。而GELU也是通过将输入乘上0或1来实现这个功能，但是输入是乘以0还是1，是在同时取决于输入自身分布的情况下随机选择的。换句话说，是0还是1取决于当前的输入有多大的概率大于其余的输入。而由于神经元的输入x往往遵循正态分布（尤其是深度网络中普遍存在Normalization），所以GELU就可以被定义为“标准正态分布的累积分布函数”，利用erf就可以得到公式：x/2*(1+erf(x/sqrt(2))) | Dan Hendrycks et al,2016
