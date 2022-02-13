@@ -203,6 +203,8 @@
 
 + [Learning Text Similarity with Siamese Recurrent Networks](https://aclanthology.org/W16-1617.pdf)：网络包含4层BiLSTM（64-d hidden），最后一层的BiLSTM的hidden state和cell state进行concat，然后在timestep维度进行average处理，并接一个Dense层（激活函数为tanh），得到的两个Embedding Space进行Cosine sim计算，得到的相似度分数E用于损失函数计算，损失函数使用对比损失函数，计算方法为，损失函数正例：1/4(1-E)^2，负例：E^2(如果E<m)，否则0 | Paul Neculoiu et al,2016
 
++ [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/pdf/1908.10084.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/113133510)：和之前提出的InferSent结构如出一辙，妥妥的双塔结构，只是换成了Bert来进行特征表示。模型结构没有什么创新点，但是这个结构用起来效果挺好，速度也快，很适合工业界使用。论文中在针对句向量表示计算策略分别使用了CLS向量策略、平均池化策略、最大值池化策略三个策略进行实验，实验结果中平均池化策略最优 | Nils Reimers et al,2019
+
 + [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/368353121)：基于Sentence-Bert，引入对比学习的思想，在无监督与有监督语义相似度计算任务达到SOTA。主要围绕对比学习质量指标Alignment和Uniformity来进行优化，对于Unsupervised，核心是使用dropout mask生成正样本，负样本是in-batch negatives。而Supervised则是NLI中entailment关系样例对。负例：a) in-batch negatives b)NLI中关系为contradiction的样例对 | Tianyu Gao et al,2021
 
 # Nearest Neighbor | 向量检索
