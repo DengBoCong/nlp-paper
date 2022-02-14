@@ -115,6 +115,8 @@
 + [CTRL: A Conditional Transformer Language Model For Controllable Generation](https://arxiv.org/pdf/1909.05858.pdf)
 | [阅读笔记](https://zhuanlan.zhihu.com/p/405493225)：CTRL语言模型，提供Control Code进行定向文本生成，相较于GPT可对文本风格进行控制 | Keskar et al,2019
 
++ [ALBERT: A Lite BERT For Self-superpised Learning Of Language Representations](https://arxiv.org/pdf/1909.11942.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/84273154)：Albert大大缩小了模型参数量，并且加快了训练速度，增加了模型效果。其主要对BERT做了3点改进，第一：把embedding size(E)和hidden size(H)分开可以更高效地利用参数，因为理论上存储了context信息的H要远大于E。第二：跨层参数共享，就是不管12层还是24层都只用一个transformer。第三：使用Inter-sentence coherence loss，即SOP(sentence order prediction) | Zhenzhong Lan et al,2019
+
 + [Reformer: The Efficient Transformer](https://arxiv.org/pdf/2001.04451.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/411882151)：使用LSH Attention、Reversible layers、Chunking FFN layers，降低Transformer计算复杂度和内存空间消耗 | Nikita Kitaev et al,2020
 
 + [Synthesizer: Rethinking Self-Attention for Transformer Models](https://arxiv.org/pdf/2005.00743.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/380602965)：在Transformer架构下，对Self-Attention计算的探索研究，看完会对Self-Attention有个新认识 | Yi Tay et al,2020
