@@ -78,6 +78,8 @@
 
 + [Pre-trained Models for Natural Language Processing: A Survey](https://arxiv.org/pdf/2003.08271.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/352152573)：超详细的NLP预训练语言模型总结清单 | Xipeng Qiu et al,2020
 
++ [ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators](https://arxiv.org/pdf/2003.10555.pdf) | [阅读笔记](https://kexue.fm/archives/7846#how_to_cite)：BERT使用MLM进行训练，而ELECTRA考虑到BERT的MLM模型随机选择一部分Token进行Mask的这个操作过于简单了，想要增加一下它的难度。所以它借鉴了GAN的思想，用普通的方式训练一个MLM模型（生成器），然后根据MLM模型对输入句子进行采样替换，将处理后的句子输入到另外一个模型（判别器）中，判断句子哪些部分是被替换过的，哪些部分是被没被替换的。生成器和判别器是同步训练的，因此随着生成器的训练，判断难度会慢慢增加，直观想象有利于模型学到更有价值的内容。最后只保留判别器的Encoder来用，生成器一般就不要了。由于这种渐进式的模式使得训练过程会更有针对性，所以ELECTRA的主要亮点是训练效率更高了 | Kevin Clark et al,2020
+
 + [TOD-BERT: Pre-trained Natural Language Understanding for Task-Oriented Dialogue](https://arxiv.org/pdf/2004.06871.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/377845426)：任务导向型对话的预训练自然语言理解模型 | Chien-Sheng Wu et al,2020
 
 + [LogME: Practical Assessment of Pre-trained Models for Transfer Learning](https://arxiv.org/pdf/2102.11005.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/358844524)：一种通用且快速的评估选择适合下游任务的预训练模型的打分方法，logME | Kaichao You et al,2021
