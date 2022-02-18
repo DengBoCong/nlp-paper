@@ -69,6 +69,8 @@
 
 + [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/pdf/1906.08237.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/361737484)：XLNet--自回归语言模型的复兴，30多项任务超越BERT | Zhilin Yang et al,2019
 
++ [RoBERTa: A Robustly Optimized BERT Pretraining Approach](https://arxiv.org/pdf/1907.11692.pdf)：论文发现原BERT的预训练并不充分，因此作者提出了四点Bert的改进：1）：使用更大的batch在更大的数据集上对Bert进行深度训练；2）：不在使用NSP(Next Sentence Prediction)任务；3）：使用更长的序列进行训练；4）：动态改变训练数据的MASK模式；其中动态MASK就是在每次数据输入的时候进行MASK，而不是在数据预处理的时候就预先MASK好，这种方式相当于不重复看数据，使模型学习到更多的pattern | Yinhan Liu et al,2019
+
 + [NEZHA: Neural Contextualized Representation For Chinese Language Understanding](https://arxiv.org/pdf/1909.00204.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/100044919)：具体来说没有啥特别的创新点吧，在位置编码部分改成了相对位置编码。其他的比如WWM、混合精度训练、优化器自适应学习率，都是屡见不鲜的东西，整体效果而言也没有令人惊艳 | Junqiu Wei et al,2019
 
 + [CTRL: A Conditional Transformer Language Model For Controllable Generation](https://arxiv.org/pdf/1909.05858.pdf)
