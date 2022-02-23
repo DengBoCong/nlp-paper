@@ -11,7 +11,12 @@
 
 更新一些在我学习过程中阅读过的且感觉不错的论文，对于一些经典或思路很新奇的论文，会进行精读，并写一些阅读笔记同步上传更新。(内容同步更新到[知乎](https://www.zhihu.com/people/dengbocong)、[CSDN](https://dengbocong.blog.csdn.net/))，**论文按照时间顺序排放**。
 
-**注：对部分复现论文代码以及NLP其他工具代码放在这 ☞ [paper-code](https://github.com/DengBoCong/paper/tree/master/paper-code)**
+**注：**
++ 文本相似度计算相关的复现代码以及工具包在这个仓库 ☞ [Text-Similarity](https://github.com/DengBoCong/text-similarity)
++ 对话系统构建项目在这个仓库 ☞ [Nlp-Dialogue](https://github.com/DengBoCong/nlp-dialogue)
++ 对部分复现论文代码以及NLP其他工具代码放在这 ☞ [paper-code](https://github.com/DengBoCong/paper/tree/master/paper-code)
+
+
 
 # Contents | 内容
 + [综述](#综述)
