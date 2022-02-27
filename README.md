@@ -89,6 +89,8 @@
 
 + [TOD-BERT: Pre-trained Natural Language Understanding for Task-Oriented Dialogue](https://arxiv.org/pdf/2004.06871.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/377845426)：任务导向型对话的预训练自然语言理解模型 | Chien-Sheng Wu et al,2020
 
++ [DeBERTa: Decoding-Enhanced Bert With Disentangled Attention](https://arxiv.org/pdf/2006.03654.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/348522530)：DeBERTa的一大亮点在于改动位置编码的介入时机，在论文中叫作Disentangled Attention。具体做法是将原本和输入embedding混合相加的pos embedding（relative）单独拎出来，然后再用位置编码和content 编码计算attention，进而增加了“位置-内容” 和 “内容-位置” 注意力的分散Disentangled Attention。然后一些其他的改动比如：1):因为我们在精调时一般会在 BERT 的输出后接一个特定任务的 Decoder，但是在预训练时却并没有这个 Decoder，所以本文在预训练时用一个两层的 Transformer decoder 和一个 SoftMax 作为 Decoder；2):为了弥补一下只有相对位置的损失，因此在decoder前加入一层绝对位置embedding；3):bert的训练策略中，mask有10%的情况是不做任何替换，而DeBeta将不做替换改成了换位该位置词绝对位置的pos embeding | Pengcheng He et al,2020
+
 + [LogME: Practical Assessment of Pre-trained Models for Transfer Learning](https://arxiv.org/pdf/2102.11005.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/358844524)：一种通用且快速的评估选择适合下游任务的预训练模型的打分方法，logME | Kaichao You et al,2021
 
 + [Are Pre-trained Convolutions Better than Pre-trained Transformers?](https://arxiv.org/pdf/2105.03322.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/380195756)：将Transformer的Attention换成了卷积，尝试预训练模型新方式 | Yi Tay et al,2021
