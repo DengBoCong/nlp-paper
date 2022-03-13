@@ -102,6 +102,8 @@
 
 + [Convolutional Neural Networks for Sentence Classification](https://arxiv.org/pdf/1408.5882.pdf)：经典的TextCNN，static/non-static几种特征向量学习方式 | Yoon Kim et al,2014
 
++ [Highway Networks](https://arxiv.org/pdf/1505.00387.pdf) | [阅读笔记](https://www.zhihu.com/question/279426970/answer/614880515)：Highway Networks名字取得很有意思，整个网络结构思想也是符合取名的。简单来说就是通过设置一个函数T来限制网络的输出（借鉴LSTM中gate思想），其中T取0时，输出y=x，这个时候梯度直接传到下一层，也就是说，可以通过T来控制梯度传递，从而一定程度上解决梯度消失的问题。Highway的参数较少，适合single nonlinear layer的transform | Rupesh Kumar Srivastava et al,2015
+
 + [Pointer Networks](https://arxiv.org/pdf/1506.03134.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/48959800)：原文是围绕解决凸包而设计的的网络结构，直接使用Attention的权重用于预测，能够适应输入的规模，后面许多网络结构应用发展成了Copying Mechanism来解决OOV问题 | Oriol Vinyals et al,2015
 
 + [Training Very Deep Networks](https://arxiv.org/pdf/1507.06228.pdf) | [阅读笔记](https://cloud.tencent.com/developer/article/1148375)：经典的Highway networks，基于深层的CNN堆叠网络，使用transform gate和carry gate（其实后来被统一称为Shortcut），将浅层特征信息带到深层中，以此来解决深度网络中梯度发散，难以训练的问题 | Rupesh Kumar Srivastava et al,2015
