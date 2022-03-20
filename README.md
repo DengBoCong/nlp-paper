@@ -224,6 +224,8 @@
 
 + [Bag of Tricks for Efficient Text Classification](https://arxiv.org/pdf/1607.01759.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/31118235)：比较经典的FastText，比较依赖Word Embedding的质量（槽点本身难点就在于embedding，结果文章不谈这个），整个网络结构使用N-gram，对得到的Embedding求和，并过两个Dense然后输出，本身网络结构就那没啥，当然fast啦，外加论文具体加了hashing trick，hierarchical softmax等进行加速、内存优化 | Armand Joulin et al,2016
 
++ [Poly-encoders: Transformer Architectures and Pre-training Strategies for Fast and Accurate Multi-sentence Scoring](https://arxiv.org/pdf/1905.01969v2.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/119444637)：Poly-encoder主要的出发点就是想要保持Bi-encoder的推理速度的同时，兼顾Cross-encoder精准匹配的潜力。思想上比较好理解，Bi-encoder的主要问题在于它要求encoder将query的所有信息都塞进一个固定的比较general的向量中，而Cross-encoder为了得到更加均衡的语义表示，需要将句子对关联起来进行推理计算，导致在检索时速度极慢。因此Poly-encoder的方案就是每个query产生m个不同的vec，利用这m个vec动态的和candidate vec计算，得到最终的final_vec（作为query的最终表示），用final_vec和candidate vec进行计算得到分数 | Samuel Humeau et al,2019
+
 + [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/pdf/1908.10084.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/113133510)：和之前提出的InferSent结构如出一辙，妥妥的双塔结构，只是换成了Bert来进行特征表示。模型结构没有什么创新点，但是这个结构用起来效果挺好，速度也快，很适合工业界使用。论文中在针对句向量表示计算策略分别使用了CLS向量策略、平均池化策略、最大值池化策略三个策略进行实验，实验结果中平均池化策略最优 | Nils Reimers et al,2019
 
 + [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/368353121)：基于Sentence-Bert，引入对比学习的思想，在无监督与有监督语义相似度计算任务达到SOTA。主要围绕对比学习质量指标Alignment和Uniformity来进行优化，对于Unsupervised，核心是使用dropout mask生成正样本，负样本是in-batch negatives。而Supervised则是NLI中entailment关系样例对。负例：a) in-batch negatives b)NLI中关系为contradiction的样例对 | Tianyu Gao et al,2021
