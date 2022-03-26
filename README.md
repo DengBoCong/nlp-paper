@@ -228,6 +228,8 @@
 
 + [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/pdf/1908.10084.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/113133510)：和之前提出的InferSent结构如出一辙，妥妥的双塔结构，只是换成了Bert来进行特征表示。模型结构没有什么创新点，但是这个结构用起来效果挺好，速度也快，很适合工业界使用。论文中在针对句向量表示计算策略分别使用了CLS向量策略、平均池化策略、最大值池化策略三个策略进行实验，实验结果中平均池化策略最优 | Nils Reimers et al,2019
 
++ [ColBERT: Eicient and Eective Passage Search via Contextualized Late Interaction over BERT](https://arxiv.org/pdf/2004.12832.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/376475610)：和前面的Poly-encoder出发点都是一样的，为了就是在获得BERT representation能力的同时，提高文本计算的效率。按照本文的说法，就是尽可能离线计算好Embedding，在通过Late Interaction的方式，弥补因为query和doc分离计算导致的效果损失。本文具体的模型结构是使用原生的BERT，对query和doc进行Embedding，不同之处是为了区分query和doc，分别在输入的seq的起始位置加上[Q]和[D]。Bert是编码器，CNN做维度变换，用来对BERT的隐层输出进行降维处理，Normalize是为后面计算余弦相似度做l2正则化处理，对于doc加个标点符号的mask | Omar Khattab et al,2020
+
 + [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/368353121)：基于Sentence-Bert，引入对比学习的思想，在无监督与有监督语义相似度计算任务达到SOTA。主要围绕对比学习质量指标Alignment和Uniformity来进行优化，对于Unsupervised，核心是使用dropout mask生成正样本，负样本是in-batch negatives。而Supervised则是NLI中entailment关系样例对。负例：a) in-batch negatives b)NLI中关系为contradiction的样例对 | Tianyu Gao et al,2021
 
 # Nearest Neighbor | 向量检索
