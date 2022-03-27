@@ -228,7 +228,7 @@
 
 + [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/pdf/1908.10084.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/113133510)：和之前提出的InferSent结构如出一辙，妥妥的双塔结构，只是换成了Bert来进行特征表示。模型结构没有什么创新点，但是这个结构用起来效果挺好，速度也快，很适合工业界使用。论文中在针对句向量表示计算策略分别使用了CLS向量策略、平均池化策略、最大值池化策略三个策略进行实验，实验结果中平均池化策略最优 | Nils Reimers et al,2019
 
-+ [ColBERT: Eicient and Eective Passage Search via Contextualized Late Interaction over BERT](https://arxiv.org/pdf/2004.12832.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/376475610)：和前面的Poly-encoder出发点都是一样的，为了就是在获得BERT representation能力的同时，提高文本计算的效率。按照本文的说法，就是尽可能离线计算好Embedding，在通过Late Interaction的方式，弥补因为query和doc分离计算导致的效果损失。本文具体的模型结构是使用原生的BERT，对query和doc进行Embedding，不同之处是为了区分query和doc，分别在输入的seq的起始位置加上[Q]和[D]。Bert是编码器，CNN做维度变换，用来对BERT的隐层输出进行降维处理，Normalize是为后面计算余弦相似度做l2正则化处理，对于doc加个标点符号的mask | Omar Khattab et al,2020
++ [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://arxiv.org/pdf/2004.12832.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/376475610)：和前面的Poly-encoder出发点都是一样的，为了就是在获得BERT representation能力的同时，提高文本计算的效率。按照本文的说法，就是尽可能离线计算好Embedding，在通过Late Interaction的方式，弥补因为query和doc分离计算导致的效果损失。本文具体的模型结构是使用原生的BERT，对query和doc进行Embedding，不同之处是为了区分query和doc，分别在输入的seq的起始位置加上[Q]和[D]。Bert是编码器，CNN做维度变换，用来对BERT的隐层输出进行降维处理，Normalize是为后面计算余弦相似度做l2正则化处理，对于doc加个标点符号的mask | Omar Khattab et al,2020
 
 + [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/368353121)：基于Sentence-Bert，引入对比学习的思想，在无监督与有监督语义相似度计算任务达到SOTA。主要围绕对比学习质量指标Alignment和Uniformity来进行优化，对于Unsupervised，核心是使用dropout mask生成正样本，负样本是in-batch negatives。而Supervised则是NLI中entailment关系样例对。负例：a) in-batch negatives b)NLI中关系为contradiction的样例对 | Tianyu Gao et al,2021
 
@@ -297,6 +297,8 @@
 + [ProjectionNet: Learning Efficient On-Device Deep Networks Using Neural Projections](https://arxiv.org/pdf/1708.00630.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/295636122)：一种叫ProjectionNet的联合框架，可以为不同机器学习模型架构训练轻量的设备端模型。 | Google et al,2017
 
 + [Additive Margin Softmax for Face Verification](https://arxiv.org/pdf/1801.05599.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/397084135)：AM-Softmax在A-Softmax的最大区别是AM是角度距离，A是余弦距离
+
++ [Fixing Weight Decay Regularization in Adam](https://openreview.net/pdf?id=rk6qdGgCZ) | [原英文版阅读笔记](https://www.fast.ai/2018/07/02/adam-weight-decay/) | [阅读笔记](https://zhuanlan.zhihu.com/p/39543160)：论文提出Adam在算法实现上的改进方法--AdamW（注意是算法实现）。Adam相较于传统的GD算法来说，增加了一阶动量（各时刻方向的指数移动平均值）和二阶动量（历史梯度平方和），在算法库的具体实现中，一般是通过在计算梯度之初就加上了正则项，这就导致这个正则项随着梯度一同计算，而AdamW的做法则是在梯度计算完之后，在加上这个正则项（称为weight decay）。论文中比较了SGD和SGDW、Adam和AdamW，通过实验证明了weight decay相较于一般实现的l2正则效果更好 | Anonymous authors et al, 2018
 
 + [Self-Attention with Relative Position Representations](https://arxiv.org/pdf/1803.02155.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/268649069)：对Transformer里面用到的位置编码进行讨论，对自注意力进行改造，从而使用相对位置编码代替硬位置编码 | Mihaylova et al,2018
 
