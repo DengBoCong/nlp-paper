@@ -41,6 +41,8 @@
 
 + [Evolution of Semantic Similarity - A Survey](https://arxiv.org/pdf/2004.13820.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/138636605)：一篇语义相似度的综述，整体文章从数据集开始，将技术体系分为：基于知识的语义相似性方法、基于语料的语义相似性方法、基于深度神经网络的方法、基于混合模型方法四类进行分析 | DHIVYA CHANDRASEKARAN et al,2020
 
++ [Measurement of Text Similarity: A Survey](https://scholar.google.com/scholar_url?url=https://www.mdpi.com/2078-2489/11/9/421/pdf&hl=zh-CN&sa=T&oi=gsb-gga&ct=res&cd=0&d=6927655514883966546&ei=Ftg9Yqm4D4TQmAGcuKOgCw&scisig=AAGBfm0m8ZuluCOz6UpEoMRcxqYN9oQl8A)：语义相似度的综述，大体上从独立度量到模型计算的模型概述的比较广，但不是很全，不过从了解相似度计算来讲，还是值得一看的 | Jiapeng Wang et al,2020
+
 + [A Survey on Neural Network Interpretability](https://arxiv.org/pdf/2012.14261.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/341153242)：关于神经网络可解释性的一篇综述，整理的挺不错的，不过就是相关领域前沿探索不足 | Yu Zhang et al,2020
 
 + [A Comprehensive Survey and Experimental Comparison of Graph-Based Approximate Nearest Neighbor Search](https://arxiv.org/pdf/2101.12631.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/415320221)：论文是一篇关于graph-base的向量召回综述，聚焦实现了效率和精度最优权衡的近邻图索引，综述了 13 种具有代表性相关算法，包括NSW、HNSW等在内的优秀算法，并提出一个统一评估的pipeline | Mengzhao Wang et al,2021
