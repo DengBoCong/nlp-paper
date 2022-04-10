@@ -118,6 +118,8 @@
 
 + [Very Deep Convolutional Networks for Text Classification](https://arxiv.org/pdf/1606.01781.pdf)：VDCNN，character level，只利用小尺度的卷积核池化操作，包含了29个卷积层。效果提升并不是很明显吧，不过亮点在于CNN层数比较深，从某种程度上证明了类似ResNet那样的Shortcut connections可以降低梯度消失带来的影响，从而提升效果 | Alexis Conneau et al, 2016
 
++ [Semi-supervised classification with graph convolutional networks](https://arxiv.org/pdf/1609.02907.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/78466344)/[阅读笔记2](https://www.zhihu.com/question/54504471/answer/332657604)：这就是非常经典的GCN啦，GCN对非结构化数据构造特征节点，进而构造graph，通过使用邻接矩阵、度矩阵等图结构对输入的节点embedding进行优化学习（本质上是一种局部加权求和的方式，类似Attention的思想，不过有很多trick在里面，比如对称归一化等），能够通过相邻节点传递特征信息。GCN能够有效地提取空间特征来进行机器学习，虽然目前在NLP任务中的表现不算突出，但是它的功劳在于提供一种处理、研究的模型，扩广了解决方案的思路 | Thomas N. Kipf et al,2016
+
 + [Language Modeling with Gated Convolutional Networks](https://arxiv.org/pdf/1612.08083.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/395977833)：受LSTM门控机制的启发，将线性门控机制应用于卷积结构，文中对比GLU、GTU等结构性能 | Yann N. Dauphin et al,2016
 
 + [Densely Connected Convolutional Networks](https://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.pdf) | [阅读笔记](https://cloud.tencent.com/developer/article/1148375)：CVPR 2017的Best Paper，提出了DenseNet，借鉴highway networks和ResNet的思路，DenseNet将shortcut用到了“极致”——每两层之间都添加shortcut，当然具体实现中使用了一些tricks防止模型过大的问题 | Gao Huang et al,2017
