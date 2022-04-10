@@ -118,7 +118,7 @@
 
 + [Very Deep Convolutional Networks for Text Classification](https://arxiv.org/pdf/1606.01781.pdf)：VDCNN，character level，只利用小尺度的卷积核池化操作，包含了29个卷积层。效果提升并不是很明显吧，不过亮点在于CNN层数比较深，从某种程度上证明了类似ResNet那样的Shortcut connections可以降低梯度消失带来的影响，从而提升效果 | Alexis Conneau et al, 2016
 
-+ [Semi-supervised classification with graph convolutional networks](https://arxiv.org/pdf/1609.02907.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/78466344)/[阅读笔记2](https://www.zhihu.com/question/54504471/answer/332657604)：这就是非常经典的GCN啦，GCN对非结构化数据构造特征节点，进而构造graph，通过使用邻接矩阵、度矩阵等图结构对输入的节点embedding进行优化学习（本质上是一种局部加权求和的方式，类似Attention的思想，不过有很多trick在里面，比如对称归一化等），能够通过相邻节点传递特征信息。GCN能够有效地提取空间特征来进行机器学习，虽然目前在NLP任务中的表现不算突出，但是它的功劳在于提供一种处理、研究的模型，扩广了解决方案的思路 | Thomas N. Kipf et al,2016
++ [Semi-supervised classification with graph convolutional networks](https://arxiv.org/pdf/1609.02907.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/78466344)/[阅读笔记2](https://www.zhihu.com/question/54504471/answer/332657604)：这就是非常经典的GCN啦，GCN对非结构化数据构造特征节点，进而构造graph，通过使用邻接矩阵、度矩阵等图结构对输入的节点embedding进行优化学习（本质上是一种局部加权求和的方式，类似Attention的思想，不过有很多trick在里面，比如对称归一化等），能够通过相邻节点传递特征信息。GCN能够有效地提取空间特征来进行机器学习，虽然目前在NLP任务中的表现不算特别突出，但是它的功劳在于提供一种处理、研究的模型，扩广了解决方案的思路 | Thomas N. Kipf et al,2016
 
 + [Language Modeling with Gated Convolutional Networks](https://arxiv.org/pdf/1612.08083.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/395977833)：受LSTM门控机制的启发，将线性门控机制应用于卷积结构，文中对比GLU、GTU等结构性能 | Yann N. Dauphin et al,2016
 
@@ -229,6 +229,8 @@
 + [Learning Text Similarity with Siamese Recurrent Networks](https://aclanthology.org/W16-1617.pdf)：网络包含4层BiLSTM（64-d hidden），最后一层的BiLSTM的hidden state和cell state进行concat，然后在timestep维度进行average处理，并接一个Dense层（激活函数为tanh），得到的两个Embedding Space进行Cosine sim计算，得到的相似度分数E用于损失函数计算，损失函数使用对比损失函数，计算方法为，损失函数正例：1/4(1-E)^2，负例：E^2(如果E<m)，否则0 | Paul Neculoiu et al,2016
 
 + [Bag of Tricks for Efficient Text Classification](https://arxiv.org/pdf/1607.01759.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/31118235)：比较经典的FastText，比较依赖Word Embedding的质量（槽点本身难点就在于embedding，结果文章不谈这个），整个网络结构使用N-gram，对得到的Embedding求和，并过两个Dense然后输出，本身网络结构就那没啥，当然fast啦，外加论文具体加了hashing trick，hierarchical softmax等进行加速、内存优化 | Armand Joulin et al,2016
+
++ [Graph Convolutional Networks for Text Classification](https://arxiv.org/pdf/1809.05679.pdf)：将GCN应用于文本分类中，在不引入预训练模型的情况下，该方法的表现已经很优异了。该方法将每个独立的单词以及文档作为节点，即graph中包含单词级别和文档级别两类节点。初始化单词one-hot（不使用训练向量）。对于边，则包含（文档-单词）、（单词-单词）两类边，其中（文档-单词）使用tf-idf进行度量，（单词-单词）使用PMI指数。本文的模型结构的缺点在于，只考虑到共现度方面的信息，因此语义方面很低（作者原意就是不使用预训练embedding），而且可能会受到长尾问题的影响，因此可以使用注意力来辅助提升 | Liang Yao et al, 2018
 
 + [Poly-encoders: Transformer Architectures and Pre-training Strategies for Fast and Accurate Multi-sentence Scoring](https://arxiv.org/pdf/1905.01969v2.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/119444637)：Poly-encoder主要的出发点就是想要保持Bi-encoder的推理速度的同时，兼顾Cross-encoder精准匹配的潜力。思想上比较好理解，Bi-encoder的主要问题在于它要求encoder将query的所有信息都塞进一个固定的比较general的向量中，而Cross-encoder为了得到更加均衡的语义表示，需要将句子对关联起来进行推理计算，导致在检索时速度极慢。因此Poly-encoder的方案就是每个query产生m个不同的vec，利用这m个vec动态的和candidate vec计算，得到最终的final_vec（作为query的最终表示），用final_vec和candidate vec进行计算得到分数 | Samuel Humeau et al,2019
 
