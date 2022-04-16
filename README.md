@@ -189,6 +189,8 @@
 
 + [Increasing Faithfulness in Knowledge-Grounded Dialogue with Controllable Features](https://arxiv.org/pdf/2107.06963.pdf)：通过可控特征来增加知识对话系统的学习 | Rashkin et al,2021
 
++ [General-Purpose Question-Answering with MACAW](https://arxiv.org/pdf/2109.02593.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/425427299)：生成式多角度问答模型，参数量只有GPT-3的十六分之一，作者主打的亮点是通过整合7种不同的任务范式（问题生成、答案生成...），使得模型能够通过不同角度学习到QA相关的内容，目的就是得到一个强大的QA版本预训练模型。输入的话就是通过"$s1$;$s2$.."的slot方式进行文本拼接，得到的解码输出也是如此输出的，模型内核还是基于transformer的改造 | Oyvind Tafjord et al,2021
+
 + [Constraint based Knowledge Base Distillation in End-to-End Task Oriented Dialogs](https://arxiv.org/pdf/2109.07396.pdf)：基于KB的End2End的Task-Oriented的对话系统，使用pairwise相似度过滤相关信息来获得KB中的n元结构，就这一点上倒没有什么新奇，只不过相对于之前的方式修改的entity格式。不过在避免检索到部分entity相似但并不是目标的record的情况，作者加入了辅助的损失函数用于embedding constraint，这种做法确实减少了相同entity之间的相似性，从而提高record的可靠性，值得借鉴。基于现有的F1指标的缺点，提出multiset entity F1 | Dinesh Raghu et al,2021
 
 # Speech | 语音系统
