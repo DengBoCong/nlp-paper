@@ -99,6 +99,8 @@
 
 + [Are Pre-trained Convolutions Better than Pre-trained Transformers?](https://arxiv.org/pdf/2105.03322.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/380195756)：将Transformer的Attention换成了卷积，尝试预训练模型新方式 | Yi Tay et al,2021
 
++ [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?](https://arxiv.org/pdf/2202.12837.pdf) | [阅读笔记](https://mp.weixin.qq.com/s/qdCuPWsNg_lOxUkap1dQ9Q)：本文主要探讨分析Prompt范式下，预训练语言模型是如何学习并work的。主要的结论是在in-context learning 学习中，学习并不是输入与标注之间的关联，而是通过展示数据形式，来激活与训练模型的能力。此外附带两个结论：在meta learning环境下，in-context leanring的这个特点更为明显；因为标签不重要，所以可以用无标注领域内数据做in-context zero shot learning | Sewon Min et al,2022
+
 # Model | 模型
 + [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/26306795)：Word2vec开山之作之一，专门讲训练中的两个trick：hierarchical softmax 和 negative sampling | Tomas Mikolov et al,2013
 
