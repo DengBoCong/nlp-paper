@@ -51,6 +51,8 @@
 
 + [Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing](https://arxiv.org/pdf/2107.13586.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/409541189)：关于Prompt-based learning的一篇综述，Prompt（提示/题词）和之前的MLM有些相似，通过定义template的方式，基于语言模型的特性直接估计出文本的概率，从而生成答案。相较于传统的语言模型依赖于针对特定下游任务的fine-tune，Prompt更加关注模型的迁移能力（它的目标就是希望对不同下游任务建立一个统一的范例），除了便捷和泛化能力之外，这样做的一个明显优势就是不同任务之间的数据可以共享，减少标注数据，随着数据累积，新的任务可以达到zero-shot learning的目的 | Pengfei Liu et al,2021
 
++ [Paradigm Shift in Natural Language Processing](https://arxiv.org/pdf/2109.12575.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/415867930)：总结归纳NLP中任务范式并分析的综述，论文给出了七中范式的定义，针对此分析一些具体任务（范式迁移）的例子，并指出四种可能大一统的NLP任务范式：LM，matching，MRC，Seq2Seq（LM减少工程量，MRC具有更高的可解释性，seq2seq在处理复杂任务时具有更高的灵活性），但是没有把Prompt纳进去（狗头） | Tianxiang Sun et al,2021
+
 + [Data Augmentation Approaches in Natural Language Processing: A Survey](https://arxiv.org/pdf/2110.01852.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/420295576)：哈工大的工作，对15中NLP数据增强方法进行了总结和对比，有详细的优缺点说明，还有一些使用技巧，实用性非常强，需要的时候可以详细的参考原文以及相关的文献的应用细节。几个开源工具：Easy DA、UNsupervised DA、nlpaug、eda_nlp_for_Chinese | Bohan Li et al,2021
 
 # Pretraining | 预训练
