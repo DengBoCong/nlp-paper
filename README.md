@@ -150,6 +150,8 @@
 
 + [Synthesizer: Rethinking Self-Attention for Transformer Models](https://arxiv.org/pdf/2005.00743.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/380602965)：在Transformer架构下，对Self-Attention计算的探索研究，看完会对Self-Attention有个新认识 | Yi Tay et al,2020
 
++ [Glancing Transformer for Non-Autoregressive Neural Machine Translation](https://arxiv.org/pdf/2008.07905.pdf) | [阅读笔记](https://www.linkresearcher.com/theses/5970ead3-229c-4193-9f67-f39dc16219f5)：本文提出的GLAT是一种Non-Autoregressive翻译模型（摆脱BeamSearch），主要着重于并行化Decoder以及提高翻译质量，实际的效果速度快且在一些翻译方向上（英德）达到了SOTA。模型的核心结构沿用Transformer结构，参考预训练语言模型的MLM的做法，提出一种叫作GLM（Glancing LM）的方案，即使用两遍Decoder（同一个Decoder），第一遍的Decoder中，不加任何干预的获得模型的自然输出，这个时候将输出与Gold output进行对比，然后随机采样（也可以尝试其他的）目标词的词嵌入替换模型输出对应的hidden，然后再次喂入Decoder得到最终输出（注意，这里采样的词数量是根据训练情况好坏反比的，模型输出效果越好，采样的目标词越少，最终模型收敛到一次并行推理）。原理就是在第一次并行推理比较难学习到词与词之间的依赖关系，因此在第二次并行推理时，适当的引入目标词进行修正，进行增强训练 | Lihua Qian et al, 2020
+
 + [Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting](https://arxiv.org/pdf/2012.07436.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/351321328)：一种效果远超Transformer的长序列预测模型，针对LSTF问题上的研究改进 | Haoyi Zhou et al,2020
 
 # Dialogue | 对话系统
