@@ -72,6 +72,8 @@
 
 + [Fully Character-Level Neural Machine Translation without Explicit Segmentation](https://arxiv.org/pdf/1610.03017.pdf)：比较经典的Character-Level的Subword算法模型 | Jason et al,2016
 
++ [Deep contextualized word representations](https://arxiv.org/pdf/1802.05365.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/51679783)：ELMo模型原paper，想了想还是放在预训练里吧。ELMo模型很经典了，在Transformer这个大杀器提出后，依旧以LSTM为核心结构提出新的SOTA语义编码结构，还是尤其独到之处（ps：同年BERT也被提出了）。ELMo的结构可以分为两侧各一个多层LSTM，左侧的多层LSTM负责编码文本的正向语义，右侧的负责编码反向语义，然后对左右两边每一层的输出进行concat并乘上一个权重，最后的ELMo向量就是每一层输出的和。ELMo最大的亮点就是编码了文本的双向语义，因此相对于一些单向、静态编码器来讲，效果更好，但是问题也在这，这种将正反向的语义分开编码方式，就比不上BERT这种融合式的双向编码了，事实上也证明了这一点 | Matthew E. Peters et al, 2018
+
 + [Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates](https://arxiv.org/pdf/1804.10959.pdf)：unigram在给定词表及对应概率值下，直接以最大化句子的likelihood为目标来直接构建整个词表 | Kudo et al,2018
 
 + [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/269997771)：BERT的顶顶大名，使用Transformer的Encoder双向架构 | Devlin et al,2018
