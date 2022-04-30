@@ -328,6 +328,8 @@
 
 + [RelGAN: Relational Generative Adversarial Networks For Text Generation](https://openreview.net/pdf?id=rJedV3R5tm) | [阅读笔记](https://zhuanlan.zhihu.com/p/87605995)：提出了新型的生成器和判别器结构，使得直接用Gumbel Softmax训练出的文本GAN大幅度超过了以往的各种文本GAN模型。主要由三个模块组成，分别是：在生成器上，利用relational memory，使得具有更强表达能力和在长文本上更好的模型能力；在离散数据上，训练GAN利用Gumbel-Softmax Relaxation模型，使得模型简化，替代强化学习启发式算法；在判别器上利用多层词向量表示，使得生成器往更具多样性方面更新 Weili Nie et al,2019
 
++ [Language Models as Knowledge Bases?](https://aclanthology.org/D19-1250.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/94470840)：一篇讨论性的文章，主要提出的观点是认为像BERT等类似的预训练语言模型是另一种形式的knowledge database，能够保存大量的知识信息。作者通过效仿MLM的方式，将已有的NLP数据集进行整合，并挖空成完形填空的提问形式（以推理实体关系），文中实验了两种单向语言模型和两种双向语言模型，结果显示预训练模型的确包含了知识库中的信息。ps：这种观点也不一定对的，也有文章反对说BERT等模型只是由于对实体名称（表面形式）进行推理，如果过滤掉一些容易猜测的事实，那么模型精度将会急剧下降 | Fabio Petroni et al, 2019
+
 + [On the Convergence of Adam and Beyond](https://arxiv.org/pdf/1904.09237.pdf) | [原英文版阅读笔记](https://www.fast.ai/2018/07/02/adam-weight-decay/) | [阅读笔记](https://zhuanlan.zhihu.com/p/39543160)：Amsgrad，ICLR2018的最佳论文，主要是算法证明Adam在收敛性上存在的缺陷，并设计了理论实验，证明了这一点，同时提出了很简单的优化方法（实际的算法实现中，这个优化方法在相当多的实验中效果并不好）。Adam的收敛性缺陷在于，学习率通常是恒定的或降低的，所以随着训练过程的进行，二阶动量会随之减少，所以具体做法是增加一个变量来记录最大值，使用这个二阶动量的最大值替换原来的二阶动量进行计算，即v = max(avg_squared, max_squared) | Sashank J. Reddi et al, 2019
 
 + [Scheduled Sampling for Transformers](https://arxiv.org/pdf/1906.07651.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/267146739)：在Transformer应用Scheduled Sampling | Mihaylova et al,2019
