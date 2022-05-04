@@ -25,7 +25,7 @@
 + [对话系统](#对话系统)
 + [语音系统](#语音系统)
 + [聚类](#聚类)
-+ [文本相似度(匹配)](文本相似度(匹配))
++ [文本相似度/匹配/分类](文本相似度/匹配/分类)
 + [向量检索](#向量检索)
 + [深度学习](#深度学习)
 + [机器学习](#机器学习)
@@ -235,7 +235,7 @@
 
 + [Robust and Rapid Clustering of KPIs for Large-Scale Anomaly Detection](https://netman.aiops.org/~peidan/ANM2018/8.DependencyDiscovery/LectureCoverage/2018IWQOS_ROCKA.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/50698719)：关于快速时序聚类的文章，提出ROCKA系统架构，包括了数据预处理、基线提取、相似性度量、基于密度的聚类算法。ROCKA算法仅仅是使用了派发策略，单是并未在有效的利用过程中的计算结果，导致在派发过程中复杂度较高 | Zhihan Li et al,2018
 
-# Text Similarity | 文本相似度(匹配)
+# Text Similarity | 文本相似度/匹配/分类
 + [Siamese Recurrent Architectures for Learning Sentence Similarity](https://scholar.google.com/scholar_url?url=https://ojs.aaai.org/index.php/AAAI/article/view/10350/10209&hl=zh-CN&sa=T&oi=gsb-gga&ct=res&cd=0&d=7393466935379636447&ei=KQWzYNL5OYz4yATXqJ6YCg&scisig=AAGBfm0zNEZZez8zh5ZB_iG7UTrwXmhJWg)：Siamese LSTM，一个用来计算句对相似度的模型 | Jonas Mueller et al,2016
 
 + [Learning Text Similarity with Siamese Recurrent Networks](https://aclanthology.org/W16-1617.pdf)：网络包含4层BiLSTM（64-d hidden），最后一层的BiLSTM的hidden state和cell state进行concat，然后在timestep维度进行average处理，并接一个Dense层（激活函数为tanh），得到的两个Embedding Space进行Cosine sim计算，得到的相似度分数E用于损失函数计算，损失函数使用对比损失函数，计算方法为，损失函数正例：1/4(1-E)^2，负例：E^2(如果E<m)，否则0 | Paul Neculoiu et al,2016
@@ -253,6 +253,8 @@
 + [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://arxiv.org/pdf/2004.12832.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/376475610)：和前面的Poly-encoder出发点都是一样的，为了就是在获得BERT representation能力的同时，提高文本计算的效率。按照本文的说法，就是尽可能离线计算好Embedding，在通过Late Interaction的方式，弥补因为query和doc分离计算导致的效果损失。本文具体的模型结构是使用原生的BERT，对query和doc进行Embedding，不同之处是为了区分query和doc，分别在输入的seq的起始位置加上[Q]和[D]。Bert是编码器，CNN做维度变换，用来对BERT的隐层输出进行降维处理，Normalize是为后面计算余弦相似度做l2正则化处理，对于doc加个标点符号的mask | Omar Khattab et al,2020
 
 + [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/368353121)：基于Sentence-Bert，引入对比学习的思想，在无监督与有监督语义相似度计算任务达到SOTA。主要围绕对比学习质量指标Alignment和Uniformity来进行优化，对于Unsupervised，核心是使用dropout mask生成正样本，负样本是in-batch negatives。而Supervised则是NLI中entailment关系样例对。负例：a) in-batch negatives b)NLI中关系为contradiction的样例对 | Tianyu Gao et al,2021
+
++ [Noisy Channel Language Model Prompting for Few-Shot Text Classification](https://arxiv.org/pdf/2108.04106.pdf)：本篇论文以实验探索为主，含有大量的实验对比，主要出发点就是在few-shot问题中，探讨控制训练参数对于direct model和channel model效果的影响，最终的论文的结论是Noisy Channel model明显优于direct model。论文中的direct model主要是指一般的P(c|x)，其中x是输入，c是label，而direct++ model则是基于direct，强化文本间的差异，引入空文本，即P(c|x)/P(c|null)，而channel model则是指使用贝叶斯公式重新参数化direct，P(c|x)=P(x|c)P(c)/P(x)，其中P(c)就是label数分之一，即P(1/C)，而P(x)独立于c，所以最终只需要计算P(x|c)。那么最后用形象一点的例子来解释direct和channel的差异就是，direct=x->c，channel=c->x。论文中对参数的控制采用了all finetuning、head tuning、transformation tuning和Prompt tuning（这里可以认为是soft prompt，即只需在输入序列中放入一些随机向量，与词汇表中的特定word embedding无关，并进行调整，同时固定预训练模型的其他部分）。在direct和channel的方法间，channel明显优于direct。在direct model的参数控制实验中，head tuning是最优的，但是当channel model配合soft prompt时，效果是最好的 | Sewon Min et al,2021
 
 # Nearest Neighbor | 向量检索
 + [similarity estimation techniques from rounding algorithms](https://www.cs.princeton.edu/courses/archive/spring04/cos598B/bib/CharikarEstim.pdf) | [阅读笔记](http://tangxman.github.io/2015/12/01/simhash/)：论文提出的SimHash是当年Google用来文本去重的算法。主要做法是将文档提取出一定数量的关键词，然后转换成哈希码并按列相加，1+weight，0-weight，得到的结果按照整数为1，负数为0得到最终的哈希码，然后将哈希码分为m个table，并分别记性计算检索 | Moses S. Charikar et al,2002
