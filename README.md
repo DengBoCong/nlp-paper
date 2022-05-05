@@ -12,7 +12,7 @@
 更新一些在我学习过程中阅读过的且感觉不错的论文，对于一些经典或思路很新奇的论文，会进行精读，并写一些阅读笔记同步上传更新。(内容同步更新到[知乎](https://www.zhihu.com/people/dengbocong)、[CSDN](https://dengbocong.blog.csdn.net/))，**论文按照时间顺序排放**。
 
 **注：**
-+ 文本相似度计算相关的复现代码以及工具包在这个仓库 ☞ [Text-Similarity](https://github.com/DengBoCong/text-similarity)
++ 文本相似度计算相关的复现代码以及工具包（Tf/Pytorch双版本）在这个仓库 ☞ [Text-Similarity](https://github.com/DengBoCong/text-similarity)
 + 对话系统构建项目在这个仓库 ☞ [Nlp-Dialogue](https://github.com/DengBoCong/nlp-dialogue)
 + 对部分复现论文代码以及NLP其他工具代码放在这 ☞ [paper-code](https://github.com/DengBoCong/paper/tree/master/paper-code)
 
@@ -100,6 +100,8 @@
 + [TOD-BERT: Pre-trained Natural Language Understanding for Task-Oriented Dialogue](https://arxiv.org/pdf/2004.06871.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/377845426)：任务导向型对话的预训练自然语言理解模型 | Chien-Sheng Wu et al,2020
 
 + [DeBERTa: Decoding-Enhanced Bert With Disentangled Attention](https://arxiv.org/pdf/2006.03654.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/348522530)：DeBERTa的一大亮点在于改动位置编码的介入时机，在论文中叫作Disentangled Attention。具体做法是将原本和输入embedding混合相加的pos embedding（relative）单独拎出来，然后再用位置编码和content 编码计算attention，进而增加了“位置-内容” 和 “内容-位置” 注意力的分散Disentangled Attention。然后一些其他的改动比如：1):因为我们在精调时一般会在 BERT 的输出后接一个特定任务的 Decoder，但是在预训练时却并没有这个 Decoder，所以本文在预训练时用一个两层的 Transformer decoder 和一个 SoftMax 作为 Decoder；2):为了弥补一下只有相对位置的损失，因此在decoder前加入一层绝对位置embedding；3):bert的训练策略中，mask有10%的情况是不做任何替换，而DeBeta将不做替换改成了换位该位置词绝对位置的pos embeding | Pengcheng He et al,2020
+
++ [Making Pre-trained Language Models Better Few-shot Learners](https://arxiv.org/pdf/2012.15723.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/386470305)：文中提出的LM-BFF是一套简单的技术组合，用于仅在少量训练样本上对预训练的LM进行微调，其中包括：（1）基于Prompt的微调以及自动生成prompt的新方法；（2）一种动态的、有选择的在上下文中引入demonstration的方法。这里稍微介绍一下背景概念，Prompt方法主要分两种不同的研究方向：（1）基于prompt的fine-tuning（被认为是更适合小LM的few-shot learner）；（2）而对于大模型，fine-tuning比较困难，因此是希望固定他们的参数，通过不同的prompt将它们应用在不同的任务上。对于第二个研究方向，prompt分为Discrete Prompts和Soft Prompts，可以简单的认为discrete是选随机token，而soft则是直接用随机向量替换Embedding。然后还有除了Prompt之外，还有demonstration（in-context learning， 一种新的meta-learning方式），prompt和demonstration都是GPT-3很成功的设计，demonstration是多sample+input text作为模型输入，其中也有很多优化的方法 | Tianyu Gao et al,2020
 
 + [LogME: Practical Assessment of Pre-trained Models for Transfer Learning](https://arxiv.org/pdf/2102.11005.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/358844524)：一种通用且快速的评估选择适合下游任务的预训练模型的打分方法，logME | Kaichao You et al,2021
 
