@@ -12,6 +12,7 @@ import os
 import sys
 import pickle
 import jieba
+import requests
 from PyQt6.QtCore import QMetaObject, QCoreApplication, Qt, QModelIndex
 from PyQt6.QtGui import QStandardItemModel, QKeyEvent
 from PyQt6.QtWidgets import (
@@ -43,7 +44,7 @@ class SearchEngine(object):
         tokens = [token.lower() for token in jieba.cut(text) if token.strip() not in self.stopwords]
         return tokens
 
-    def create_index(self, readme_file_path: str = "../README.md"):
+    def create_index(self, readme_file_path: str = "./README.md"):
         index_count = 100000000
         with open(readme_file_path, "r", encoding="utf-8") as file:
             for line in file:
@@ -262,6 +263,16 @@ class SearchKits(object):
 
     def show(self, title: str = "Paper Search Tool"):
         self.set_paper_category_list(self.search_engine.categories)
+        content = ""
+        count = 0
+        for key in self.search_engine.categories.keys():
+            if count % 6 == 0:
+                content += "<br>"
+            count += 1
+            content += f"•&nbsp;&nbsp;[{key}](https://github.com/DengBoCong/nlp-paper)&nbsp;&nbsp;"
+
+        with open("./te.txt", "w", encoding="utf-8") as file:
+            file.write(content)
         self.windows.show()
         self.windows.setWindowTitle(title)
         sys.exit(self.app.exec())
