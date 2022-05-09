@@ -9,6 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 #data/
+.idea/
 paper-code/data/
 paper-code/pytorch_src/checkpoint/
 paper-code/pytorch_src/data/

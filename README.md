@@ -34,7 +34,7 @@ python3 search_kits.py
 # Paper List | 论文列表
 ```
 注：论文按时间排序，并进行分类归档，可直接在本页Ctrl+F查询，或使用上述搜索工具查询（推荐）
-    下述列表项格式：<论文 | 阅读笔记 | 简述 | 作者时间 | 标签>
+    下述列表项格式：<标签 | 论文 | 阅读笔记 | 简述 | 作者时间>
 ```
 + [聚类] | [Accelerating exact k-means algorithms with geometric reasoning](http://portal.acm.org/citation.cfm?doid=312129.312248) | [阅读笔记](https://www.zhihu.com/question/494753171/answer/2204649294) | K-Means引入计算机中的那片论文，K-Means属于Partition-based methods，思想是初始化中心点，然后通过启发式算法，达到”类内的点都足够近，类间的点都足够远“的目标 | et al Dan Pelleg,1999
 
