@@ -15,6 +15,7 @@ paper-code/pytorch_src/data/
 paper-code/tensorflow_src/checkpoint/
 paper-code/tensorflow_src/data/
 task/checkpoint/
+debug.py
 build/
 develop-eggs/
 dist/
