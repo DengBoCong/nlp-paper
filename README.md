@@ -300,6 +300,8 @@ python3 search_kits.py
   
 + [模型-预训练] | [Reformer: The Efficient Transformer](https://arxiv.org/pdf/2001.04451.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/411882151) | 使用LSH Attention、Reversible layers、Chunking FFN layers，降低Transformer计算复杂度和内存空间消耗 | Nikita Kitaev et al,2020
 
++ [Prompt-预训练-语言模型-文本相似度/匹配/分类] | [Exploiting Cloze Questions for Few Shot Text Classification and Natural Language Inference](https://arxiv.org/pdf/2001.07676.pdf)：比较早研究Prompt的工作之一，PET使用了基于手工设计模板的Prompt进行训练，对无标签数据使用了简单的prompt ensemble，即将多种prompt集成在一起计算预测结果，最后叠加一个分类器对这些soft-labeled数据进行训练。PET在计算loss的时候主要计算目标词的cross entropy（MLM loss作为附加），而忽略了词表中其他备选词，这种方式在后续的工作当中是被认为不妥的，还是使用原生的MLM loss更好。PET这种手动设计Prompt的方式本身难度较大，而且是基于人为经验的，这种方式使得模型比较依赖prompt，导致稍加改动就影响模型性能，因此后续工作也朝着auto prompt方向发展 | Timo Schick et al,2020
+
 + [深度学习] | [Consistency of a Recurrent Language Model With Respect to Incomplete Decoding](https://arxiv.org/pdf/2002.02492.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/349675973) | 讨论Seq2Seq模型解码停不下来的原因 | Sean Welleck et al,2020
 
 + [深度学习] | [GLU Variants Improve Transformer](https://arxiv.org/pdf/2002.05202.pdf) | 本文借助门控线性单元(Gated Linear Unit,GLU)对模型的FeedForward层进行了修改，同时在训练的时候去掉了Dropout，并增加了解码器输出端的Embedding（这些改动增加了模型参数，但效果更佳）。文中主要对比了Bilinear、relu、gelu、swish激活函数下，使用GLU的效果，其中gelu和swish表现最佳。总得来说，实验证明了GLU的有效性，可以应用在模型里试试 | Noam Shazeer et al,2020
@@ -366,7 +368,7 @@ python3 search_kits.py
   
 + [对话系统] | [Increasing Faithfulness in Knowledge-Grounded Dialogue with Controllable Features](https://arxiv.org/pdf/2107.06963.pdf) | 通过可控特征来增加知识对话系统的学习 | Rashkin et al,2021
   
-+ [综述-Prompt-预训练] | [Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing](https://arxiv.org/pdf/2107.13586.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/409541189) | 关于Prompt-based learning的一篇综述，Prompt（提示/题词）和之前的MLM有些相似，通过定义template的方式，基于语言模型的特性直接估计出文本的概率，从而生成答案。相较于传统的语言模型依赖于针对特定下游任务的fine-tune，Prompt更加关注模型的迁移能力（它的目标就是希望对不同下游任务建立一个统一的范例），除了便捷和泛化能力之外，这样做的一个明显优势就是不同任务之间的数据可以共享，减少标注数据，随着数据累积，新的任务可以达到zero-shot learning的目的 | Pengfei Liu et al,2021
++ [综述-Prompt-预训练] | [Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing](https://arxiv.org/pdf/2107.13586.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/409541189) / [阅读笔记2](https://zhuanlan.zhihu.com/p/461825791) | 关于Prompt-based learning的一篇综述，Prompt（提示/题词）和之前的MLM有些相似，通过定义template的方式，基于语言模型的特性直接估计出文本的概率，从而生成答案。相较于传统的语言模型依赖于针对特定下游任务的fine-tune，Prompt更加关注模型的迁移能力（它的目标就是希望对不同下游任务建立一个统一的范例），除了便捷和泛化能力之外，这样做的一个明显优势就是不同任务之间的数据可以共享，减少标注数据，随着数据累积，新的任务可以达到zero-shot learning的目的 | Pengfei Liu et al,2021
 
 + [文本相似度/匹配/分类-Prompt-预训练-语言模型] | [Noisy Channel Language Model Prompting for Few-Shot Text Classification](https://arxiv.org/pdf/2108.04106.pdf) | 本篇论文以实验探索为主，含有大量的实验对比，主要出发点就是在few-shot问题中，探讨控制训练参数对于direct model和channel model效果的影响，最终的论文的结论是Noisy Channel model明显优于direct model。论文中的direct model主要是指一般的P(c|x)，其中x是输入，c是label，而direct++ model则是基于direct，强化文本间的差异，引入空文本，即P(c|x)/P(c|null)，而channel model则是指使用贝叶斯公式重新参数化direct，P(c|x)=P(x|c)P(c)/P(x)，其中P(c)就是label数分之一，即P(1/C)，而P(x)独立于c，所以最终只需要计算P(x|c)。那么最后用形象一点的例子来解释direct和channel的差异就是，direct=x->c，channel=c->x。论文中对参数的控制采用了all finetuning、head tuning、transformation tuning和Prompt tuning（这里可以认为是soft prompt，即只需在输入序列中放入一些随机向量，与词汇表中的特定word embedding无关，并进行调整，同时固定预训练模型的其他部分）。在direct和channel的方法间，channel明显优于direct。在direct model的参数控制实验中，head tuning是最优的，但是当channel model配合soft prompt时，效果是最好的 | Sewon Min et al,2021
 
