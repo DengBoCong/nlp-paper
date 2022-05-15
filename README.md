@@ -354,6 +354,8 @@ python3 search_kits.py
 
 + [对话系统-预训练-检索式对话系统] | [Distilling Knowledge From Reader To Retriever For Question Answering](https://openreview.net/pdf?id=NTEz-6wysdb) | [阅读笔记](https://zhuanlan.zhihu.com/p/372694270) | 一种模型训练模型的开放域问答方法 | Izacard et al,2021
 
++ [Prefix-Tuning: Optimizing Continuous Prompts for Generation](https://arxiv.org/pdf/2101.00190.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/386073664) | 本篇论文核心是针对离散的Prompt难以优化的问题，提出了参数化的prompt，仅微调prompt，freeze住LM。这篇文章的做法和P-tuning差不多，都是设计了非自然语言的模板，只不过Prefix-tuning主要关心的是NLG的应用，而P-tuning更加关心NLU的应用 | Xiang Lisa Li et al,2021
+
 + [综述-向量召回] | [A Comprehensive Survey and Experimental Comparison of Graph-Based Approximate Nearest Neighbor Search](https://arxiv.org/pdf/2101.12631.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/415320221) | 论文是一篇关于graph-base的向量召回综述，聚焦实现了效率和精度最优权衡的近邻图索引，综述了 13 种具有代表性相关算法，包括NSW、HNSW等在内的优秀算法，并提出一个统一评估的pipeline | Mengzhao Wang et al,2021
   
 + [预训练-评估] | [LogME: Practical Assessment of Pre-trained Models for Transfer Learning](https://arxiv.org/pdf/2102.11005.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/358844524) | 一种通用且快速的评估选择适合下游任务的预训练模型的打分方法，logME | Kaichao You et al,2021
