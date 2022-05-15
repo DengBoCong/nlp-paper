@@ -354,13 +354,15 @@ python3 search_kits.py
 
 + [对话系统-预训练-检索式对话系统] | [Distilling Knowledge From Reader To Retriever For Question Answering](https://openreview.net/pdf?id=NTEz-6wysdb) | [阅读笔记](https://zhuanlan.zhihu.com/p/372694270) | 一种模型训练模型的开放域问答方法 | Izacard et al,2021
 
-+ [Prefix-Tuning: Optimizing Continuous Prompts for Generation](https://arxiv.org/pdf/2101.00190.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/386073664) | 本篇论文核心是针对离散的Prompt难以优化的问题，提出了参数化的prompt，仅微调prompt，freeze住LM。这篇文章的做法和P-tuning差不多，都是设计了非自然语言的模板，只不过Prefix-tuning主要关心的是NLG的应用，而P-tuning更加关心NLU的应用 | Xiang Lisa Li et al,2021
++ [Prefix-Tuning: Optimizing Continuous Prompts for Generation](https://arxiv.org/pdf/2101.00190.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/386073664) | 本篇论文核心是针对离散的Prompt难以优化的问题，提出了参数化的prompt，仅微调prompt，freeze住LM。在小样本任务重，这种方法极大的减小的模型的参数，减少了过拟合的风险，这种参数化的prompt在小样本场景中，能够优于fine-tune的方法。这篇文章的做法和P-tuning差不多，都是设计了非自然语言的模板，只不过Prefix-tuning主要关心的是NLG的应用，而P-tuning更加关心NLU的应用 | Xiang Lisa Li et al,2021
 
 + [综述-向量召回] | [A Comprehensive Survey and Experimental Comparison of Graph-Based Approximate Nearest Neighbor Search](https://arxiv.org/pdf/2101.12631.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/415320221) | 论文是一篇关于graph-base的向量召回综述，聚焦实现了效率和精度最优权衡的近邻图索引，综述了 13 种具有代表性相关算法，包括NSW、HNSW等在内的优秀算法，并提出一个统一评估的pipeline | Mengzhao Wang et al,2021
   
 + [预训练-评估] | [LogME: Practical Assessment of Pre-trained Models for Transfer Learning](https://arxiv.org/pdf/2102.11005.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/358844524) | 一种通用且快速的评估选择适合下游任务的预训练模型的打分方法，logME | Kaichao You et al,2021
 
 + [Prompt-预训练-语言模型] | [GPT Understands, Too](https://arxiv.org/pdf/2103.10385.pdf) | [阅读笔记](https://kexue.fm/archives/8295) | 在本文之前的Prompt思路呢，要么是通过人工设计Prompt（如PET），要么是探索通过自动化搜索Prompt进行（如AutoPrompt、LM-BFF等），思路都限于搜索token来组成Prompt template（Discrete Prompt Search），而本文提出的P-tuning思路是不用关心template由哪些token word组成，对于模型而言，只需要token embedding，直观点说就是在template中，除了目标词正常以Mask token出现，prompt token则是[unused*]（也就是从未见过的token来构成模板，这里的token会过一层LSTM进行编码），其中token数目是一个超参数可以调整，这种方式极大的提升了template的搜索空间（连续）。小样本的时候固定模型权重，只优化[unused*]的Embedding，这样即使样本少也能学到prompt template，不容易过拟合。标注数据足够的话就直接放开所有权重一同训练微调就行 | Xiao Liu et al,2021
+
++ [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/pdf/2104.08691.pdf) | [阅读笔记](https://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/121112298) | 本文的方法和p-tuning相似，是固定LM，只训练prefix，这篇文章主要是验证了全量数据情况下，仅微调prompt相关的参数，能够达到fine-tune的效果（p-tuning的prompt token人为的选用[unused*]，而本文对prompt token的初始化分两种：置零和采用词表的一些预训练token embedding）。论文的最终结论有：1）：在一般模型大小的情况下，prompt token越多，效果越好（超过20增益减小），但是在超大模型的情况下，单个prompt token也能达到前面20个token以上的效果；2）：随机初始化、词表采样、用label标签初始化，其中label的方式效果最好；3）：LM Adaptation steps 越多，效果越好；4）：同时训练多个prompt进行ensemble，效果优于单一prompt | Brian Lester et al,2021
 
 + [预训练-语言模型-文本相似度/匹配/分类] | [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/368353121) | 基于Sentence-Bert，引入对比学习的思想，在无监督与有监督语义相似度计算任务达到SOTA。主要围绕对比学习质量指标Alignment和Uniformity来进行优化，对于Unsupervised，核心是使用dropout mask生成正样本，负样本是in-batch negatives。而Supervised则是NLI中entailment关系样例对。负例：a) in-batch negatives b)NLI中关系为contradiction的样例对 | Tianyu Gao et al,2021
 
