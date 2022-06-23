@@ -262,6 +262,8 @@ python3 search_kits.py
 
 + [深度学习] | [Language Models as Knowledge Bases?](https://aclanthology.org/D19-1250.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/94470840) | 一篇讨论性的文章，主要提出的观点是认为像BERT等类似的预训练语言模型是另一种形式的knowledge database，能够保存大量的知识信息。作者通过效仿MLM的方式，将已有的NLP数据集进行整合，并挖空成完形填空的提问形式（以推理实体关系），文中实验了两种单向语言模型和两种双向语言模型，结果显示预训练模型的确包含了知识库中的信息。ps：这种观点也不一定对的，也有文章反对说BERT等模型只是由于对实体名称（表面形式）进行推理，如果过滤掉一些容易猜测的事实，那么模型精度将会急剧下降 | Fabio Petroni et al, 2019
 
++ [深度学习-预训练] | [What does BERT learn about the structure of language?](https://hal.inria.fr/hal-02131630/document) | [阅读笔记](https://zhuanlan.zhihu.com/p/74515580) | 本文主要是通过一些实验来补充验证BERT的不同层学习到的信息（具体没啥新结论，只是补充验证而已）。BERT的底层学习到的主要是token的表层信息，中层学习到的是语言学特征信息（句法结构之类的），顶层学习到的是语义特征信息。文中还进一步探索了BERT能够学习到组合结构的特征，使用了Tensor Product Decomposition Networks（TPDN）来设计实验，从自注意力机制的权重中推导出对应的依赖树，印证了BERT的组合建模方式和传统的句法分析相似 | Ganesh Jawahar et al,2019
+
 + [模型] | [Pay Less Attention With Lightweight And Dynamic Convolutions](https://arxiv.org/pdf/1901.10430.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/396143249) | 论文研究Lightweight、Dynamic Convolutions，卷积结构同样能够达到和Self-Attention媲美的效果 | Felix Wu et al,2019
   
 + [深度学习] | [On the Convergence of Adam and Beyond](https://arxiv.org/pdf/1904.09237.pdf) | [原英文版阅读笔记](https://www.fast.ai/2018/07/02/adam-weight-decay/) | [阅读笔记](https://zhuanlan.zhihu.com/p/39543160) | Amsgrad，ICLR2018的最佳论文，主要是算法证明Adam在收敛性上存在的缺陷，并设计了理论实验，证明了这一点，同时提出了很简单的优化方法（实际的算法实现中，这个优化方法在相当多的实验中效果并不好）。Adam的收敛性缺陷在于，学习率通常是恒定的或降低的，所以随着训练过程的进行，二阶动量会随之减少，所以具体做法是增加一个变量来记录最大值，使用这个二阶动量的最大值替换原来的二阶动量进行计算，即v = max(avg_squared, max_squared) | Sashank J. Reddi et al, 2019
