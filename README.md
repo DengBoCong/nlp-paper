@@ -297,6 +297,8 @@ python3 search_kits.py
 + [预训练-语言模型] | [ALBERT: A Lite BERT For Self-superpised Learning Of Language Representations](https://arxiv.org/pdf/1909.11942.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/84273154) | Albert大大缩小了模型参数量，并且加快了训练速度，增加了模型效果。其主要对BERT做了3点改进，第一：把embedding size(E)和hidden size(H)分开可以更高效地利用参数，因为理论上存储了context信息的H要远大于E。第二：跨层参数共享，就是不管12层还是24层都只用一个transformer。第三：使用Inter-sentence coherence loss，即SOP(sentence order prediction) | Zhenzhong Lan et al,2019
 
 + [对话系统-对话意图识别-数据增强] | [A Closer Look At Feature Space Data Augmentation For Few-Shot Intent Classification](https://arxiv.org/pdf/1910.04176.pdf) | 针对SLU的Intent分类任务，对其文本数据进行数据增强并比较效果，其中Linear+Transfer learning效果最佳 | Varun Kumar et al,2019
+
++ [预训练-语言模型] | [CogLTX: Applying BERT to Long Texts](https://proceedings.neurips.cc/paper/2020/file/96671501524948bc3937b4b30d0e57b9-Paper.pdf) | 本文主要介绍如何优雅且有效的的使用BERT处理长文本。一般用BERT处理长文本的方式有截断法、Pooling法、压缩法，本文介绍的就是压缩法的一种（三种效果最好的）。从直观的角度来讲，长文本中的核心语义可以由某个短文本替换（相当于长句总结），因此需要找到这个短文本。具体的做法就是（1）首先使用动态规划算法将长文本划分长文本块；（2）然后使用一个叫做MemRecall的模块对这些块进行打分（本质上是concat），从而选出分数最高的子句组成短文本；（3）然后再用这个短文本用于后续的NLP任务。总结来讲就是COGLTX相当于使用了了两个bert，MemRecall中bert就是负责打分，另一个bert执行原本的NLP任务 | Ming Ding et al,2020
   
 + [数据集] | [Improving Dialog Evaluation with a Multi-reference Adversarial Dataset and Large Scale Pretraining](https://scholar.google.com/scholar_url?url=https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl_a_00347/1923874/tacl_a_00347.pdf&hl=zh-CN&sa=T&oi=gsb-gga&ct=res&cd=0&d=13355199831609160829&ei=hXzkYNupCsyO6rQPkrG1wAo&scisig=AAGBfm39FeIrjR-BGf074wiUqDueImjYeA) | [数据集地址](https://github.com/iitmnlp/Dialogue-Evaluation-with-BERT) | DailyDialog数据集的升级版，11K的多轮对话上下文，每个上下文包括五个标准的参考回复、五个不相关的回复、五个随机挑选的回复 | Ananya B. Sai et al, 2020
   
