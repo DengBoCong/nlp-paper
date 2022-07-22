@@ -89,6 +89,8 @@ python3 search_kits.py
 + [对话系统] | [Context Sensitive Spoken Language Understanding Using Role Dependent LSTM Layers](https://www.merl.com/publications/docs/TR2015-134.pdf) | 使用LSTM在SLU方面做的工作，通过agent和client角色划分，能够解决多轮对话中的歧义问题 | Hori et al,2015
   
 + [深度学习] | [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/340219662) | 经典的Batch Normalization原论文 | Sergey et al,2015
+
++ [蒸馏-预训练] | [Distilling the Knowledge in a Neural Network](https://arxiv.org/pdf/1503.02531.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/75031938) | 蒸馏方法的开山之作啦，将一个复杂模型的knowledge，transfer到一个简单的模型上。具体做法是给复杂分类模型（teacher）的softmax加上一个temperature参数，然后用hard target训练好，模型的softmax的输出就是我们需要的soft target。然后用一个simple模型，基于soft和hard target进行训练，simple模型在soft target训练时，softmax的temperature设置和teacher一样，在hard target训练时，temperature设置1即可，然后loss计算取两个目标的交叉熵的加权平均（soft targets和小模型的输出数据的交叉熵，hard targets和小模型的输出数据的交叉熵）。除此之外，通过梯度计算公式转换，我当temperature特别大的时候（且模型产生的logits为0），知识蒸馏就相当于大模型的logits和小模型的logits的MSE | Geoffrey Hinton et al,2015
   
 + [模型] | [Highway Networks](https://arxiv.org/pdf/1505.00387.pdf) | [阅读笔记](https://www.zhihu.com/question/279426970/answer/614880515) | Highway Networks名字取得很有意思，整个网络结构思想也是符合取名的。简单来说就是通过设置一个函数T来限制网络的输出（借鉴LSTM中gate思想），其中T取0时，输出y=x，这个时候梯度直接传到下一层，也就是说，可以通过T来控制梯度传递，从而一定程度上解决梯度消失的问题。Highway的参数较少，适合single nonlinear layer的transform | Rupesh Kumar Srivastava et al,2015
 
