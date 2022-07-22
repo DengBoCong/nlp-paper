@@ -267,6 +267,8 @@ python3 search_kits.py
 + [深度学习-预训练] | [What does BERT learn about the structure of language?](https://hal.inria.fr/hal-02131630/document) | [阅读笔记](https://zhuanlan.zhihu.com/p/74515580) | 本文主要是通过一些实验来补充验证BERT的不同层学习到的信息（具体没啥新结论，只是补充验证而已）。BERT的底层学习到的主要是token的表层信息，中层学习到的是语言学特征信息（句法结构之类的），顶层学习到的是语义特征信息。文中还进一步探索了BERT能够学习到组合结构的特征，使用了Tensor Product Decomposition Networks（TPDN）来设计实验，从自注意力机制的权重中推导出对应的依赖树，印证了BERT的组合建模方式和传统的句法分析相似 | Ganesh Jawahar et al,2019
 
 + [模型] | [Pay Less Attention With Lightweight And Dynamic Convolutions](https://arxiv.org/pdf/1901.10430.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/396143249) | 论文研究Lightweight、Dynamic Convolutions，卷积结构同样能够达到和Self-Attention媲美的效果 | Felix Wu et al,2019
+
++ [蒸馏-预训练-语言模型] | [Distilling Task-Specific Knowledge from BERT into Simple Neural Networks](https://arxiv.org/pdf/1903.12136.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/351319938) | 对BERT进行蒸馏，训练一个TextCNN模型，相比于直接使用BERT，TextCNN虽然有一定的损失，但是参数量和速度都大大提升。本文在知识蒸馏的方式上没有特别的创新，核心点在于（1）添加了额外的逻辑回归的目标，在标注数据下，hard label的交叉熵+teacher 模型的logits的MSE；在无标注数据下，teacher模型的softlabel的交叉熵+teacher模型的logits的MSE（2）数据增强，提出了多种方法；随机mask一个token；pos tag替换；n-gram sampling；mask_prob，执行mask增强，mask_prob << pos_prob，执行pos替换，最后执行n-gram sampling | Raphael Tang et al,2019
   
 + [深度学习] | [On the Convergence of Adam and Beyond](https://arxiv.org/pdf/1904.09237.pdf) | [原英文版阅读笔记](https://www.fast.ai/2018/07/02/adam-weight-decay/) | [阅读笔记](https://zhuanlan.zhihu.com/p/39543160) | Amsgrad，ICLR2018的最佳论文，主要是算法证明Adam在收敛性上存在的缺陷，并设计了理论实验，证明了这一点，同时提出了很简单的优化方法（实际的算法实现中，这个优化方法在相当多的实验中效果并不好）。Adam的收敛性缺陷在于，学习率通常是恒定的或降低的，所以随着训练过程的进行，二阶动量会随之减少，所以具体做法是增加一个变量来记录最大值，使用这个二阶动量的最大值替换原来的二阶动量进行计算，即v = max(avg_squared, max_squared) | Sashank J. Reddi et al, 2019
   
