@@ -298,6 +298,8 @@ python3 search_kits.py
 
 + [语音系统] | [A Comparative Study on Transformer vs RNN in Speech Applications](https://arxiv.org/pdf/1909.06317.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/309390439) | Transformer应用在语音领域上与RNN对比的论文，并在ESPnet上面开源了模型代码 | Nanxin et al,2019
 
++ [蒸馏-预训练-语言模型] | [TinyBERT: Distilling BERT for Natural Language Understanding](https://arxiv.org/pdf/1909.10351.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/84827596) | 本文提出的TinyBERT模型大小只有BERT的13.3%，推理速度是BERT的9倍，效果下降了2-3个点左右（炼丹练出来的，我好奇用其他像Albert的不更好？）。具体细节分为基础蒸馏：（1）Embedding蒸馏，先用权重矩阵转换一下T模型的Embedding，然后在计算两个模型的Embedding的MSE loss（2）attention层蒸馏，计算S模型和T模型的单个头Attention的MSE loss；（3）hidden层蒸馏，同Embedding的蒸馏方式，先用权重矩阵转换一下；（4）Prediction层蒸馏，计算T模型输出的logits和S模型输出 logits的交叉熵，加一个temperature控制平滑。在训练的时候，分成了两段式学习框架，包含通用蒸馏和特定于任务的蒸馏，就是分别在通用语料和在下游任务语料上分别蒸馏 | Xiaoqi Jiao et al,2019
+
 + [预训练-语言模型] | [ALBERT: A Lite BERT For Self-superpised Learning Of Language Representations](https://arxiv.org/pdf/1909.11942.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/84273154) | Albert大大缩小了模型参数量，并且加快了训练速度，增加了模型效果。其主要对BERT做了3点改进，第一：把embedding size(E)和hidden size(H)分开可以更高效地利用参数，因为理论上存储了context信息的H要远大于E。第二：跨层参数共享，就是不管12层还是24层都只用一个transformer。第三：使用Inter-sentence coherence loss，即SOP(sentence order prediction) | Zhenzhong Lan et al,2019
 
 + [对话系统-对话意图识别-数据增强] | [A Closer Look At Feature Space Data Augmentation For Few-Shot Intent Classification](https://arxiv.org/pdf/1910.04176.pdf) | 针对SLU的Intent分类任务，对其文本数据进行数据增强并比较效果，其中Linear+Transfer learning效果最佳 | Varun Kumar et al,2019
