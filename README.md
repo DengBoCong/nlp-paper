@@ -205,6 +205,8 @@ python3 search_kits.py
 + [模型-预训练-语言模型] | [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/250946855) | Transformer的开山之作，值得精读 | Ashish et al,2017
   
 + [深度学习] | [ProjectionNet: Learning Efficient On-Device Deep Networks Using Neural Projections](https://arxiv.org/pdf/1708.00630.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/295636122) | 一种叫ProjectionNet的联合框架，可以为不同机器学习模型架构训练轻量的设备端模型。 | Google et al,2017
+
++ [深度学习-损失函数] | [Focal Loss for Dense Object Detection](https://arxiv.org/pdf/1708.02002.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/260407405) | 分类问题我们一般使用交叉熵损失函数，交叉熵损失函数是平等对待正负样本的，当正负样本不均衡的时候，正样本总的损失会淹没小量负样本总的损失，导致模型最终的学习方向并不会把重点放在负样本上，解决方案就是增加负样本的权重，减少正样本的权重，从而是模型重点倾向于学习负样本的规律。这种方式还是不能解决easy/heard samples的问题，Focal loss对交叉熵损失函数增加了一个调制因子，实现对easy samples的降权，从而使模型训练的损失可以集中在比较难学习的负样本上 | Tsung-Yi Lin et al,2017
   
 + [对话系统-任务型对话-对话状态跟踪] | [An End-to-End Trainable Neural Network Model with Belief Tracking for Task-Oriented Dialog](https://arxiv.org/pdf/1708.05956.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/260345363) | 面向任务的对话系统的新型端到端可训练神经网络模型 | Liu et al,2017
   
