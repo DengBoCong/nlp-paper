@@ -38,6 +38,8 @@ python3 search_kits.py
 ```
 + [聚类] | [Accelerating exact k-means algorithms with geometric reasoning](http://portal.acm.org/citation.cfm?doid=312129.312248) | [阅读笔记](https://www.zhihu.com/question/494753171/answer/2204649294) | K-Means引入计算机中的那片论文，K-Means属于Partition-based methods，思想是初始化中心点，然后通过启发式算法，达到”类内的点都足够近，类间的点都足够远“的目标 | et al Dan Pelleg,1999
 
++ [异常检测-机器学习] | [LOF: Identifying Density-Based Local Outliers](https://dl.acm.org/doi/pdf/10.1145/342009.335388) | [阅读笔记](https://zhuanlan.zhihu.com/p/28178476) | 本文提出的LOF算法是基于密度的算法，其优势在于同时考虑了数据集的局部和全局属性（其中局部可达密度的定义其实暗含了一个假设，即不存在大于等于K个重复的点），异常值不是按绝对值确定的，而是相对于它们的领域点密度确定的。因此，当数据集中存在不同密度的不同集群时，LOF算法表现良好，比较适合中等高维的数据集 | Markus M. Breunig et al, 2000
+
 + [聚类] | [Mean Shift: A Robust Approach toward Feature Space Analysis](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.76.8968&rep=rep1&type=pdf) | [阅读笔记](https://www.zhihu.com/question/494753171/answer/2204649294) | 实现的方法是滑动窗口的算法，在每次迭代中，通过将中心点移动到窗口内所有点的平均值位置（因此得名），将滑动窗口中心移向密度较高的区域。滑动窗口内的密度与其内部的点数成正比。通过转换到窗口内点的平均值位置，窗口将逐渐移动到有着更高点密度的区域。优点：Mean-Shift的最大优势就是可以自动发现簇的数量而不需要人工选择；簇的中心向最大密度点聚合的事实也是非常令人满意的，因为它可被非常直观地理解并很自然地契合数据驱动；可以处理任意形状的簇类；算法只需设置半径这一个参数，半径影响数据集的核密度估计；算法结果稳定，不需要进行类似K均值的样本初始化；缺点：不足就是窗口大小/半径“r”的选择可能是非平凡的；半径设置的太小，收敛太慢，簇类个数过多；半径设置的太大，一些簇类可能会丢失。对于较大的特征空间，计算量非常大 | Dorin Comaniciu et al,2002
 
 + [向量召回] | [similarity estimation techniques from rounding algorithms](https://www.cs.princeton.edu/courses/archive/spring04/cos598B/bib/CharikarEstim.pdf) | [阅读笔记](http://tangxman.github.io/2015/12/01/simhash/) | 论文提出的SimHash是当年Google用来文本去重的算法。主要做法是将文档提取出一定数量的关键词，然后转换成哈希码并按列相加，1+weight，0-weight，得到的结果按照整数为1，负数为0得到最终的哈希码，然后将哈希码分为m个table，并分别记性计算检索 | Moses S. Charikar et al,2002
