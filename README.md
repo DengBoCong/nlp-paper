@@ -122,6 +122,8 @@ python3 search_kits.py
 
 + [深度学习] | [Strategies for Training Large Vocabulary Neural Language Models](https://arxiv.org/pdf/1512.04906.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/397084135) | 主要是对当时的一些Softmax和Sampling进行总结，顺便提出了Differentiated Softmax方法 | Wenlin Chen et al,2015
 
++ [机器学习-模型] | [XGBoost: A Scalable Tree Boosting System](https://dl.acm.org/doi/pdf/10.1145/2939672.2939785) | [阅读笔记1](https://zhuanlan.zhihu.com/p/89572181) / [阅读笔记2](https://zhuanlan.zhihu.com/p/87885678) | 本文提出的XGBoost是基于Boosting的集成算法，更确切的说，XGBoost包括了数学原理和工程实现的优化，有着包括精度更高、灵活性强、并行化计算的诸多优点。一般在一些业务场景作为baseline（在数据科学竞赛做集成更是可以无脑上一波），实现包xgboost | Tianqi Chen et al, 2016
+
 + [聚类] | [Approximate K-Means++ in Sublinear Time](https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/viewFile/12147/11759) | [阅读笔记](https://www.zhihu.com/question/494753171/answer/2204649294) | K-MC2区别于k-means II的采样方法，使用MCMC采样，其主要思想是将K-Means++中的采样方法替换为基于MCMC（马尔科夫链蒙特卡洛）采样方法（MCMC的介绍可以参考：[MCMC随机采样](https://zhuanlan.zhihu.com/p/30003899)）。用MCMC的方法采样出长为M的数列，取最后（K-1）个数作为中心点初始化，target distribution是距离的函数，满足距离越远，概率越大(表达的含义同k-means++)，proposal distribution是一个常函数，1/样本数。 | Olivier Bachem et al,2016
 
 + [聚类] | [Fast and Provably Good Seedings for k-Means](https://proceedings.neurips.cc/paper/2016/file/d67d8ab4f4c10bf22aa353e27879133c-Paper.pdf) | [阅读笔记](https://www.zhihu.com/question/494753171/answer/2204649294) | AFK-MC2基于K-MC2改进，由于K-MC2的proposal distribution是常函数，不够鲁棒，因此AFK-MC2将与距离有关的分布作为一个term加入原始的分布中，优化proposal distribution | Olivier Bachem et al,2016
