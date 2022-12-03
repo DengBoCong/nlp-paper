@@ -224,6 +224,8 @@ python3 search_kits.py
 
 + [语音系统-语音合成] | [Natural TTS Synthesis By Conditioning Wavenet On Mel Spectrogram Predictions](https://arxiv.org/pdf/1712.05884.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/337042442) | Tacotron2，相较于Tacotron有着更好的性能，使用WaveNet作为Vocoder | Jonathan et al,2017
 
++ [异常检测-机器学习] | [XGBOD: Improving Supervised Outlier Detection with Unsupervised Representation Learning](https://arxiv.org/ftp/arxiv/papers/1912/1912.00290.pdf) | 本文主要是提出一种通过无监督算法来增广特征，进而融合原始特征用于XGB的有监督的训练思路，命名为XGBOD。在ADBench中，半监督的总体效果来讲好于直接使用XGB，监督学习的情况下，指标提升差不了多少（然后XGBOD在训练代价上更大），因此在有监督的情况下，直接使用XGB作为baseline更加简单直接一些 | Yue Zhao et al, 2018
+
 + [数据集] | [LCQMC: A Large-scale Chinese Question Matching Corpus](https://aclanthology.org/C18-1166.pdf) | LCQMC，开放域的中文语义相似度语料，更加侧重于intent相似，总共26万的文本对 | Xin Liu et al,2018
 
 + [数据集] | [The BQ Corpus: A Large-scale Domain-specific Chinese Corpus For Sentence Semantic Equivalence Identification](https://aclanthology.org/D18-1536.pdf) | 关于Bank Question的中文语义相似度语料，总共12万的文本对 | Jing Chen et al,2018
