@@ -268,9 +268,11 @@ python3 search_kits.py
 
 + [预训练-语言模型] | [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/269997771) | 顶顶大名的BERT，单独抽离Transformer的Encoder架构，并提出NSP、MLM预训练方式，也是基于此，是的BERT拥有强大的表征能力，并用于下游相关任务 | Devlin et al,2018
 
-+ [深度学习] | [RelGAN: Relational Generative Adversarial Networks For Text Generation](https://openreview.net/pdf?id=rJedV3R5tm) | [阅读笔记](https://zhuanlan.zhihu.com/p/87605995) | 提出了新型的生成器和判别器结构，使得直接用Gumbel Softmax训练出的文本GAN大幅度超过了以往的各种文本GAN模型。主要由三个模块组成，分别是：在生成器上，利用relational memory，使得具有更强表达能力和在长文本上更好的模型能力；在离散数据上，训练GAN利用Gumbel-Softmax Relaxation模型，使得模型简化，替代强化学习启发式算法；在判别器上利用多层词向量表示，使得生成器往更具多样性方面更新 Weili Nie et al,2019
++ [深度学习] | [RelGAN: Relational Generative Adversarial Networks For Text Generation](https://openreview.net/pdf?id=rJedV3R5tm) | [阅读笔记](https://zhuanlan.zhihu.com/p/87605995) | 提出了新型的生成器和判别器结构，使得直接用Gumbel Softmax训练出的文本GAN大幅度超过了以往的各种文本GAN模型。主要由三个模块组成，分别是：在生成器上，利用relational memory，使得具有更强表达能力和在长文本上更好的模型能力；在离散数据上，训练GAN利用Gumbel-Softmax Relaxation模型，使得模型简化，替代强化学习启发式算法；在判别器上利用多层词向量表示，使得生成器往更具多样性方面更新 Weili Nie et al, 2019
 
-+ [机器学习] | [Covariate Shift: A Review and Analysis on Classifiers](https://ieeexplore.ieee.org/abstract/document/8978471) | [阅读笔记](https://zhuanlan.zhihu.com/p/339719861) | 通过几种分类算法，在四种不同的数据集下验证几种方法处理Covariate Shift问题后的性能分析 | Geeta et al,2019
++ [异常检测-综述] | [Deep Learning for Anomaly Detection: A Review](https://arxiv.org/pdf/2007.02500.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/419161328) | 本篇综述将异常检测归纳到三个框架（deep learning generic feature extraction、learning representations of normality、end-to-end anomaly score learning），共十一种类别中，并对每个类别的目标、流程、优缺点等进行了详细的阐述。最后给出了代表性的算法和数据集，并分析了当下和未来的发展方向，是一篇非常值得一读的异常检测综述 | Guansong Pang et al, 2019
+
++ [机器学习] | [Covariate Shift: A Review and Analysis on Classifiers](https://ieeexplore.ieee.org/abstract/document/8978471) | [阅读笔记](https://zhuanlan.zhihu.com/p/339719861) | 通过几种分类算法，在四种不同的数据集下验证几种方法处理Covariate Shift问题后的性能分析 | Geeta et al, 2019
 
 + [深度学习] | [Language Models as Knowledge Bases?](https://aclanthology.org/D19-1250.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/94470840) | 一篇讨论性的文章，主要提出的观点是认为像BERT等类似的预训练语言模型是另一种形式的knowledge database，能够保存大量的知识信息。作者通过效仿MLM的方式，将已有的NLP数据集进行整合，并挖空成完形填空的提问形式（以推理实体关系），文中实验了两种单向语言模型和两种双向语言模型，结果显示预训练模型的确包含了知识库中的信息。ps：这种观点也不一定对的，也有文章反对说BERT等模型只是由于对实体名称（表面形式）进行推理，如果过滤掉一些容易猜测的事实，那么模型精度将会急剧下降 | Fabio Petroni et al, 2019
 
