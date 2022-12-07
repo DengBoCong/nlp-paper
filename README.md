@@ -209,6 +209,8 @@ python3 search_kits.py
 + [对话系统-对话意图识别] | [Latent Intention Dialogue Models](https://arxiv.org/pdf/1705.10229.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/263034049) | 离散潜在变量模型学习对话意图的框架 | Wen et al,2017
   
 + [模型-预训练-语言模型] | [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/250946855) | Transformer的开山之作，值得精读 | Ashish et al,2017
+
++ [社区发现-综述] | [Network Community Detection: A Review and Visual Survey](https://arxiv.org/ftp/arxiv/papers/1708/1708.00977.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/141401358) | 一篇关于社区发现的综述，文章对社区发现概念和发展进行了介绍，并对当下社区发现算法按照分类进行了细致的介绍，包括传统的社区检测技术、基于分裂的社区检测技术、基于模块化优化的社区检测技术、重叠社区检测技术、动态社区检测技术等 | Bisma S. Khan et al, 2017
   
 + [深度学习] | [ProjectionNet: Learning Efficient On-Device Deep Networks Using Neural Projections](https://arxiv.org/pdf/1708.00630.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/295636122) | 一种叫ProjectionNet的联合框架，可以为不同机器学习模型架构训练轻量的设备端模型。 | Google et al,2017
 
