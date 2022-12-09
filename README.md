@@ -92,6 +92,8 @@ python3 search_kits.py
 
 + [向量召回] | [Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS)](https://arxiv.org/pdf/1405.5869.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/111502331) | 传统的MIPS问题找不到LSH函数，为此论文提出了一种“非对称LSH”的算法，其核心技巧就是通过“非对称变换”构造向量从而消除待查集合X的向量模长对MIPS结果的影响。巧妙的将问题转换为欧氏距离下，通过LSH函数求出NN的近似解的问题 | Anshumali Shrivastava et al,2014
 
++ [图算法-GNN-模型] | [DeepWalk: Online Learning of Social Representations](https://arxiv.org/pdf/1403.6652.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/45167021) / [阅读笔记2](https://zhuanlan.zhihu.com/p/56380812) | 本文提出的DeepWalk是我们了解Graph Embedding无法绕过的一个方法。其核心思想是通过使用随机游走(RandomWalk)的方式在图中进行节点采样，从而使用图中节点与节点的共现关系来学习节点的向量表示（思想来源于Word2Vec的skip-gram）。总体分为两步，第一步就是随机游走采样节点序列，然后使用skip-gram来学习表示向量 | Bryan Perozzi et al, 2014
+
 + [语言模型-文本相似度/匹配/分类] | [Convolutional Neural Networks for Sentence Classification](https://arxiv.org/pdf/1408.5882.pdf) | 经典的TextCNN，static/non-static几种特征向量学习方式 | Yoon Kim et al,2014
 
 + [深度学习] | [Neural Machine Translation Bu Jointly Learning To Align And Translate](https://arxiv.org/pdf/1409.0473.pdf) | Bahdanau Attention的原文 | Bahdanau et al,2014
