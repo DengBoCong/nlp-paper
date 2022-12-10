@@ -171,6 +171,8 @@ python3 search_kits.py
 + [对话系统-对话状态跟踪] | [Neural Belief Tracker: Data-Driven Dialogue State Tracking](https://arxiv.org/pdf/1606.03777.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/262289823) | NBT框架，理解Belief state和tracking的好文 | Young et al,2016
   
 + [机器学习] | [Gaussian Error Linear Units (GELUS)](https://arxiv.org/pdf/1606.08415.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/349492378) | GELU的目标就是希望在激活（拥有非线性拟合的能力）中加入正则化的思想。ReLU会确定性的将输入乘上一个0或者1，Dropout则是随机乘上0。而GELU也是通过将输入乘上0或1来实现这个功能，但是输入是乘以0还是1，是在同时取决于输入自身分布的情况下随机选择的。换句话说，是0还是1取决于当前的输入有多大的概率大于其余的输入。而由于神经元的输入x往往遵循正态分布（尤其是深度网络中普遍存在Normalization），所以GELU就可以被定义为“标准正态分布的累积分布函数”，利用erf就可以得到公式：x/2*(1+erf(x/sqrt(2))) | Dan Hendrycks et al,2016
+
++ [GNN-图算法-模型] | [node2vec: Scalable Feature Learning for Networks](https://arxiv.org/pdf/1607.00653.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/56542707) / [阅读笔记2](https://toutiao.io/posts/y84ifco/preview) | 本文提出的node2vec是一种综合考虑DFS邻域和BFS邻域的graph embedding方法，整体算法思路框架继承了DeepWalk，通过随机游走获取序列，并通过Word2Vec学习表示向量。不同于DeepWalk的是，其使用了有偏的随机游走，同时通过p和q两个参数，以alias采样的方式来控制序列游走的方向（是选择邻接节点还是二度节点） | Aditya Grover et al, 2016
   
 + [模型-文本相似度/匹配/分类] | [Bag of Tricks for Efficient Text Classification](https://arxiv.org/pdf/1607.01759.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/31118235) | 比较经典的FastText，比较依赖Word Embedding的质量（槽点本身难点就在于embedding，结果文章不谈这个），整个网络结构使用N-gram，对得到的Embedding求和，并过两个Dense然后输出，本身网络结构就那没啥，当然fast啦，外加论文具体加了hashing trick，hierarchical softmax等进行加速、内存优化 | Armand Joulin et al,2016
   
