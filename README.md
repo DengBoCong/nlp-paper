@@ -92,7 +92,7 @@ python3 search_kits.py
 
 + [向量召回] | [Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS)](https://arxiv.org/pdf/1405.5869.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/111502331) | 传统的MIPS问题找不到LSH函数，为此论文提出了一种“非对称LSH”的算法，其核心技巧就是通过“非对称变换”构造向量从而消除待查集合X的向量模长对MIPS结果的影响。巧妙的将问题转换为欧氏距离下，通过LSH函数求出NN的近似解的问题 | Anshumali Shrivastava et al,2014
 
-+ [图算法-GNN-模型] | [DeepWalk: Online Learning of Social Representations](https://arxiv.org/pdf/1403.6652.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/45167021) / [阅读笔记2](https://zhuanlan.zhihu.com/p/56380812) | 本文提出的DeepWalk是我们了解Graph Embedding无法绕过的一个方法。其核心思想是通过使用随机游走(RandomWalk)的方式在图中进行节点采样，从而使用图中节点与节点的共现关系来学习节点的向量表示（思想来源于Word2Vec的skip-gram）。总体分为两步，第一步就是随机游走采样节点序列，然后使用skip-gram来学习表示向量 | Bryan Perozzi et al, 2014
++ [图算法-GNN-模型-无监督] | [DeepWalk: Online Learning of Social Representations](https://arxiv.org/pdf/1403.6652.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/45167021) / [阅读笔记2](https://zhuanlan.zhihu.com/p/56380812) | 本文提出的DeepWalk是我们了解Graph Embedding无法绕过的一个方法。其核心思想是通过使用随机游走(RandomWalk)的方式在图中进行节点采样，从而使用图中节点与节点的共现关系来学习节点的向量表示（思想来源于Word2Vec的skip-gram）。总体分为两步，第一步就是随机游走采样节点序列，然后使用skip-gram来学习表示向量 | Bryan Perozzi et al, 2014
 
 + [语言模型-文本相似度/匹配/分类] | [Convolutional Neural Networks for Sentence Classification](https://arxiv.org/pdf/1408.5882.pdf) | 经典的TextCNN，static/non-static几种特征向量学习方式 | Yoon Kim et al,2014
 
@@ -108,7 +108,7 @@ python3 search_kits.py
 
 + [蒸馏-预训练] | [Distilling the Knowledge in a Neural Network](https://arxiv.org/pdf/1503.02531.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/75031938) | 蒸馏方法的开山之作啦，将一个复杂模型的knowledge，transfer到一个简单的模型上。具体做法是给复杂分类模型（teacher）的softmax加上一个temperature参数，然后用hard target训练好，模型的softmax的输出就是我们需要的soft target。然后用一个simple模型，基于soft和hard target进行训练，simple模型在soft target训练时，softmax的temperature设置和teacher一样，在hard target训练时，temperature设置1即可，然后loss计算取两个目标的交叉熵的加权平均（soft targets和小模型的输出数据的交叉熵，hard targets和小模型的输出数据的交叉熵）。除此之外，通过梯度计算公式转换，我当temperature特别大的时候（且模型产生的logits为0），知识蒸馏就相当于大模型的logits和小模型的logits的MSE | Geoffrey Hinton et al,2015
 
-+ [GNN-图算法-模型] | [LINE: Large-scale Information Network Embedding](https://arxiv.org/pdf/1503.03578.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/56478167) | 本文提出的LINE方法是应用于graph embedding，是一种采用基于领域相似假设的方法。文中总共提出了两个维度的相似计算视角：（1）一度相似性（First-order）适用于无向图，是认为图中存在直接连接的两个点是相似的，因此目的是使得两个点的向量表示分布尽可能相似；（2）二度相似性（Second-order）适用于无向图或有向图，认为的是一个节点，需要学习自己的表示向量之外，还需要一个用于表示与其直接相邻节点的表示（作为上下文向量），当两个没有直接连接的节点时，如果它们的邻居节点重合，便可以将上下文向量用于计算相似性。两种方法都是通过KL散度作为目标函数进行优化计算 | Jian Tang et al, 2015
++ [GNN-图算法-模型-无监督] | [LINE: Large-scale Information Network Embedding](https://arxiv.org/pdf/1503.03578.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/56478167) | 本文提出的LINE方法是应用于graph embedding，是一种采用基于领域相似假设的方法。文中总共提出了两个维度的相似计算视角：（1）一度相似性（First-order）适用于无向图，是认为图中存在直接连接的两个点是相似的，因此目的是使得两个点的向量表示分布尽可能相似；（2）二度相似性（Second-order）适用于无向图或有向图，认为的是一个节点，需要学习自己的表示向量之外，还需要一个用于表示与其直接相邻节点的表示（作为上下文向量），当两个没有直接连接的节点时，如果它们的邻居节点重合，便可以将上下文向量用于计算相似性。节点数字序列编号，并用embedding层编码，两种方法都是通过KL散度作为目标函数进行优化计算 | Jian Tang et al, 2015
   
 + [模型] | [Highway Networks](https://arxiv.org/pdf/1505.00387.pdf) | [阅读笔记](https://www.zhihu.com/question/279426970/answer/614880515) | Highway Networks名字取得很有意思，整个网络结构思想也是符合取名的。简单来说就是通过设置一个函数T来限制网络的输出（借鉴LSTM中gate思想），其中T取0时，输出y=x，这个时候梯度直接传到下一层，也就是说，可以通过T来控制梯度传递，从而一定程度上解决梯度消失的问题。Highway的参数较少，适合single nonlinear layer的transform | Rupesh Kumar Srivastava et al,2015
 
@@ -172,7 +172,9 @@ python3 search_kits.py
   
 + [机器学习] | [Gaussian Error Linear Units (GELUS)](https://arxiv.org/pdf/1606.08415.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/349492378) | GELU的目标就是希望在激活（拥有非线性拟合的能力）中加入正则化的思想。ReLU会确定性的将输入乘上一个0或者1，Dropout则是随机乘上0。而GELU也是通过将输入乘上0或1来实现这个功能，但是输入是乘以0还是1，是在同时取决于输入自身分布的情况下随机选择的。换句话说，是0还是1取决于当前的输入有多大的概率大于其余的输入。而由于神经元的输入x往往遵循正态分布（尤其是深度网络中普遍存在Normalization），所以GELU就可以被定义为“标准正态分布的累积分布函数”，利用erf就可以得到公式：x/2*(1+erf(x/sqrt(2))) | Dan Hendrycks et al,2016
 
-+ [GNN-图算法-模型] | [node2vec: Scalable Feature Learning for Networks](https://arxiv.org/pdf/1607.00653.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/56542707) / [阅读笔记2](https://toutiao.io/posts/y84ifco/preview) | 本文提出的node2vec是一种综合考虑DFS邻域和BFS邻域的graph embedding方法，整体算法思路框架继承了DeepWalk，通过随机游走获取序列，并通过Word2Vec学习表示向量。不同于DeepWalk的是，其使用了有偏的随机游走，同时通过p和q两个参数，以alias采样的方式来控制序列游走的方向（是选择邻接节点还是二度节点） | Aditya Grover et al, 2016
++ [GNN-图算法-模型-无监督] | [node2vec: Scalable Feature Learning for Networks](https://arxiv.org/pdf/1607.00653.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/56542707) / [阅读笔记2](https://toutiao.io/posts/y84ifco/preview) | 本文提出的node2vec是一种综合考虑DFS邻域和BFS邻域的graph embedding方法，整体算法思路框架继承了DeepWalk，通过随机游走获取序列，并通过Word2Vec学习表示向量。不同于DeepWalk的是，其使用了有偏的随机游走，同时通过p和q两个参数，以alias采样的方式来控制序列游走的方向（是选择邻接节点还是二度节点） | Aditya Grover et al, 2016
+
++ [GNN-图算法-模型-无监督] | [Structural Deep Network Embedding](http://www.shichuan.org/hin/time/2016.%20Structural%20Deep%20Network%20Embedding.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/56637181) / [阅读笔记2](https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247486868&idx=1&sn=c2d3e38e9ab7cc61f2a2ffaeecf0febe&chksm=e929309bde5eb98dfa657c7fd1bf7e80495f9c9ad0cde2ee78b36a1f0a453d2cc322948cb3a3&mpshare=1&scene=1&srcid=0213HJqpvPzBLS7AW7L6K3Zz#rd) | 本文提出的SDNE模型是和Node2Vec同年提出的graph embedding方法，可以看作是基于LINE方法的扩展。SDNE使用一个自动编码器结构来同时优化1阶和2阶相似度(LINE是分别优化的)，学习得到的向量表示能够保留局部和全局结构，并且对稀疏网络具有鲁棒性。通过输入的邻接矩阵和网络重构出的邻接矩阵计算一阶二阶损失函数，并配合一个正则项组成联合损失函数进行优化 | Daixin Wang et al, 2016
   
 + [模型-文本相似度/匹配/分类] | [Bag of Tricks for Efficient Text Classification](https://arxiv.org/pdf/1607.01759.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/31118235) | 比较经典的FastText，比较依赖Word Embedding的质量（槽点本身难点就在于embedding，结果文章不谈这个），整个网络结构使用N-gram，对得到的Embedding求和，并过两个Dense然后输出，本身网络结构就那没啥，当然fast啦，外加论文具体加了hashing trick，hierarchical softmax等进行加速、内存优化 | Armand Joulin et al,2016
   
