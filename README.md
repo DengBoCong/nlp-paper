@@ -107,6 +107,8 @@ python3 search_kits.py
 + [深度学习] | [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/340219662) | 经典的Batch Normalization原论文 | Sergey et al,2015
 
 + [蒸馏-预训练] | [Distilling the Knowledge in a Neural Network](https://arxiv.org/pdf/1503.02531.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/75031938) | 蒸馏方法的开山之作啦，将一个复杂模型的knowledge，transfer到一个简单的模型上。具体做法是给复杂分类模型（teacher）的softmax加上一个temperature参数，然后用hard target训练好，模型的softmax的输出就是我们需要的soft target。然后用一个simple模型，基于soft和hard target进行训练，simple模型在soft target训练时，softmax的temperature设置和teacher一样，在hard target训练时，temperature设置1即可，然后loss计算取两个目标的交叉熵的加权平均（soft targets和小模型的输出数据的交叉熵，hard targets和小模型的输出数据的交叉熵）。除此之外，通过梯度计算公式转换，我当temperature特别大的时候（且模型产生的logits为0），知识蒸馏就相当于大模型的logits和小模型的logits的MSE | Geoffrey Hinton et al,2015
+
++ [GNN-图算法-模型] | [LINE: Large-scale Information Network Embedding](https://arxiv.org/pdf/1503.03578.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/56478167) | 本文提出的LINE方法是应用于graph embedding，是一种采用基于领域相似假设的方法。文中总共提出了两个维度的相似计算视角：（1）一度相似性（First-order）适用于无向图，是认为图中存在直接连接的两个点是相似的，因此目的是使得两个点的向量表示分布尽可能相似；（2）二度相似性（Second-order）适用于无向图或有向图，认为的是一个节点，需要学习自己的表示向量之外，还需要一个用于表示与其直接相邻节点的表示（作为上下文向量），当两个没有直接连接的节点时，如果它们的邻居节点重合，便可以将上下文向量用于计算相似性。两种方法都是通过KL散度作为目标函数进行优化计算 | Jian Tang et al, 2015
   
 + [模型] | [Highway Networks](https://arxiv.org/pdf/1505.00387.pdf) | [阅读笔记](https://www.zhihu.com/question/279426970/answer/614880515) | Highway Networks名字取得很有意思，整个网络结构思想也是符合取名的。简单来说就是通过设置一个函数T来限制网络的输出（借鉴LSTM中gate思想），其中T取0时，输出y=x，这个时候梯度直接传到下一层，也就是说，可以通过T来控制梯度传递，从而一定程度上解决梯度消失的问题。Highway的参数较少，适合single nonlinear layer的transform | Rupesh Kumar Srivastava et al,2015
 
