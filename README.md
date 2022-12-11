@@ -218,6 +218,8 @@ python3 search_kits.py
 
 + [深度学习] | [Massive Exploration of Neural Machine Translation Architectures](https://arxiv.org/pdf/1703.03906.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/328801239) | 展示了以NMT架构超参数为例的首次大规模分析，实验为构建和扩展NMT体系结构带来了新颖的见解和实用建议。 | Denny et al,2017
 
++ [GNN-图算法-模型-无监督] | [struc2vec: Learning Node Representations from Structural Identity](https://arxiv.org/pdf/1704.03165.pdf) | [阅读笔记1](https://zhuanlan.zhihu.com/p/63175042) / [阅读笔记2](https://zhuanlan.zhihu.com/p/56733145) | | 本文提出的struc2vec方法是用于graph embedding，相较于经典的DeepWalk和Node2Vec方法（关注存在直连节点的相似性），struc2vec如它名字一样，关注的是节点的结构相似性，这使得它可以表示两个距离很远但结构（连接度，局部拓扑结构）相似的节点。大体的流程分为四步：（1）根据不同距离的邻居信息分别算出每个节点对的结构相似度，这涉及到了不同层次的结构相似度的计算，其中使用DTW（一种动态规划方法）计算有序度序列的距离；（2）构建一个多层次的带权重网络M，每个层次中的节点皆由原网络中的节点构成，距离计算对应其层数的有序度序列的距离；（3）在M中生成随机游走，为每个节点采样出上下文；（4）使用word2vec的方法对采样出的随机游走序列学习出每个节点的节点表示 | Leonardo F. R. Ribeiro et al, 2017
+
 + [模型] | [Get To The Point: Summarization with Pointer-Generator Networks](https://arxiv.org/pdf/1704.04368.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/419659043) | 结合Copying Mechanism和Coverage mechanism两种技巧的LSTM-Base模型，一定程度上解决OOV和重复词问题，经典值得一读 | Abigail See et al,2017
 
 + [深度学习] | [SphereFace: Deep Hypersphere Embedding for Face Recognition](https://arxiv.org/pdf/1704.08063.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/397084135) | A-Softmax，思路和L-Softmax差不多，区别是对权重进行了归一化 | Weiyang Liu et al,2017
