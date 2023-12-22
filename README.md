@@ -453,3 +453,9 @@ python3 search_kits.py
 + [异常检测-综述-自监督] | [Self-Supervised Anomaly Detection: A Survey and Outlook](https://arxiv.org/pdf/2205.05173.pdf) | 一篇关于异常检测的综述论文，主要是围绕自监督形式的异常检测方法进行介绍，论文中大部分方法的切入视角是图像，搞文本或者多模态的话也可以看看，说不定有所启发。全文主要的内容大体可以分为：（1）对目前自监督形式的异常检测方法和其应用的场景进行介绍和讨论；（2）根据异常检测算法所针对的数据样本的不同，提出对这些算法进行划分，有利于根据不同场景进行算法的选择；（3）最后对未来的发展进行了讨论 | Hadi Hojjati et al, 2022
 
 + [异常检测-评估] | [ADBench: Anomaly Detection Benchmark](https://arxiv.org/pdf/2206.09426.pdf) | [阅读笔记](https://zhuanlan.zhihu.com/p/565458918) | 一篇很全面的针对Tabular Data的异常检测方法的实验论文，通过设计Benchmark对30种算法（包括许多传统机器学习算法也加入了实验）进行实验分析。其主要贡献就是设计了Benchmark，设计切入的角度分为三个：（1）从完全无监督异常检测到完全监督的异常检测，标签的数量有多重要？（2）对于不同种类的异常，如何分析算法的优劣？（3）对于数据质量中面临的问题，比如噪音、重复、错误等，哪些算法更加鲁棒？ | Songqiao Han et al, 2022
+
+
+# Blog Article | 文章
+
++ [用ALBERT和ELECTRA之前，请确认你真的了解它们](https://kexue.fm/archives/7846/comment-page-1) | 文章对ALBERT和ELECTRA的优缺点进行了思考，并于BERT进行的比较分析，得到两点结论：（1）如果不到xlarge版，那么没必要用ALBERT，同一速度的ALBERT效果比BERT差，同一效果的ALBERT速度比BERT慢；（2）ELECTRA的预训练速度是加快了，但从目前的实验来看，它相比同级别的BERT在下游任务上的效果并没有突出优势，可以试用，但是效果变差了也不用太失望 | 苏剑林, 2020
+
